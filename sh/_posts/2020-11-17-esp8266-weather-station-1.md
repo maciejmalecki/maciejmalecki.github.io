@@ -1,6 +1,6 @@
 ---
 title: Weather Station with ESP 8266 (part 1)
-description: 
+description: Introduction to the battery powered, ESP 8266 IoT project.
 layout: post
 post-url: weather-station
 categories: smarthome iot esp8266 mcu
