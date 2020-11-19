@@ -3,6 +3,7 @@
 git config user.name "$USER_NAME"
 git config user.email "$USER_EMAIL"
 
+git stash
 git checkout gh-pages
 git pull origin gh-pages
 
