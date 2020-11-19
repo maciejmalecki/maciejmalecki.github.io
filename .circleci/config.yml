@@ -2,11 +2,10 @@ version: 2
 jobs:
   deploy:
     docker:
-      - image: circleci/ruby:2.7.2-buster-node-browsers
+      - image: circleci/ruby:2.6.6-node-browsers
     steps:
       - checkout
       - run: npm install
-      - run: gem install bundler
       - run: bundle install
       - run: bundle exec jekyll build
       - deploy:
