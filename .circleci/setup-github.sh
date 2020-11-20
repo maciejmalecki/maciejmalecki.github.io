@@ -7,7 +7,7 @@ git stash
 git checkout gh-pages
 git pull origin gh-pages
 
-find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
+find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' ! -name '.circleci' -exec rm -rf {} \;
 mv _site/* .
 rm -R _site/
 
