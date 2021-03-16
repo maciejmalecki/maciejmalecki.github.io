@@ -160,23 +160,28 @@
 #posts {
   li {
     list-style-type: none;
+    a {
+      color: $text-color;
+      text-decoration: none;
+      font-weight: normal;
+      &:hover,
+      &:focus {
+        color: $text-color;
+        background-color: #8c8c8c;
+      }
+    }
     div.short {
       flex-direction: row;
-      display: flex;
-      img {
-        margin: 0 1em 0 0;
-        height: 10em;
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
       }
-      a {
-        color: $text-color;
-        text-decoration: none;
-        font-weight: normal;
-        &:hover,
-        &:focus {
-          color: $text-color;
+      display: flex;
+      @media screen and (min-width: 601px) {
+        img {
+          margin: 0 1em 0 0;
+          height: 10em;
         }
       }
-
     }
   }
 }
