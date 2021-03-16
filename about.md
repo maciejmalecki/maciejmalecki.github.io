@@ -1,6 +1,8 @@
 ---
 layout: page
 title: About
+order: 1
+nav: true
 description: This page describes content of this blog.
 ---
 Well, not too much so far.
