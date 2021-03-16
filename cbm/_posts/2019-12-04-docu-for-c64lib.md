@@ -2,6 +2,7 @@
 title: Documentation site for the c64lib finally available
 layout: post
 categories: cbm
+pic: /cbm/img/c64lib-avatar.jpg
 ---
 I have finally managed to set up documentation web site for [c64lib]. It is available under
 following link: [https://c64lib.github.io/docu/][docu]

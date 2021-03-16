@@ -5,7 +5,7 @@ layout: post
 post-url: copper64-1
 categories: cbm asm c64lib
 ---
-One of the greatest feature of VIC-II is that it can a source of IRQ interrupts. VIC can generate interrupt on sprite collision, lightgun shots and most importantly on specified raster line. 
+One of the greatest feature of VIC-II is that it can a source of IRQ interrupts. VIC can generate an interrupt on sprite collision, light gun shots, and most importantly on specified raster line. 
 
 This last feature is especially useful because it allows to do some tricks such us screen splitting (so that you can have two or more screen areas displaying different screen modes or scrolled independently). You can play with global color registers to get more colorful display, you can play with sprite registers to show more than 8 of them at the same time. Actually raster IRQ is so important in C64 world, that it is even used when playing background music.
 
@@ -13,6 +13,7 @@ Although having raster interrupt is definitely better than not having it (owners
 
 Let's look at following example:
 
+{% highlight nesasm %}
 	.label IRQ_1 = 150
 	.label IRQ_2 = 200
 
@@ -48,6 +49,7 @@ Let's look at following example:
 	  dec c64lib.BORDER_COL       // change it back
 	  irqExit(irq1, IRQ_1, false)
 	}
+{% endhighlight %}
 	
 Here I use several macros, that are defined in [chipset library](https://github.com/c64lib/chipset). I will keep them just explaining their meaning, for better code clarity:
 * ```setRaster(rasterNum)``` - sets raster number into VIC-II (including 8-th bit)

@@ -4,6 +4,7 @@ description: End to end solution for assembling, building and testing your KickA
 layout: post
 post-url: gradle-ra-plugin
 categories: cbm asm c64lib
+pic: /cbm/img/gradle-logo.png
 ---
 The idea of a tool that can automatically download all dependencies and build my 6502 projects
 arose some time [ago][1]. In the meantime I started using 

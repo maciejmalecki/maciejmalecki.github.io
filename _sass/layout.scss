@@ -160,6 +160,24 @@
 #posts {
   li {
     list-style-type: none;
+    div.short {
+      flex-direction: row;
+      display: flex;
+      img {
+        margin: 0 1em 0 0;
+        height: 10em;
+      }
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-weight: normal;
+        &:hover,
+        &:focus {
+          color: $text-color;
+        }
+      }
+
+    }
   }
 }
 
@@ -170,14 +188,14 @@
     }
 }
 
-.post+.post:before {
-    display: block;
-    content: '';
-    width: 5rem;
-    height: 1px;
-    margin: 23px auto;
-    background-color: lighten($text-color, 70%);
-  }
+//.post+.post:before {
+//    display: block;
+//    content: '';
+//    width: 5rem;
+//    height: 1px;
+//    margin: 23px auto;
+//    background-color: lighten($text-color, 70%);
+//  }
 
 .by-line {
   display: block;

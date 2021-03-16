@@ -4,6 +4,7 @@ description:
 layout: post
 post-url: esp-power-supply
 categories: smarthome iot esp8266 mcu
+pic: /sh/img/esp-12f-breakout.jpg
 ---
 For [battery powered ESP 8266 projects][weather-station-1] we would like to have a full control over electrical components that we use on board. This is because everything that draws power will also drain our battery, and this is something we want to avoid. The Wemos D1 Mini module seems to have the lowest memory consumption of them all, but we can still be better. In my battery powered projects I use ESP-12F modules and custom power circuit, that I would like to describe in this post. By the way, this approach will work with all other "bare" ESP modules like ESP-01, ESP-07, ESP-12S to mention just a few.
 

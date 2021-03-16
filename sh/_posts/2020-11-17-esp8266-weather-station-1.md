@@ -4,6 +4,7 @@ description: Introduction to the battery powered, ESP 8266 IoT project.
 layout: post
 post-url: weather-station
 categories: smarthome iot esp8266 mcu
+pic: /sh/img/weather-inside.jpg
 ---
 The ESP 8266 has relatively high power consumption (around 70-80mA) which makes battery powered devices difficult to build, unless we accept a very short battery lifetime. Reasons for this are apparently connected with WiFi communication model, which is not especially economical, big processing power of the ESP chip itself has also an influence on this.
 
