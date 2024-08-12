@@ -3,7 +3,7 @@ title: Tony. Montezuma's Gold
 description: New C64 video game relased that uses c64lib and retro build tool.
 layout: post
 post-url: tony-montezumas-gold
-categories: cbm asm c64lib
+categories: cbm c64lib
 pic: /cbm/img/tony/tony.jpg
 ---
 
