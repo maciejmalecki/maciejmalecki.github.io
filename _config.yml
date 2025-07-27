@@ -4,7 +4,7 @@ description: "t.b.d."
 author: Maciej Małecki
 name: "maciejmalecki"
 email: "malecki.maciej@gmail.com"
-url: "https://maciejmalecki.github.io"
+url: "https://maciejmalecki.github.io/"
 
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
