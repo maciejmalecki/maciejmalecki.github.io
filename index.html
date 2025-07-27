@@ -13,7 +13,7 @@ layout: default
           {% if post.pic %}
           <img src='{{ post.pic | absolute_url }}' alt=''>
           {% endif %}
-          <p>{{ post.content | strip_html | truncatewords:75 }}</p>
+          <p>{{ post.content | strip_html | truncatewords:120 }}</p>
         </div>
       </a>
     </li>
