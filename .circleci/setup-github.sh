@@ -18,7 +18,7 @@ rm -R _site/
 ls -al
 
 git add -fA
-git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
+git commit --allow-empty -m "$(git log main -1 --pretty=%B)"
 git push -f origin gh-pages
 
 echo "deployed successfully"
