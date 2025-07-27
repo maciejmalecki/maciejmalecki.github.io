@@ -7,7 +7,7 @@ email: "malecki.maciej@gmail.com"
 url: "https://maciejmalecki.github.io"
 
 # Build settings
-baseurl: /blog # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
 source: .
 destination: ./_site
@@ -37,6 +37,6 @@ custom_header: false
 custom_nav_footer: false
 reverse: false
 
-repository: "maciejmalecki/blog"
+repository: "maciejmalecki/maciejmalecki.github.io"
 username: maciejmalecki
-repo: blog
+repo: maciejmalecki.github.io
