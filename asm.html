@@ -1,25 +1,256 @@
----
-layout: page
-title: Assembly language
-nav: true
-order: 2
----
-<!-- Posts -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8E02V5EDF9"></script>
+	<script>
+		var useCookies = (localStorage.getItem('useCookies') === 'true');
+		if (useCookies) {
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-8E02V5EDF9', { 'anonymize_ip': true });
+		}
+	</script>
+	
+
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Assembly language</title>
+  <meta name="description" content="t.b.d.">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+</head>
+
+
+<body>
+	<div id="wrap">
+
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/about" title="About">About</a>
+	    
+	  
+	    
+	      <a href="/architecture" title="Architecture">Architecture</a>
+	    
+	  
+	    
+	      <a href="/asm" title="Assembly language">Assembly language</a>
+	    
+	  
+	    
+	  
+	    
+	      <a href="/cbm" title="CBM">CBM</a>
+	    
+	  
+	    
+	      <a href="/genai" title="GenAI">GenAI</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	      <a href="/privacy" title="Privacy">Privacy</a>
+	    
+	  
+	    
+	      <a href="/sh" title="IoT test">IoT test</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://github.com/maciejmalecki">Github</a>
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="//">
+          <h1><code>()=>{}</code></h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="/about" title="About">About</a>
+      
+      
+        
+          <a href="/architecture" title="Architecture">Architecture</a>
+      
+      
+        
+      
+        
+      
+        
+          <a href="/genai" title="GenAI">GenAI</a>
+      
+      
+        
+      
+        
+          <a href="/privacy" title="Privacy">Privacy</a>
+      
+      
+      
+      <!-- Nav links -->
+      <a href="https://github.com/maciejmalecki">Github</a>
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+
+		<main>
+
+			<article id="page">
+	
+  <!-- Posts -->
 <ul id="posts">
 
-  {% for post in site.categories.asm %}
+  
     <li class="post">
-      <a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">
-        <h2>{%if post.header %}{{ post.header }}{% else %}{{ post.title }}{% endif %}</h2>
-        <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line"> <i>{{ post.date | date_to_string }}</i> </time>
+      <a href="/gradle-retro-plugin">
+        <h2>Gradle Retro Assembler plugin is released</h2>
+        <time datetime="2020-11-18T00:00:00+00:00" class="by-line"> <i>18 Nov 2020</i> </time>
         <div class="short">
-          {% if post.pic %}
-          <img src='{{ post.pic | absolute_url }}' alt=''>
-          {% endif %}
-          <p>{{ post.content | strip_html | truncatewords:75 }}</p>
+          
+          <img src='https://maciejmalecki.github.io/cbm/img/gradle-logo.png' alt=''>
+          
+          <p>The idea of a tool that can automatically download all dependencies and build my 6502 projects arose some time ago. In the meantime I started using 64spec for testing my assembly code. The library itself is great but requires a lot of manual operations once a great number of test files are created. I have noticed that Michał Taszycki, an author of 64spec, has already written a proof of concept tool, so that 64spec can...</p>
         </div>
       </a>
     </li>
-  {% endfor %}
+  
+    <li class="post">
+      <a href="/macro-hosted-subroutines">
+        <h2>Put subroutine into the library</h2>
+        <time datetime="2018-08-02T00:00:00+00:00" class="by-line"> <i>02 Aug 2018</i> </time>
+        <div class="short">
+          
+          <p>Subroutine is an essential concept in programming. Advantages of using subroutines are quite clear - instead of doing a repetitive work, we define chunk of code once and “jump” to it any time we need it. It is a part of DRY principle (do not repeat yourself), which allows to keep our code compact and maintainable. It allows us to keep memory footprint of our code at reasonable level. With possibility of passing execution arguments...</p>
+        </div>
+      </a>
+    </li>
+  
+    <li class="post">
+      <a href="/assembler-libraries">
+        <h2>Writing and using libraries in KickAssembler</h2>
+        <time datetime="2018-04-26T00:00:00+00:00" class="by-line"> <i>26 Apr 2018</i> </time>
+        <div class="short">
+          
+          <p>It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do not want to complain, I fully understand that productivity is a key and live is hard. When I came back to C64 programming, and that...</p>
+        </div>
+      </a>
+    </li>
+  
 
 </ul>
+
+
+</article>
+
+	  </main>
+
+		  <!-- Pagination links -->
+      
+
+	  </div>
+
+	    <!-- Footer -->
+	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-07-27 18:58</span></footer>
+
+
+      <div id="gdpr" style="display: none;">
+        <p>
+          This web page uses cookies to track anonymous user activities. By continuing using this site
+          or by closing this banner you indicate your consent to use these cookies.
+          You can change settings, i.e. disable user tracking on <a href="privacy.html">privacy</a> page.
+        </p>
+        <button id="gdprClose">Close</button>
+      </div>
+
+	    <!-- Script -->
+      <script src="/js/main.js"></script>	
+
+
+	</div>
+
+</body>
+</html>

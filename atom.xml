@@ -1,30 +1,106 @@
----
-layout: null
----
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>{{ site.title }}</title>
- <link href="{{ site.url }}/atom.xml" rel="self"/>
- <id>{{ site.url }}</id>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <title>()=>{} | Void's blog</title>
+ <link href="https://maciejmalecki.github.io/atom.xml" rel="self"/>
+ <id>https://maciejmalecki.github.io</id>
+ <updated>2025-07-27T18:58:37+00:00</updated>
  <author>
-   <name>{{ site.author.name }}</name>
-   <uri>{{ site.author.url }}</uri>
-   <email>{{ site.author.email }}</email>
+   <name></name>
+   <uri></uri>
+   <email></email>
  </author>
 
- {% for post in site.posts limit: 10 %}
+ 
 
  <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.url }}{{ post.url }}"/>
-   <id>{{ site.url }}{{ post.id }}</id>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <content type="html">{{ post.content | xml_escape | truncatewords:50 }}</content>
+   <title>Tony. Montezuma's Gold</title>
+   <link href="https://maciejmalecki.github.io/tony-montezumas-gold"/>
+   <id>https://maciejmalecki.github.io/tony-montezumas-gold</id>
+   <updated>2024-07-22T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;I’m glad to revive this blog and inform you that together with Rafał Dudek, Adam Gilmore and Sami Juntunen we managed to release a C64 version of the &lt;a href=&quot;https://monochrome-productions.itch.io/tony&quot;&gt;Tony: Montezuma’s Gold&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://maciejmalecki.github.io/cbm/img/tony/ingame.png&quot; alt=&quot;Ingame screenshot&quot; title=&quot;Tony: Montezuma's Gold&quot; /&gt;&lt;/p&gt; &lt;p&gt;The game has been written in KickAssembler and is available...</content>
  </entry>
 
- {% endfor %}
+ 
+
+ <entry>
+   <title>Power supply for bare ESP 8266 units</title>
+   <link href="https://maciejmalecki.github.io/power-supply-for-bare-esp8266"/>
+   <id>https://maciejmalecki.github.io/power-supply-for-bare-esp8266</id>
+   <updated>2020-11-19T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;For &lt;a href=&quot;esp8266-weather-station-1&quot;&gt;battery powered ESP 8266 projects&lt;/a&gt; we would like to have a full control over electrical components that we use on board. This is because everything that draws power will also drain our battery, and this is something we want to avoid. The Wemos D1 Mini module seems to...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Gradle Retro Assembler plugin is released</title>
+   <link href="https://maciejmalecki.github.io/gradle-retro-plugin"/>
+   <id>https://maciejmalecki.github.io/gradle-retro-plugin</id>
+   <updated>2020-11-18T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;The idea of a tool that can automatically download all dependencies and build my 6502 projects arose some time &lt;a href=&quot;assembler-libraries&quot;&gt;ago&lt;/a&gt;. In the meantime I started using &lt;a href=&quot;https://64bites.com/64spec/&quot;&gt;64spec&lt;/a&gt; for testing my assembly code. The library itself is great but requires a lot of manual operations once a great number...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Weather Station with ESP 8266 (part 1)</title>
+   <link href="https://maciejmalecki.github.io/esp8266-weather-station-1"/>
+   <id>https://maciejmalecki.github.io/esp8266-weather-station-1</id>
+   <updated>2020-11-17T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;The ESP 8266 has relatively high power consumption (around 70-80mA) which makes battery powered devices difficult to build, unless we accept a very short battery lifetime. Reasons for this are apparently connected with WiFi communication model, which is not especially economical, big processing power of the ESP chip itself has...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Internet of Things done cheaply with ESP 8266</title>
+   <link href="https://maciejmalecki.github.io/esp8266"/>
+   <id>https://maciejmalecki.github.io/esp8266</id>
+   <updated>2020-09-11T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;For some time I had an idea to do few “home improvements” and, as a side effect, learn a bit about microcontrollers and electronics. So called “smart home” can be expensive - there are a lot of out-of-the-box solutions that cost a small fortune (as I said: “for some time”,...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Documentation site for the c64lib finally available</title>
+   <link href="https://maciejmalecki.github.io/docu-for-c64lib"/>
+   <id>https://maciejmalecki.github.io/docu-for-c64lib</id>
+   <updated>2019-12-04T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;I have finally managed to set up documentation web site for &lt;a href=&quot;https://github.com/c64lib&quot;&gt;c64lib&lt;/a&gt;. It is available under following link: &lt;a href=&quot;https://c64lib.github.io/docu/&quot;&gt;https://c64lib.github.io/docu/&lt;/a&gt;&lt;/p&gt; &lt;p&gt;There is a dedicated &lt;a href=&quot;https://c64lib.github.io/docu/news/&quot;&gt;news&lt;/a&gt; section where most of the content of this blog is being migrated (not too much content). I plan to expand this page with...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Put subroutine into the library</title>
+   <link href="https://maciejmalecki.github.io/macro-hosted-subroutines"/>
+   <id>https://maciejmalecki.github.io/macro-hosted-subroutines</id>
+   <updated>2018-08-02T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;Subroutine is an essential concept in programming. Advantages of using subroutines are quite clear - instead of doing a repetitive work, we define chunk of code once and “jump” to it any time we need it. It is a part of DRY principle (do not repeat yourself), which allows to...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Writing and using libraries in KickAssembler</title>
+   <link href="https://maciejmalecki.github.io/assembler-libraries"/>
+   <id>https://maciejmalecki.github.io/assembler-libraries</id>
+   <updated>2018-04-26T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Review&#58; New PSU for Commodore 64/128</title>
+   <link href="https://maciejmalecki.github.io/new-psu-for-c64"/>
+   <id>https://maciejmalecki.github.io/new-psu-for-c64</id>
+   <updated>2018-02-04T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;Reliability of original C64 CPU has been disputed in community for long time. Commodore had problems with it in the past, plenty of houses were put on fire. Today, over 35 years after first Commodore 64 was produced another issue becomes especially painful: some of bricks decide now to ignore...</content>
+ </entry>
+
+ 
 
 </feed>
