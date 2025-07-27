@@ -186,14 +186,14 @@
 
 		<p>For <a href="esp8266-weather-station-1">battery powered ESP 8266 projects</a> we would like to have a full control over electrical components that we use on board. This is because everything that draws power will also drain our battery, and this is something we want to avoid. The Wemos D1 Mini module seems to have the lowest memory consumption of them all, but we can still be better. In my battery powered projects I use ESP-12F modules and custom power circuit, that I would like to describe in this post. By the way, this approach will work with all other “bare” ESP modules like ESP-01, ESP-07, ESP-12S to mention just a few.</p>
 
-<p><img src="https://maciejmalecki.github.io/sh/img/esp-12f-breakout.jpg" alt="ESP-12F and breakout board" /></p>
+<p><img src="https://maciejmalecki.github.io//sh/img/esp-12f-breakout.jpg" alt="ESP-12F and breakout board" /></p>
 
 <p>The ESP-12F module is a member of so-called castellated module family, that is it is not ready to be used with 2.54 raster boards or breadboards. Castellated modules are designed for mounting on top of other boards using SMD technique. Such modules we can find mounted on top of Wemos D1 Mini, NodeMCU v1, v2 or v3. Luckily it is possible to obtain dedicated breakout boards and solder ESP module on top of it. It is even possible to use regular soldering iron to do this, we just need a little practice in soldering.</p>
 
 <h3 id="how-to-start-a-bare-esp-8266">How to start a bare ESP 8266?</h3>
 <p>We all know that ESP 9266 chip requires 3.3V DC to operate. So it’s enough to connect the “<strong>+</strong>” with <code class="language-plaintext highlighter-rouge">VCC</code> pin and the “<strong>-</strong>” with <code class="language-plaintext highlighter-rouge">GND</code> pin, and our chip will boot. We’ll, not really. We use bare ESP chip which means that we have to take care of the proper pin configuration during startup, otherwise the chip does not boot, even though it is properly powered. Let’s see the schematic.</p>
 
-<p><img src="https://maciejmalecki.github.io/sh/img/esp-12f-startup-configuration.png" alt="ESP-12F startup configuration" /></p>
+<p><img src="https://maciejmalecki.github.io//sh/img/esp-12f-startup-configuration.png" alt="ESP-12F startup configuration" /></p>
 
 <p>For ESP-12F to start, the <code class="language-plaintext highlighter-rouge">CH_PD</code>, <code class="language-plaintext highlighter-rouge">GPIO4</code>, <code class="language-plaintext highlighter-rouge">GPIO0</code>, <code class="language-plaintext highlighter-rouge">GPIO2</code> pins must be <strong>pulled up</strong> and the <code class="language-plaintext highlighter-rouge">GPIO15</code> must be <strong>pulled down</strong>. As pull up/down we use 10kOhm resistors that are connected with <code class="language-plaintext highlighter-rouge">3.3V</code> and <code class="language-plaintext highlighter-rouge">GND</code>, respectively. Only with this configuration our chip properly boots up once powered.</p>
 
@@ -213,7 +213,7 @@
 <h3 id="the-regulator">The regulator</h3>
 <p>After this a bit lengthy introduction I would like to present my power supply solution for “bare” ESP 8266 modules.</p>
 
-<p><img src="https://maciejmalecki.github.io/sh/img/esp-12f-psu.png" alt="ESP 8266 power supply unit" /></p>
+<p><img src="https://maciejmalecki.github.io//sh/img/esp-12f-psu.png" alt="ESP 8266 power supply unit" /></p>
 
 <p>I built this unit around <a href="https://randomnerdtutorials.com/esp8266-voltage-regulator-lipo-and-li-ion-batteries/">MCP1700-3302E/TO</a> LDO voltage regulator which has a few nice characteristics:</p>
 <ul>
@@ -260,7 +260,7 @@
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-07-27 18:58</span></footer>
+	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-07-27 19:08</span></footer>
 
 
       <div id="gdpr" style="display: none;">
