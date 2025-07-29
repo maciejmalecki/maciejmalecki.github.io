@@ -4,12 +4,22 @@
  <title>()=>{} | Void's blog</title>
  <link href="https://maciejmalecki.github.io//atom.xml" rel="self"/>
  <id>https://maciejmalecki.github.io/</id>
- <updated>2025-07-29T13:24:45+00:00</updated>
+ <updated>2025-07-29T20:20:08+00:00</updated>
  <author>
    <name></name>
    <uri></uri>
    <email></email>
  </author>
+
+ 
+
+ <entry>
+   <title>Make Internet Great Again</title>
+   <link href="https://maciejmalecki.github.io//make-internet-great-again"/>
+   <id>https://maciejmalecki.github.io//make-internet-great-again</id>
+   <updated>2025-07-29T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;I discovered the internet around 1995 when I had the opportunity to use it at the &lt;a href=&quot;https://pwr.edu.pl/en/&quot;&gt;Wrocław University of Science and Technology&lt;/a&gt;. They had plenty of MS-DOS and Windows 3.11 computers with monochrome CRT monitors connected to a local network and the internet. I used tools such as &lt;em&gt;Telnet&lt;/em&gt;...</content>
+ </entry>
 
  
 
