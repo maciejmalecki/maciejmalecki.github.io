@@ -13,7 +13,7 @@ html { background-color: #FFFFFF; font-size: 16px; line-height: 1.8; color: #333
 body { max-width: 1000px; margin: 0 auto; padding: 0 10px; }
 
 /*- Link -*/
-a { color: #20209f; text-decoration: none; font-weight: 700; }
+a { color: #20209f; text-decoration: none; }
 
 a:visited { color: #4f204f; }
 
