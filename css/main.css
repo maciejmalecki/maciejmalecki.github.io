@@ -15,7 +15,7 @@ body { max-width: 1000px; margin: 0 auto; padding: 0 10px; }
 /*- Link -*/
 a { color: #20209f; text-decoration: none; }
 
-a:visited { color: #4f204f; }
+a:visited { color: #b60cb6; }
 
 a:hover, a:focus { text-decoration: underline; }
 
