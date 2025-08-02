@@ -8,6 +8,7 @@ pic: /casual/img/investment-and-business-1996.png
 I think we're at a turning point in the history of our civilisation. We've all thought stability was the way to go, but it feels like things are changing more quickly than ever before, at least in our lifetime. It's a shame, but it looks like the internet, one of the best inventions of the 20th century, is playing its part in this change. Why is that?
 
 ![Why is that? Seinfeld meme](/casual/img/jerry-why-is-that.jpg "Because the mail never stops (Seinfeld)")
+*Because the mail never stops (Seinfeld)*
 
 I discovered the internet around 1995 when I had the opportunity to use it at the [Wrocław University of Science and Technology](https://pwr.edu.pl/en/). They had plenty of MS-DOS and Windows 3.11 computers with monochrome CRT monitors connected to a local network and the internet. I used tools such as *Telnet* (to access the local Unix server), *FTP*, *Minuet*, and *Gopher*. I got my first email address and used the Unix mail command to access it. Once I had managed to type the `win.exe` command and start Windows, I had access to Netscape Navigator and could browse the web. At the time, it was a brilliant idea to have a paper notepad (or a text file on a 3.5" floppy disk) to write down all the URLs that I wanted to visit later. Google.com didn't exist yet, and the early search engines, such as AltaVista and Yahoo!, weren't very good at indexing and searching. It wasn't uncommon to have a special *Links* subpage on a home page gathering a recommended links with a very varied content.
 
