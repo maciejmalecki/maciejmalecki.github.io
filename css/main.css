@@ -369,7 +369,7 @@ footer { background-color: #FFFFFF; color: #333333; text-align: center; padding:
 
 /* Literal.Number.Integer.Long */
 /*- Custom style -*/
-img + em { margin-bottom: 1.5em; }
+img + em { margin-bottom: 1.5em; text-align: center; }
 
 .disclaimer { font-size: 14px; margin-bottom: 1.5em; }
 
