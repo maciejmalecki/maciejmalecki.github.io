@@ -4,6 +4,9 @@ layout: default
 <article id="post-page">
 	<h2>{%if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h2>		
 	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
+	<div class="disclaimer">
+		The views and opinions expressed in this blog are solely my own and do not reflect the views, policies, or positions of my employer or any professional organization with which I am affiliated.
+	</div>
 	<div class="content">
 
 		{{ content }}

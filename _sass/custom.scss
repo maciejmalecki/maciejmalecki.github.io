@@ -4,3 +4,10 @@
 img + em { 
 	
 }
+
+.disclaimer {
+    font-size: 12px;
+    @media (min-width: 940px) {
+        padding-left: 2.5em;
+    }
+}
