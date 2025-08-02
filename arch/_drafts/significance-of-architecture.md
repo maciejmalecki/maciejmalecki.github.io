@@ -6,4 +6,8 @@ categories: arch
 pic: /genai/img/neward.jpg
 ---
 
-![horror][/arch/img/horror.jpg "Horror"]
+![Ted Neward](/arch/img/neward.jpg)
+*Suprisingly you ask for an architecture and you always get this in response. / Ted Neward in Geekon/Kraków/Poland, 2019*
+
+![Marlon Brando][/arch/img/horror.jpg]
+*A random architect resting Friday night after another week fighting with the code. / Apocalypsed*
