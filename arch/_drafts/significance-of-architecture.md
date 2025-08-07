@@ -30,8 +30,12 @@ In addition, you see that writing software is actually a team effort, with diffe
 The long-term goal of moderate further development costs is to establish a software architecture that is an economic pillar. There are two more: the first is obvious — support for the required functionality — and the second, which is sometimes forgotten, is a set of so-called 'non-functional requirements', i.e. industry standards that are not directly demanded but are usually essential, such as security, monitoring and performance. NFRs are sometimes forgotten, but the economic side of development is usually forgotten, especially by "green field specialists" who like to start a new project for the first three months and then hand it over to a software house-powered team for "maintenance". I've experienced this too.
 
 ![Pillars](/arch/img/pillars-of-architecture.excalidraw.png)
+*Acropolis of the software engineering.*
 
 add few examples from my past
+
+![Swamp](/arch/img/we-live-in-a-bloody-swamp.jpg)
+*Listen my son. I have built this software on a swamp. It sank into the swamp. So I built a second one. That sank into the swamp. So I built a third. That burned down, fell over, then sank into the swamp. But the fourth one stayed up. / Monty Python and the Holy IT Architecture.* 
 
 add picture of separation
 
