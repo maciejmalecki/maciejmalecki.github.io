@@ -27,7 +27,9 @@ In addition, you see that writing software is actually a team effort, with diffe
 ![Marlon Brando](/arch/img/horror.jpg)
 *A random architect Friday night, resting after another week of fighting with the code. / Apocalypsed*
 
-postulate three pillars of architecture: functionality, NFRs, and maintainability
+The long-term goal of moderate further development costs is to establish a software architecture that is an economic pillar. There are two more: the first is obvious — support for the required functionality — and the second, which is sometimes forgotten, is a set of so-called 'non-functional requirements', i.e. industry standards that are not directly demanded but are usually essential, such as security, monitoring and performance. NFRs are sometimes forgotten, but the economic side of development is usually forgotten, especially by "green field specialists" who like to start a new project for the first three months and then hand it over to a software house-powered team for "maintenance". I've experienced this too.
+
+![Pillars](/arch/img/pillars-of-architecture.excalidraw.png)
 
 add few examples from my past
 
