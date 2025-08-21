@@ -3,7 +3,7 @@ title: Significance of Architecture
 description: Is IT architecture still relevant in AI era of coding?
 layout: post
 categories: arch genai
-pic: /genai/img/neward.jpg
+pic: /arch/img/neward.jpg
 ---
 
 When I'm interviewing new candidates for the software architect position, I always like to ask a few awkward questions first, like, "What is architecture?", "Who's an architect?" and "What do you do?" and then I just wait for that embarrassing moment of disbelief and the long silence. And then, maybe, just some of them will try to beat them by using these two rectangles and a barrel. Yeah, I was there too.
