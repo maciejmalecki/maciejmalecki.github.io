@@ -1,6 +1,6 @@
 ---
 title: Significance of Architecture
-description: tbd
+description: Is IT architecture still relevant in AI era of coding?
 layout: post
 categories: arch genai
 pic: /genai/img/neward.jpg
@@ -20,7 +20,7 @@ Martin Fowler's post on [design stamina] is spot on. Good design, or architectur
 ![Fowler: Design Stamina](/arch/img/design-stamina.png)
 *Fowler's design stamina chart*.
 
-There's a pretty straightforward reason why architecture is important and how it actually works. It's all down to human nature and the fact that our brains have limited capabilities. With all the lines of code and files these days, plus all the design patterns and technical stuff, it can get really confusing really fast. It's clear that it costs money. Either it takes longer and longer to understand the code that needs to be modified, or any changes introduce bugs that have to be corrected. In both cases, you just end up delivering slower, and nobody's happy about it. In my 23 years in the business, I've seen this so many times. Sometimes the code was mine...
+There's a pretty straightforward reason why architecture is important and how it actually works. It's all down to human nature and the fact that our brains have limited capabilities. With all the lines of code and files these days, plus all the design patterns and technical stuff, it can get really confusing really fast. It's clear that it costs money. Either it takes longer and longer to understand the code that needs to be modified, or any changes introduce bugs that have to be corrected. In both cases, you just end up delivering slower, and nobody's happy about it. In my 23 years in the business, I've seen this so many times. Sometimes the code was all mine...
 
 In addition, you see that writing software is actually a team effort, with different team members joining and leaving the project as time goes on. So, the foundation and the guidelines for the architecture are important, because they keep the project alive. Believe me, you don't want to end up with this extra level of freedom because of different cultures, skill levels and creative approaches, but you do need some standardisation. It's not exactly sexy, but it works.
 
@@ -32,15 +32,24 @@ The long-term goal of moderate further development costs is to establish a softw
 ![Pillars](/arch/img/pillars-of-architecture.excalidraw.png)
 *Acropolis of the software engineering.*
 
-add few examples from my past
+I have deliberately excluded the 'economy' part, even though I could translate it into 'maintainability' and, like all 'abilities', easily squeeze it into the NFRs section. However, clients rarely explicitly request this kind of economy. In fact, it is almost always the deliverer's responsibility to ensure the project has the right margin. Developer sanity is also the responsibility of the deliverer; clients do not care.
+
+However, there is a clear connection between architecture and the pleasure of coding, as well as the mental health of software developers who are forced to struggle with sequences of characters forming computer programmes.
 
 ![Swamp](/arch/img/we-live-in-a-bloody-swamp.jpg)
 *Listen my son. I have built this software on a swamp. It sank into the swamp. So I built a second one. That sank into the swamp. So I built a third. That burned down, fell over, then sank into the swamp. But the fourth one stayed up. / Monty Python and the Holy IT Architecture.* 
 
-add picture of separation
+But does architecture still matter in the year 2025? This is a pertinent question at a time when more and more coding tasks are being taken over by AI. Is architecture a human domain? If we eliminate humans, will it still be needed? AI never gets tired and, as time goes on, it will probably become cheaper and cheaper. It is unlikely to become mentally ill.
 
-is architecture over in GenAI era
+To answer "yes" here, one must assume that AI does not really have comprehension limits. Moreover, code without architecture can easily exceed polynomial complexity in terms of execution paths. Tireless AI could facilitate this growth by producing more and more PRs.
 
-why it is not
+![Concerns](/arch/img/concerns.excalidraw.png)
+*So-called clean architecture prioritises good concern separation, i.e. vertical separation into modules or business components and horizontal separation into layers. It treats inbound technical concerns, business logic and outbound technical concerns separately.*
+
+Unless it is proven otherwise through empirical evidence, we cannot assume that AI will be able to work reliably with a complex codebase. So, if we don't know that for sure, we cannot just let vibe in. It will most likely end up in a disaster.
+
+From my own experiments, I have noticed that a certain degree of order (architecture) actually helps AI produce better code and understand the existing code base more deeply. Good modularity (vertical separation) also helps AI build context properly and match the developer's prompt to the right elements of the code base. Horizontal separation (concern isolation) reduces informational noise in code, enhancing the models' comprehension capabilities.
+
+I strongly believe that IT architecture is far from obsolete and must remain a cornerstone of the GenAI revolution.
 
 [design stamina]: https://martinfowler.com/bliki/DesignStaminaHypothesis.html
