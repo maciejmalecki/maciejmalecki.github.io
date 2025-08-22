@@ -22,4 +22,8 @@ Apparent consequence of such understanding is that it is no longer needed to mas
 
 I have already suggested in [another article](significance-of-architecture), that uncontrolled code generation without a properly established architectural restrictions may lead to rapid quality degradation, exponential growth of complexity and in consequence to technical death of the code base. This is of course something I cannot prove (yet).
 
+So, having this vague definition, plus an enormous hype wave of everything related to generative AI, we are on the clear path to trivialize yet another IT term, *Vibe Coding*.
+
+## The Experiment
+
 [vibe-coding-definition]: https://en.wikipedia.org/wiki/Vibe_coding
