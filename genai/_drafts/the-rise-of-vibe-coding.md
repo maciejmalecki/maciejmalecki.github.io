@@ -26,4 +26,12 @@ So, having this vague definition, plus an enormous hype wave of everything relat
 
 ## The Experiment
 
+In my free time I do some Assembly coding for a rather outdated machine called Commodore 64, that has premiered around 1982. To make my life easier I decided to incorporate some modern stuff such as cross assemblers and CI/CD pipelines.
+
+![Commodore 64](/cbm/img/commodore64.jpg)
+*That's Commodore 64, the one I own since 1990.*
+
+So, majority of my GitHub repositories are MOS 6502 assembly projects except one, called [Retro Build Tool][rbt-home-page], which is basically a plugin for Gradle build system, implemented in Kotlin Language.
+
 [vibe-coding-definition]: https://en.wikipedia.org/wiki/Vibe_coding
+[rbt-home-page]: https://c64lib.github.io/gradle-retro-assembler-plugin/
