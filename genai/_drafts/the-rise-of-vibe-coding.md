@@ -33,5 +33,7 @@ In my free time I do some Assembly coding for a rather outdated machine called C
 
 So, majority of my GitHub repositories are MOS 6502 assembly projects except one, called [Retro Build Tool][rbt-home-page], which is basically a plugin for Gradle build system, implemented in Kotlin Language.
 
+RBT is not a big project, it's currently around 13K lines of code but the complexity makes it not trivial. We can assume it is a comparable to the typical microservice. If vibe coding works for this project, it should be useful for a real life microservice based code bases. If it fails, however, it cannot be used as a reliable development method for majority of existing software.
+
 [vibe-coding-definition]: https://en.wikipedia.org/wiki/Vibe_coding
 [rbt-home-page]: https://c64lib.github.io/gradle-retro-assembler-plugin/
