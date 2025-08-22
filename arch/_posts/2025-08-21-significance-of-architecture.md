@@ -32,16 +32,16 @@ Let's take a look at how modern software should be constructed. The long-term go
 ![Pillars](/arch/img/pillars-of-architecture.excalidraw.png)
 *Acropolis of the software engineering*
 
-I have deliberately excluded the *economy* part, even though I could translate it into maintainability and, like all "abilities", easily squeeze it into the NFRs section. However, clients rarely explicitly request this kind of economy (unless you do T&M). In fact, it is almost always the deliverer's responsibility to ensure the project has the right margin. Developer sanity is also the responsibility of the deliverer; clients do not care.
+I have deliberately excluded the *economy* part, even though I could translate it into maintainability and, like all "abilities", easily squeeze it into the NFRs section. However, clients rarely explicitly request this kind of economy (unless you do T&M). In fact, it is almost always the deliverer's responsibility to ensure the project has the right margin.
 
-However, there is a clear connection between architecture and the pleasure of coding, as well as the mental health of software developers who are forced to struggle with sequences of characters forming computer programmes.
+Another aspect is developer sanity. This is the responsibility of the developer, as clients do not care. There is a clear connection between the design of software architecture and the pleasure of coding, as well as the mental health of developers who are forced to struggle with sequences of characters forming computer programmes. This soft factor may greatly affect job rotation and project efficiency.
 
 ![Swamp](/arch/img/we-live-in-a-bloody-swamp.jpg)
 *Listen my son. I have built this software on a swamp. It sank into the swamp. So I built a second one. That sank into the swamp. So I built a third. That burned down, fell over, then sank into the swamp. But the fourth one stayed up. / Monty Python and the Holy IT Architecture* 
 
 But does architecture still matter in the year 2025? This is a pertinent question at a time when more and more coding tasks are being taken over by AI. Is architecture a human domain? If we eliminate humans, will it still be needed? AI never gets tired and, as time goes on, it will probably become cheaper and cheaper. It is unlikely to become mentally ill.
 
-To answer "yes" here, one must assume that AI does not really have comprehension limits. Moreover, code without architecture can easily exceed polynomial complexity in terms of execution paths. Tireless AI could facilitate this growth by producing more and more PRs.
+To answer "yes" here, one must assume that AI does not really have comprehension limits. Furthermore, code without architecture can easily exceed polynomial complexity in terms of execution paths. Tireless AI could facilitate this growth by producing an increasing number of PRs. If we cannot see the limits of AI now, would that still be the case after several iterations?
 
 ![Concerns](/arch/img/concerns.excalidraw.png)
 *So-called clean architecture prioritises good concern separation, i.e. vertical separation into modules or business components and horizontal separation into layers. It treats inbound technical concerns, business logic and outbound technical concerns separately. Each rectangle then represents an easy to comprehend piece of code.*
