@@ -306,6 +306,8 @@ If you are an IT interviewer, consider asking questions to check the knowledge s
 
 To me, it seems that the AI Agent still rewards seniority. We are not yet at the stage where engineering skills can be completely eliminated from software development. As always, and especially on commercial projects, it is highly advisable to proceed with caution. Perhaps in the future one will see the 'plan and execute' technique as 'overengineering', but for now it's still useful to understand how it works.
 
+In subsequent articles, I will describe my journey in detail. I will share more prompts, action plans, and complete Git branches with all the Vibe coding history.
+
 
 [vibe-coding-definition]: https://en.wikipedia.org/wiki/Vibe_coding
 [rbt-home-page]: https://c64lib.github.io/gradle-retro-assembler-plugin/
