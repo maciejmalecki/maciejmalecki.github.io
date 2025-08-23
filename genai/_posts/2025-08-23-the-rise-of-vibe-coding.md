@@ -225,7 +225,10 @@ goattracker, image, spritepad) that can be parallelized
 8. **buildSrc//** - Contains Gradle plugin definitions that need enhancement for flow support
 
 ## Root Cause Hypothesis
-The current architecture treats each task as an independent Gradle task with simple dependencies, but doesn't leverage Gradle's built-in parallelization capabilities. The missing piece is:
+The current architecture treats each task as an 
+independent Gradle task with simple dependencies, but 
+doesn't leverage Gradle's built-in parallelization 
+capabilities. The missing piece is:
 1. **Flow Definition DSL** - A way to define task chains 
 with explicit input/output relationships
 2. **Dependency Graph Analysis** - Logic to analyze which 
