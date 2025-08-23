@@ -31,7 +31,7 @@ In my free time, I do some assembly coding for an outdated machine called the Co
 ![Commodore 64](/cbm/img/commodore64.jpg)
 *That's a Commodore 64 — I've owned one since 1990. The blurry badge proudly reads: 'Personal Computer'.*
 
-The majority of my GitHub repositories are MOS 6502 assembly projects, except for one called [Retro Build Tool](rbt-home-page) (RBT), which is essentially a Gradle build system plugin implemented in the Kotlin language. RBT is simply a Gradle plugin that knows how to build assembly projects for Commodore 64.
+The majority of my GitHub repositories are MOS 6502 assembly projects, except for one called [Retro Build Tool][rbt-home-page] (RBT), which is essentially a Gradle build system plugin implemented in the Kotlin language. RBT is simply a Gradle plugin that knows how to build assembly projects for Commodore 64.
 
 RBT is not a large project; it currently comprises around 13,000 lines of code, but its complexity means it is not straightforward. It is comparable to the typical microservice. If vibe coding works for this project, it should be useful for real-life microservice-based codebases. However, if it fails, it cannot be used as a reliable development method for the majority of existing software.
 
