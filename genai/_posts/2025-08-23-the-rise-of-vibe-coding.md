@@ -5,39 +5,41 @@ categories: genai arch
 pic: /genai/img/YoungFrankenstein.jpg
 ---
 
-With *Vibe Coding* is like with *Agile*: reasonable idea gets ruined by misunderstanding and this is progressing as the hype goes on. Let's try to understand first, what *Vibe Coding* really is.
+With *Vibe Coding* it's the same as with *Agile*: a reasonable idea gets ruined by misunderstanding, and this gets worse as the hype continues. This may happen if an idea is applied blindly, or even forcibly, and the result is far from what was anticipated. Losses instead of profits, and so on. Is it still not too late?
 
-We find an informal definition on [Wikipedia][vibe-coding-definition]. As Vibe Coding we understand a completely different approach to coding, that is, a chatbot based rather than assistant based. Developer no longer works with code directly but rather develop via series of prompts and let the GenAI agent provide an implementation. Developer focus on problem definition, testing and giving feedbacks, also via prompts. If we look at simplified coding assistant anatomy diagram (see below), agent mode (the heart of the vibe coding) is the rightmost, most sophisticated and autonomous component that is finally capable of comprehending written software as a whole.
+First, let's try to understand what *Vibe Coding* really is. We can find an informal definition on [Wikipedia][vibe-coding-definition]. By Vibe Coding, we mean a completely different approach to coding: a chatbot-based approach rather than an assistant-based one. The developer no longer works with the code directly, but rather develops via a series of prompts, letting the GenAI agent provide the implementation. The developer focuses on problem definition, testing, and providing feedback, also via prompts. Looking at the simplified coding assistant anatomy diagram below, we can see that the agent mode (the heart of Vibe Coding) is the most sophisticated and autonomous component on the right, finally capable of comprehending written software as a whole.
 
 ![Anatomy](/genai/img/anatomy-of-coding-assistant.excalidraw.png)
-*Anatomy of AI coding assistant, based on GitHub Copilot example*
+*Anatomy of AI coding assistant, based on GitHub Copilot.*
 
-According to forementioned definition, these few points characterize Vibe Coding:
+According to the aforementioned definition, the following points characterise Vibe Coding:
 
-1. Developer no longer "micromanage" the code.
-2. Developer accepts generated code without full understanding of it.
-3. Developer tests generated code in runtime and in case of misbehaviour, uses further prompting asking AI to fix the problem.
+1. The developer no longer micromanages the code.
+2. The developer accepts the generated code without fully understanding it.
+3. The developer tests the generated code at runtime. If there is any misbehaviour, the developer uses further prompts to ask the AI to fix the problem.
 
-Apparent consequence of such understanding is that it is no longer needed to master a programming knowledge, know details of frameworks or libraries, has ability to model data or algorithms properly, etc. In other words, in order to write an application it is no longer needed to have a software engineer skills.
+The apparent consequence of this approach is that it is no longer necessary to have programming knowledge or to understand the details of frameworks or libraries in order to model data or algorithms properly. In other words, software engineering skills are no longer necessary to write an application.
 
-I have already suggested in [another article](significance-of-architecture), that uncontrolled code generation without a properly established architectural restrictions may lead to rapid quality degradation, exponential growth of complexity and in consequence to technical death of the code base. This is of course something I cannot prove (yet).
+As I have previously suggested in [another article](significance-of-architecture), uncontrolled code generation without properly established architectural restrictions may lead to rapid quality degradation and exponential growth in complexity, consequently resulting in the technical death of the code base. This is, of course, something that I cannot yet prove.
 
-So, having this vague definition, plus an enormous hype wave of everything related to generative AI, we are on the clear path to trivialize yet another IT term, *Vibe Coding*.
+So, with this vague definition and an enormous wave of hype surrounding everything related to generative AI, we are clearly on the path to trivialising yet another IT term: *vibe coding*!
 
 ## The Experiment
 
-In my free time I do some Assembly coding for a rather outdated machine called Commodore 64, that has premiered around 1982. To make my life easier I decided to incorporate some modern stuff such as cross assemblers and CI/CD pipelines.
+In my free time, I do some assembly coding for an outdated machine called the Commodore 64, which premiered around 1982. To make my life easier, I have incorporated modern tools such as cross assemblers and CI/CD pipelines.
 
 ![Commodore 64](/cbm/img/commodore64.jpg)
-*That's Commodore 64, the one I own since 1990. Blurry badge proudly says: "Personal Computer".*
+*That's a Commodore 64 — I've owned one since 1990. The blurry badge proudly reads: 'Personal Computer'.*
 
-So, majority of my GitHub repositories are MOS 6502 assembly projects except one, called [Retro Build Tool][rbt-home-page], which is basically a plugin for Gradle build system, implemented in Kotlin Language.
+The majority of my GitHub repositories are MOS 6502 assembly projects, except for one called [Retro Build Tool](rbt-home-page) (RBT), which is essentially a Gradle build system plugin implemented in the Kotlin language.
 
-RBT is not a big project, it's currently around 13K lines of code but the complexity makes it not trivial. We can assume it is a comparable to the typical microservice. If vibe coding works for this project, it should be useful for a real life microservice based code bases. If it fails, however, it cannot be used as a reliable development method for majority of existing software.
+RBT is not a large project; it currently comprises around 13,000 lines of code, but its complexity means it is not straightforward. It is comparable to the typical microservice. If vibe coding works for this project, it should be useful for real-life microservice-based codebases. However, if it fails, it cannot be used as a reliable development method for the majority of existing software.
 
-One problem I have noticed while working with RBT is, that while it offers a seamless experience when working with simple, straightforward, "one pass" assembly project, it fails miserably in more complex works. That is, once I started working on [Tony: Montezuma's Gold][tony] and wend beyond one-file demo version, I have discovered that RBT now needs to support multi module, multi part project that has two compilation targets: a 5'25" floppy disk and a ROM Cartridge in Magic Desk format. I had to include packing (as assets grow really big) as well as kind of linking, that is, an intermediate compilation step followed by additional compression and then yet another compilation to desired format (disk image/ROM image). I was able to do it within Gradle, by using a lot of custom at hoc tasks and CLI commands, but result was a bit messy, just to say. Other problem was that execution was all sequential and takes ages. It is because I know very little about Gradle API, the documentation is rather cryptic and this is my free time project, and apparently free time is not enough in my case. I know that Gradle can track changes in files and run only tasks that needs to be run and can even parallelize tasks but I had no idea how to write a plugin that uses all these features. So, I've created some entries into my backlog and let them rest for next 6 months.
+One problem I have noticed while working with RBT is that, although it offers a seamless experience with simple, straightforward "one-pass" assembly projects, it struggles with more complex work. For example, when I started working on [Tony: Montezuma's Gold][tony] and moved beyond the one-file demo version, I discovered that RBT now needs to support a multi-module, multi-part project with two compilation targets: a 5.25" floppy disk and a ROM cartridge in Magic Desk format. I had to include packing, as the assets were really big, as well as a kind of linking: an intermediate compilation step followed by additional compression, and then another compilation to the desired format (disk image/ROM image). 
 
-This is a very good topic to start playing with agent and vibe coding, isn't it?
+I was able to do this within Gradle using a lot of custom ad hoc tasks and CLI commands, but the result was rather messy. Another problem was that the execution was sequential and took a long time. This is because I know very little about the Gradle API; the documentation is rather cryptic, and this is a project in my free time. Apparently, free time is not enough in my case! I know Gradle can track file changes and run only the necessary tasks, and it can even parallelise tasks, but I had no idea how to write a plugin that uses all these features. 
+
+So, I created some entries in my backlog and left them for the next six months. This is a very good topic to start playing with agent and vibe coding, isn't it?
 
 ## How do I work?
 
@@ -54,19 +56,19 @@ Additionally, following premium models are available:
 4. Gemini 2.5 Pro
 5. o4-mini (preview)
 
-Gemini and o4 models were in *preview*, however today I have noticed, that Gemini model is now GA. Premium models have limits, all but *o4-mini* costs the same (1x tariff), *o4-mini* is way cheaper (0.33x tariff).
+The Gemini and o4 models were in preview, but I noticed today that the Gemini model is now GA. The premium models have limits; all but the o4-mini cost the same (1x tariff), while the o4-mini is much cheaper (0.33x tariff).
 
-GitHub Copilot also supports instructions file (in markdown format) that can be stored in the project repository and shared across the team (however I don't have any team).
+GitHub Copilot also supports an instructions file in Markdown format that can be stored in the project repository and shared across the team. However, I don't have a team.
 
-I rather prefer a careful examination and don't accept that much risk, therefore I gave up on naive usage of agent. I know that agent mode (as well as other coding agents) are internally implemented as ["plan and execute"][plan-and-execute] agent therefore I have orchestrated my Copilot so that it externalizes the plan into a file that I store in my project repo and use in subsequent iterations of my work with the agent.
+I prefer a careful approach and don't accept much risk; therefore, I gave up on naive usage of the agent. I know that the agent mode (as well as other coding agents) is implemented internally as a ["plan and execute"][plan-and-execute] agent, so I have configured my Copilot to externalise the plan into a file that I store in my project repository and use in subsequent iterations of my work with the agent.
 
-So, my work basically requires three kind of prompts to work:
+So, my work basically requires three kinds of prompts:
 
 1. **User story prompt** specifying the feature that needs to be implemented that results in planning the work and storing the action plan in separate MD file.
 2. **Execution prompt** asking to execute certain points from the action plan.
 3. **Enhancing the plan prompt** asking to extend existing plan with new facts, decisions and points.
 
-To orchestate agent so that it does exactly what I want (plan, execute, enhance, update the plan document and so on) would be a tedious work therefore I use copilot instructions file as a kind of *system prompt*. Let's see at my instructions file:
+It would be tedious to orchestrate the agent so that it does exactly what I want (planning, execution, enhancement, updating the plan document, etc.), therefore I use the copilot instructions file as a kind of system prompt. Let's take a look at my instructions file.
 
 ```markdown
 # Coding guidelines
@@ -95,7 +97,7 @@ At the beginning of each task, prepare a plan for the task. If not specified in 
 5. Next Steps: Outline the next steps for addressing this issue, including specific actions for logging, debugging and documenting. Provide a clear, actionable plan. Number each step and provide a brief rationale for why it's necessary.
 
 After completing your analysis, create a Markdown document with the following structure:
-```markdown
+``markdown
 # Action Plan for [Issue Name]
 
 ## Issue Description
@@ -116,7 +118,8 @@ After completing your analysis, create a Markdown document with the following st
 ## Additional Notes
 [Any other relevant information or considerations]
 Ensure that your action plan is comprehensive, follows a step-by-step approach, and is presented in an easy-to-read Markdown format. The final document should be named .ai/feature-{feature name}-action-plan.md
-```
+``
+
 ## Execute plan
 1. When developer asks for executing plan step, it is always meant to be a step from the *next steps* section of the action plan.
 2. When developer asks for complete plan execution, execute the plan step by step but stop and ask for confirmation before executing each step
@@ -127,16 +130,21 @@ Ensure that your action plan is comprehensive, follows a step-by-step approach, 
 7. If by any reason the step is skipped, it should be marked as skipped in the action plan by adding a ⏭️ right before step name. It should be clearly stated why it was skipped.
 8. Always update action plan with relevant findings during plan execution, such as new questions, new contacts, new codebase parts, etc.
 ```
+*Note: I don't know how to nest Markdown in Markdown, therefore if you decide to reuse my copilot instructions, please replace two backticks (``) with three of them, to get a proper Markdown syntax.*
 
-As you see, you can put a lot of useful information into the instructions file (but remember about LLM limits and try to be short and concise). Key information are included in **General notes on working approach relevant for Agent mode** section. In **Tools** subsection I specify how to use useful tools that are available for the project (that's right, my Gradle plugin project uses Gradle as a build tool itself and the build file contains everything that agent may need to work and verify the results). In **Prepare plan** subsection I specify exactly how the plan should be created and what should be its structure. This is a kind of *one shot* prompting technique, that deliberately covers **User story prompt** (see above). In **Execute plan** I specify exactly how agent should execute the plan and this covers both **Execution prompt** and **Enhancing the plan prompt** (also from above).
+As you can see, you can include a lot of useful information in the instructions file, but bear in mind the LLM limits and aim to be brief and concise. The key information is included in the **General notes on working approach relevant for Agent mode** section.
+
+* In the **Tools** subsection, I explain how to use the useful tools available for the project. That's right — my Gradle plugin project uses Gradle as a build tool itself, and the build file contains everything the agent needs to work and verify the results.
+* In the **Prepare plan** subsection, I explain exactly how the plan should be created and what its structure should be. This is a kind of 'one-shot' prompting technique that deliberately covers the **user story prompt** (see above).
+* In the **Execute plan** subsection, I explain exactly how the agent should execute the plan, which covers both the **Execution prompt** and the **Enhancing the plan prompt** (also mentioned above).
 
 ## Sample prompts
 
-With all preparations already described, I can start *vibe coding* simply by choosing agent mode in Copilot plugin and placing a simple, problem describing prompt:
+Having completed all the preparations described above, I can start vibe coding simply by selecting Agent Mode in the Copilot plugin and entering a prompt that describes the problem.
 
 > Currently, all tasks in the problem are executed sequentially, not leveraging parallelization feature of Gradle. This results in very long build times for complex projects that execute compilation, preprocessing and postprocessing of long projects. Propose a new bounded context named 'flows' that will allow to organize tasks into chains (flows) that can depend on each other (outputs of one flow can feed input of another flows). This new flow mechanism should have a separate, new DSL syntax. Create an action plan.
 
-I use *Claude Sonnet 4* as a model and get the following action plan:
+Using Claude's Sonnet 4 as a model, I came up with the following action plan:
 
 ```markdown
 # Action Plan for Flows Parallelization Enhancement
@@ -234,7 +242,9 @@ The current architecture treats each task as an independent Gradle task with sim
 - **Performance Monitoring**: Include metrics collection to validate performance improvements and identify bottlenecks
 ```
 
-I got a very detailed plan consisting of 15 steps divided into five phases. I got an identification of potentially relevant files and resources. I got a root cause hypothesis that describe why do I need this feature and why current implementation is not good enough for me. Eventually, I have a self reflecting questions showing how broad the context and the scope of thinking for selected model is. At any point I can review this plan, even manually correct it and then use it as an attachment to any interaction with agent mode. Even if I exceed token window, I can create a new conversation, put the plan into the context and continue with much smaller penalty comparing with situation when agent needs to plan the work from scratch.
+I received a very detailed plan consisting of 15 steps, which were divided into five phases. I received an identification of potentially relevant files and resources. I have a root cause hypothesis describing why I need this feature and why the current implementation is not good enough for me. Finally, I have a set of reflective questions showing how broad the context and scope of thinking for the selected model is. 
+
+I can review this plan at any time, manually correct it if necessary, and then use it as an attachment to any interaction with the agent. Even if I exceed the token window, I can create a new conversation, put the plan into context, and continue with a much smaller penalty than if the agent had to plan the work from scratch.
 
 ## Preliminary conclusions
 
@@ -244,15 +254,27 @@ I have successfully implememented three features using this technique:
 2. I have implemented assemble step and integrate it with existing [Kick Assembler task][kick-ass].
 3. I have implemented CLI step allowing to execute arbitrary CLI command in the flow.
 
-I have tested generated code and checked, that it already supports file sensing and differential builds, however, it still does not use parallelization.
+I have tested the generated code and confirmed that it already supports file sensing and differential builds. However, it still does not use parallelisation.
 
-I have spent roughly 12 hours on coding with agent and burned about 25% of my monthly quota of premium tokens (YES!). That's a lot, but mostly I used Claude Sonnet 4 premium model.
+I was able to recover from at least 80% of problems with code generated by the agent via further prompting, either directly in the conversation or, in more complex cases, by enhancing the existing action plan and executing the newly added steps. Occasionally, I had to type 'continue' because the agent exceeded its tool execution limits. On only two or three occasions did I need to manually fix the code, although the agent would most likely have been able to fix this problem itself. The only time I had to give up and discard all changes was when I tried to rely on GPT models only.
+
+Nevertheless, it is advisable to commit to Git frequently, after each iteration, because the agent sometimes performs erratic actions, such as erasing the entire contents of the action plan.
+
+I spent around 12 hours coding with the agent and used about 25% of my monthly premium token quota (yes!). That's a lot, but I mostly used the Claude Sonnet 4 premium model.
 
 ### A rant on models
 
-I have tried different models once I discovered on how fast premium credits gets consumed. I always started with Claude Sonnet models and after a short while I decided to use version 4 from this family, as it seems to be the fastest one. I strongly prefer Claude for planning. Gemini model usually failed to execute but it was the time when it was still in "preview" phase. I falled back to GPT models and was completely appalled by their performance, especially GPT-4o - both models have very limited token window and require restarting conversation quite often, they have huge problems with using tools and capturing their output and GPT models were the only from the set that were prone to hallucinations. The only problem that was capable of executing the plan with good results is *o4-mini*, although execution can be very slow (it's still in *preview*). o4 seems to be a good choice keeping in mind it costs only 30% of Claude models.
+Once I discovered how quickly premium credits get consumed, I tried different models. 
 
-I have some positive experience with GPT-4.1, even with creating a plan with that model, but this still requires a lot of work on my system prompt to be fully useful.
+I always started with any of Claude Sonnet models, but after a while I decided to use version 4, as it seemed to be the fastest. I strongly prefer Claude for planning purposes. 
+
+The Gemini model usually failed to execute, but that was when it was still in the 'preview' phase. 
+
+I fell back to GPT models and was appalled by their performance, especially that of GPT-4o. Both models have a very limited token window, require frequent restarts and have significant issues with tool usage and output capture. GPT models were also prone to hallucinations. 
+
+Other than Claude, the only model capable of executing the plan with good results is o4-mini, although it can be very slow (it's still in preview). o4 seems to be a good choice, especially since it costs only 30% of a Claude model.
+
+I have had some positive experiences with GPT-4.1, including creating plans with that model. However, it still requires a lot of work on my system prompt to be fully useful.
 
 > **Hypothesis:**
 > *GPT-4.1* is an economical approach for simple tasks, *Claude Sonnet 4* + *o4-mini* are best combination for most complex tasks. If you can afford, use *Claude Sonnet 4* solely.
@@ -267,22 +289,22 @@ So my current ranking of models is:
 
 ### A rant on the future
 
-**If you are a software developer, please read this carefully**. Of course can cannot see the future and this is just my opinion, but I think that:
+**If you are a software developer, please read this carefully.** Of course, I cannot see the future, and this is just my opinion, but I think that:
 
-1. Knowledge of multiple programming languages is no longer an advantage. With AI Agent it is sufficient that you know a single language well and rather understand programming paradigm than a concrete syntax. I know Java very well and only a little of Kotlin, and my project is in Kotlin.
-2. Knowledge of multiple frameworks no longer matters. You need to understand the concept (i.e. SPA, IoC, etc) and let AI do the concrete stuff. I don't understand Gradle API to sufficient extent, but AI fills that gap.
-3. Knowledge of alghoritms is no longer a must, but you need to understand what a complexity is if you care about performance or resources. You need to know, how to instruct AI in that matter.
-4. Knowledge about libraries - forget about it - as long as this is a mainstream knowledge, AI will do this for you.
+1. Knowledge of multiple programming languages is no longer advantageous. With the AI Agent, it is sufficient to know a single language well, and to understand programming paradigms rather than concrete syntax. I know Java very well, but only a little Kotlin, despite my project being in Kotlin.
+2. Knowledge of multiple frameworks is irrelevant. You need to understand the concepts (e.g. SPA, IoC) and let AI handle the specifics. I don't understand the Gradle API well enough, but AI fills that gap.
+3. Knowledge of algorithms is no longer essential, but you need to understand complexity if you care about performance or resources. You need to know how to instruct AI in this respect.
+4. Forget about knowledge of libraries — as long as it's mainstream, AI will do it for you.
 
-If you are an IT interviewer, consider asking questions checking knowledge specified in points 1-4.
+If you are an IT interviewer, consider asking questions to check the knowledge specified in points 1–4.
 
 **What do you need to know?**
 
-1. You need to know how to define the problem in natural language. In other words: you need to have some of domain and business analyst skills.
-2. You need to know to define and guard the architecture (as I wrote [here](significance-of-architecture), I don't believe, that architecture lost its significance).
-3. You need to be ready to jump in. That is, at least at the current stage of tool maturity, you need to be able to understand generated code to sufficient extend, just in order to fix it manually.
+1. You need to know how to define the problem using natural language. In other words, you need to possess some domain and business analysis skills.
+2. You need to know how to define and protect the architecture. As I wrote [here](significance-of-architecture), I don't believe that architecture has lost its significance.
+3. You need to be ready to jump in. At the current stage of tool maturity, this means you need to be able to understand the generated code well enough to fix it manually.
 
-To me, it seems that AI Agent still rewards seniority.
+To me, it seems that the AI Agent still rewards seniority. We are not yet at the stage where engineering skills can be completely eliminated from software development. As always, and especially on commercial projects, it is highly advisable to proceed with caution. Perhaps in the future one will see the 'plan and execute' technique as 'overengineering', but for now it's still useful to understand how it works.
 
 
 [vibe-coding-definition]: https://en.wikipedia.org/wiki/Vibe_coding
