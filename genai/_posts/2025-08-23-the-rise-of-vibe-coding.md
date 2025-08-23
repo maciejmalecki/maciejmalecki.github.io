@@ -1,7 +1,7 @@
 ---
 title: The Rise of Vibe Coding
 layout: post
-categories: genai
+categories: genai arch
 pic: /genai/img/YoungFrankenstein.jpg
 ---
 
