@@ -250,10 +250,10 @@ I have spent roughly 12 hours on coding with agent and burned about 25% of my mo
 
 I have tried different models once I discovered on how fast premium credits gets consumed. I always started with Claude Sonnet models and after a short while I decided to use version 4 from this family, as it seems to be the fastest one. I strongly prefer Claude for planning. Gemini model usually failed to execute but it was the time when it was still in "preview" phase. I falled back to GPT models and was completely appalled by their performance, especially GPT-4o - both models have very limited token window and require restarting conversation quite often, they have huge problems with using tools and capturing their output and GPT models were the only from the set that were prone to hallucinations. The only problem that was capable of executing the plan with good results is *o4-mini*, although execution can be very slow (it's still in *preview*). o4 seems to be a good choice keeping in mind it costs only 30% of Claude models.
 
-I have some positive conclusions with GPT-4.1 even with creating a plan with that model, but perhaps this requires much more instructions I need to yet invent.
+I have some positive experience with GPT-4.1, even with creating a plan with that model, but this still requires a lot of work on my system prompt to be fully useful.
 
 > **Hypothesis:**
-> GPT-4.1 is an economical approach for simple tasks, Claude Sonnet 4 + o4-mini are best combination for most complex tasks.
+> *GPT-4.1* is an economical approach for simple tasks, *Claude Sonnet 4* + *o4-mini* are best combination for most complex tasks. If you can afford, use *Claude Sonnet 4* solely.
 
 [vibe-coding-definition]: https://en.wikipedia.org/wiki/Vibe_coding
 [rbt-home-page]: https://c64lib.github.io/gradle-retro-assembler-plugin/
