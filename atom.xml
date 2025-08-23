@@ -4,12 +4,22 @@
  <title>()=>{} | Void's blog</title>
  <link href="https://maciejmalecki.github.io//atom.xml" rel="self"/>
  <id>https://maciejmalecki.github.io/</id>
- <updated>2025-08-23T18:01:45+00:00</updated>
+ <updated>2025-08-23T18:21:05+00:00</updated>
  <author>
    <name></name>
    <uri></uri>
    <email></email>
  </author>
+
+ 
+
+ <entry>
+   <title>The Rise of Vibe Coding</title>
+   <link href="https://maciejmalecki.github.io//the-rise-of-vibe-coding"/>
+   <id>https://maciejmalecki.github.io//the-rise-of-vibe-coding</id>
+   <updated>2025-08-23T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;With &lt;em&gt;Vibe Coding&lt;/em&gt; is like with &lt;em&gt;Agile&lt;/em&gt;: reasonable idea gets ruined by misunderstanding and this is progressing as the hype goes on. Let’s try to understand first, what &lt;em&gt;Vibe Coding&lt;/em&gt; really is.&lt;/p&gt; &lt;p&gt;We find an informal definition on &lt;a href=&quot;https://en.wikipedia.org/wiki/Vibe_coding&quot;&gt;Wikipedia&lt;/a&gt;. As Vibe Coding we understand a completely different approach to...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://maciejmalecki.github.io//assembler-libraries</id>
    <updated>2018-04-26T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Review&#58; New PSU for Commodore 64/128</title>
-   <link href="https://maciejmalecki.github.io//new-psu-for-c64"/>
-   <id>https://maciejmalecki.github.io//new-psu-for-c64</id>
-   <updated>2018-02-04T00:00:00+00:00</updated>
-   <content type="html">&lt;p&gt;Reliability of original C64 CPU has been disputed in community for long time. Commodore had problems with it in the past, plenty of houses were put on fire. Today, over 35 years after first Commodore 64 was produced another issue becomes especially painful: some of bricks decide now to ignore...</content>
  </entry>
 
  

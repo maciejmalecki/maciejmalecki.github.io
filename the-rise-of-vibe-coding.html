@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8E02V5EDF9"></script>
+	<script>
+		var useCookies = (localStorage.getItem('useCookies') === 'true');
+		if (useCookies) {
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-8E02V5EDF9', { 'anonymize_ip': true });
+		}
+	</script>
+	
+
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>The Rise of Vibe Coding</title>
+  <meta name="description" content="t.b.d.">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+</head>
+
+
+<body>
+	<div id="wrap">
+
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/about" title="About">About</a>
+	    
+	  
+	    
+	      <a href="/architecture" title="Architecture">Architecture</a>
+	    
+	  
+	    
+	      <a href="/asm" title="Assembly language">Assembly language</a>
+	    
+	  
+	    
+	  
+	    
+	      <a href="/cbm" title="8bits">8bits</a>
+	    
+	  
+	    
+	      <a href="/genai" title="GenAI">GenAI</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	      <a href="/privacy" title="Privacy">Privacy</a>
+	    
+	  
+	    
+	      <a href="/sh" title="IoT">IoT</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://github.com/maciejmalecki">Github</a>
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/">
+          <h1><code>()=>{}</code></h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="/about" title="About">About</a>
+      
+      
+        
+          <a href="/architecture" title="Architecture">Architecture</a>
+      
+      
+        
+      
+        
+          <a href="/genai" title="GenAI">GenAI</a>
+      
+      
+        
+          <a href="/cbm" title="8bits">8bits</a>
+      
+      
+        
+          <a href="/sh" title="IoT">IoT</a>
+      
+      
+        
+          <a href="/privacy" title="Privacy">Privacy</a>
+      
+      
+      
+      <!-- Nav links -->
+      <a href="https://github.com/maciejmalecki">Github</a>
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+
+		<main>
+
+			<article id="post-page">
+	<h2>The Rise of Vibe Coding</h2>		
+	<time datetime="2025-08-23T00:00:00+00:00" class="by-line">23 Aug 2025</time>
+	<div class="disclaimer">
+		The views and opinions expressed in this blog are solely my own and do not reflect the views, policies, or positions of my employer or any professional organization with which I am affiliated.
+	</div>
+	<div class="content">
+
+		<p>With <em>Vibe Coding</em> is like with <em>Agile</em>: reasonable idea gets ruined by misunderstanding and this is progressing as the hype goes on. Let’s try to understand first, what <em>Vibe Coding</em> really is.</p>
+
+<p>We find an informal definition on <a href="https://en.wikipedia.org/wiki/Vibe_coding">Wikipedia</a>. As Vibe Coding we understand a completely different approach to coding, that is, a chatbot based rather than assistant based. Developer no longer works with code directly but rather develop via series of prompts and let the GenAI agent provide an implementation. Developer focus on problem definition, testing and giving feedbacks, also via prompts. If we look at simplified coding assistant anatomy diagram (see below), agent mode (the heart of the vibe coding) is the rightmost, most sophisticated and autonomous component that is finally capable of comprehending written software as a whole.</p>
+
+<p><img src="/genai/img/anatomy-of-coding-assistant.excalidraw.png" alt="Anatomy" />
+<em>Anatomy of AI coding assistant, based on GitHub Copilot example</em></p>
+
+<p>According to forementioned definition, these few points characterize Vibe Coding:</p>
+
+<ol>
+  <li>Developer no longer “micromanage” the code.</li>
+  <li>Developer accepts generated code without full understanding of it.</li>
+  <li>Developer tests generated code in runtime and in case of misbehaviour, uses further prompting asking AI to fix the problem.</li>
+</ol>
+
+<p>Apparent consequence of such understanding is that it is no longer needed to master a programming knowledge, know details of frameworks or libraries, has ability to model data or algorithms properly, etc. In other words, in order to write an application it is no longer needed to have a software engineer skills.</p>
+
+<p>I have already suggested in <a href="significance-of-architecture">another article</a>, that uncontrolled code generation without a properly established architectural restrictions may lead to rapid quality degradation, exponential growth of complexity and in consequence to technical death of the code base. This is of course something I cannot prove (yet).</p>
+
+<p>So, having this vague definition, plus an enormous hype wave of everything related to generative AI, we are on the clear path to trivialize yet another IT term, <em>Vibe Coding</em>.</p>
+
+<h2 id="the-experiment">The Experiment</h2>
+
+<p>In my free time I do some Assembly coding for a rather outdated machine called Commodore 64, that has premiered around 1982. To make my life easier I decided to incorporate some modern stuff such as cross assemblers and CI/CD pipelines.</p>
+
+<p><img src="/cbm/img/commodore64.jpg" alt="Commodore 64" />
+<em>That’s Commodore 64, the one I own since 1990. Blurry badge proudly says: “Personal Computer”.</em></p>
+
+<p>So, majority of my GitHub repositories are MOS 6502 assembly projects except one, called <a href="https://c64lib.github.io/gradle-retro-assembler-plugin/">Retro Build Tool</a>, which is basically a plugin for Gradle build system, implemented in Kotlin Language.</p>
+
+<p>RBT is not a big project, it’s currently around 13K lines of code but the complexity makes it not trivial. We can assume it is a comparable to the typical microservice. If vibe coding works for this project, it should be useful for a real life microservice based code bases. If it fails, however, it cannot be used as a reliable development method for majority of existing software.</p>
+
+<p>One problem I have noticed while working with RBT is, that while it offers a seamless experience when working with simple, straightforward, “one pass” assembly project, it fails miserably in more complex works. That is, once I started working on <a href="https://monochrome-productions.itch.io/tony">Tony: Montezuma’s Gold</a> and wend beyond one-file demo version, I have discovered that RBT now needs to support multi module, multi part project that has two compilation targets: a 5’25” floppy disk and a ROM Cartridge in Magic Desk format. I had to include packing (as assets grow really big) as well as kind of linking, that is, an intermediate compilation step followed by additional compression and then yet another compilation to desired format (disk image/ROM image). I was able to do it within Gradle, by using a lot of custom at hoc tasks and CLI commands, but result was a bit messy, just to say. Other problem was that execution was all sequential and takes ages. It is because I know very little about Gradle API, the documentation is rather cryptic and this is my free time project, and apparently free time is not enough in my case. I know that Gradle can track changes in files and run only tasks that needs to be run and can even parallelize tasks but I had no idea how to write a plugin that uses all these features. So, I’ve created some entries into my backlog and let them rest for next 6 months.</p>
+
+<p>This is a very good topic to start playing with agent and vibe coding, isn’t it?</p>
+
+<h2 id="how-do-i-work">How do I work?</h2>
+
+<p>I choose GitHub Copilot as a plugin into IntelliJ Ultimate IDE. The tool, as for now, supports code completion (via CODEX model), chat and edits function and, of course, an agent mode.</p>
+
+<p>Agent mode supports following models without limitations (included in the license):</p>
+<ol>
+  <li>GPT-4o</li>
+  <li>GPT-4.1</li>
+</ol>
+
+<p>Additionally, following premium models are available:</p>
+<ol>
+  <li>Claude Sonnet 3.5</li>
+  <li>Claude Sonnet 3.7</li>
+  <li>Claude Sonnet 4</li>
+  <li>Gemini 2.5 Pro</li>
+  <li>o4-mini (preview)</li>
+</ol>
+
+<p>Gemini and o4 models were in <em>preview</em>, however today I have noticed, that Gemini model is now GA. Premium models have limits, all but <em>o4-mini</em> costs the same (1x tariff), <em>o4-mini</em> is way cheaper (0.33x tariff).</p>
+
+<p>GitHub Copilot also supports instructions file (in markdown format) that can be stored in the project repository and shared across the team (however I don’t have any team).</p>
+
+<p>I rather prefer a careful examination and don’t accept that much risk, therefore I gave up on naive usage of agent. I know that agent mode (as well as other coding agents) are internally implemented as <a href="https://langchain-ai.github.io/langgraph/tutorials/plan-and-execute/plan-and-execute/#planning-step">“plan and execute”</a> agent therefore I have orchestrated my Copilot so that it externalizes the plan into a file that I store in my project repo and use in subsequent iterations of my work with the agent.</p>
+
+<p>So, my work basically requires three kind of prompts to work:</p>
+
+<ol>
+  <li><strong>User story prompt</strong> specifying the feature that needs to be implemented that results in planning the work and storing the action plan in separate MD file.</li>
+  <li><strong>Execution prompt</strong> asking to execute certain points from the action plan.</li>
+  <li><strong>Enhancing the plan prompt</strong> asking to extend existing plan with new facts, decisions and points.</li>
+</ol>
+
+<p>To orchestate agent so that it does exactly what I want (plan, execute, enhance, update the plan document and so on) would be a tedious work therefore I use copilot instructions file as a kind of <em>system prompt</em>. Let’s see at my instructions file:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Coding guidelines</span>
+...a place to put your specific guidelines, including architecture guidelines...
+
+<span class="gh"># Testing guidelines</span>
+...a place to put some more details on how test automation is done...
+
+<span class="gh"># General notes on working approach relevant for Agent mode</span>
+<span class="gu">## Tools</span>
+<span class="p">1.</span> We use Powershell so always use syntax of powershell when running commands. In particular do not use <span class="sb">`&amp;&amp;`</span>.
+<span class="p">2.</span> Use <span class="sb">`gradle build`</span> to quickly compile the client code
+<span class="p">3.</span> Use <span class="sb">`gradle test`</span> to run all tests in the client code
+<span class="p">4.</span> use <span class="sb">`gradle spotlessApply`</span> to format the code according to the coding style
+<span class="p">5.</span> always run <span class="sb">`gradle spotlessApply`</span> after creating or editing any source files to ensure the code is formatted correctly
+
+<span class="gu">## Prepare plan</span>
+Always use this approach when user asks in agent mode to create an action plan.
+At the beginning of each task, prepare a plan for the task. If not specified in the user prompt explicitly, ask user for a feature name to name the plan MD file accordingly.<span class="sb">
+
+
+</span><span class="p">1.</span> Identify Relevant Codebase Parts: Based on the issue description and project onboarding document, determine which parts of the codebase are most likely connected to this issue. List and number specific parts of the codebase mentioned in both documents. Explain your reasoning for each.
+<span class="p">2.</span> Hypothesize Root Cause: Based on the information gathered, list potential causes for the issue. Then, choose the most likely cause and explain your reasoning.
+<span class="p">3.</span> Identify Potential Contacts: List names or roles mentioned in the documents that might be helpful to contact for assistance with this issue. For each contact, explain why they would be valuable to consult.
+<span class="p">4.</span> Self-Reflection Questions: Generate a list of questions that should be asked to further investigate and understand the issue. Include both self-reflective questions and questions for others. Number each question as you write it.
+<span class="p">5.</span> Next Steps: Outline the next steps for addressing this issue, including specific actions for logging, debugging and documenting. Provide a clear, actionable plan. Number each step and provide a brief rationale for why it's necessary.
+
+After completing your analysis, create a Markdown document with the following structure:
+<span class="p">```</span><span class="nl">markdown
+</span><span class="gh"># Action Plan for [Issue Name]</span>
+
+<span class="gu">## Issue Description</span>
+[Briefly summarize the issue]
+
+<span class="gu">## Relevant Codebase Parts</span>
+[List and briefly describe the relevant parts of the codebase]
+
+<span class="gu">## Root Cause Hypothesis</span>
+[State and explain your hypothesis]
+
+<span class="gu">## Investigation Questions</span>
+[List self-reflection questions and questions for others]
+
+<span class="gu">## Next Steps</span>
+[Provide a numbered list of actionable steps, including logging and debugging tasks]
+
+<span class="gu">## Additional Notes</span>
+[Any other relevant information or considerations]
+Ensure that your action plan is comprehensive, follows a step-by-step approach, and is presented in an easy-to-read Markdown format. The final document should be named .ai/feature-{feature name}-action-plan.md
+</code></pre></div></div>
+<h2 id="execute-plan">Execute plan</h2>
+<ol>
+  <li>When developer asks for executing plan step, it is always meant to be a step from the <em>next steps</em> section of the action plan.</li>
+  <li>When developer asks for complete plan execution, execute the plan step by step but stop and ask for confirmation before executing each step</li>
+  <li>When developer asks for single step execution, execute only that step</li>
+  <li>When developer asks additionally for some changes, update existing plan with the changes being made</li>
+  <li>Once finishing executing of the step, always mark the step as completed in the action plan by adding a ✅ right before step name.</li>
+  <li>Once finishing executing the whole phase, always mark the phase as completed in the action plan by adding a ✅ right before phase name.</li>
+  <li>If by any reason the step is skipped, it should be marked as skipped in the action plan by adding a ⏭️ right before step name. It should be clearly stated why it was skipped.</li>
+  <li>Always update action plan with relevant findings during plan execution, such as new questions, new contacts, new codebase parts, etc.
+```</li>
+</ol>
+
+<p>As you see, you can put a lot of useful information into the instructions file (but remember about LLM limits and try to be short and concise). Key information are included in <strong>General notes on working approach relevant for Agent mode</strong> section. In <strong>Tools</strong> subsection I specify how to use useful tools that are available for the project (that’s right, my Gradle plugin project uses Gradle as a build tool itself and the build file contains everything that agent may need to work and verify the results). In <strong>Prepare plan</strong> subsection I specify exactly how the plan should be created and what should be its structure. This is a kind of <em>one shot</em> prompting technique, that deliberately covers <strong>User story prompt</strong> (see above). In <strong>Execute plan</strong> I specify exactly how agent should execute the plan and this covers both <strong>Execution prompt</strong> and <strong>Enhancing the plan prompt</strong> (also from above).</p>
+
+<h2 id="sample-prompts">Sample prompts</h2>
+
+<p>With all preparations already described, I can start <em>vibe coding</em> simply by choosing agent mode in Copilot plugin and placing a simple, problem describing prompt:</p>
+
+<blockquote>
+  <p>Currently, all tasks in the problem are executed sequentially, not leveraging parallelization feature of Gradle. This results in very long build times for complex projects that execute compilation, preprocessing and postprocessing of long projects. Propose a new bounded context named ‘flows’ that will allow to organize tasks into chains (flows) that can depend on each other (outputs of one flow can feed input of another flows). This new flow mechanism should have a separate, new DSL syntax. Create an action plan.</p>
+</blockquote>
+
+<p>I use <em>Claude Sonnet 4</em> as a model and get the following action plan:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Action Plan for Flows Parallelization Enhancement</span>
+
+<span class="gu">## Issue Description</span>
+Currently, all tasks in the Retro Assembler Plugin are executed sequentially, not leveraging Gradle's parallelization features. This results in very long build times for complex projects that execute compilation, preprocessing, and postprocessing. The existing <span class="sb">`flows`</span> bounded context exists but lacks implementation. We need to enhance it with a new DSL syntax that allows organizing tasks into chains (flows) that can depend on each other, where outputs of one flow can feed inputs of another flows, enabling parallel execution.
+
+<span class="gu">## Relevant Codebase Parts</span>
+<span class="p">1.</span> <span class="gs">**flows/**</span> - Empty bounded context directory that needs to be populated with domain logic and adapters
+<span class="p">2.</span> <span class="gs">**infra/gradle/src/main/kotlin/com/github/c64lib/gradle/RetroAssemblerPlugin.kt**</span> - Main plugin where tasks are currently registered sequentially
+<span class="p">3.</span> <span class="gs">**shared/gradle//**</span> - Contains existing DSL extensions and task utilities that need to be enhanced
+<span class="p">4.</span> <span class="gs">**compilers/kickass//**</span> - Kick Assembler integration that represents the main compilation flow
+<span class="p">5.</span> <span class="gs">**processors//**</span> - Various processor modules (charpad, goattracker, image, spritepad) that can be parallelized
+<span class="p">6.</span> <span class="gs">**dependencies//**</span> - Dependency resolution that can run in parallel with other tasks
+<span class="p">7.</span> <span class="gs">**emulators/vice//**</span> - Testing execution that depends on compilation outputs
+<span class="p">8.</span> <span class="gs">**buildSrc//**</span> - Contains Gradle plugin definitions that need enhancement for flow support
+
+<span class="gu">## Root Cause Hypothesis</span>
+The current architecture treats each task as an independent Gradle task with simple dependencies, but doesn't leverage Gradle's built-in parallelization capabilities. The missing piece is:
+<span class="p">1.</span> <span class="gs">**Flow Definition DSL**</span> - A way to define task chains with explicit input/output relationships
+<span class="p">2.</span> <span class="gs">**Dependency Graph Analysis**</span> - Logic to analyze which flows can run in parallel
+<span class="p">3.</span> <span class="gs">**Task Orchestration**</span> - Enhanced task registration that respects parallel execution capabilities
+<span class="p">4.</span> <span class="gs">**Resource Management**</span> - Proper handling of shared resources and output artifacts
+
+<span class="gu">## Investigation Questions</span>
+<span class="p">1.</span> What are the current bottlenecks in build execution time?
+<span class="p">2.</span> Which tasks are independent and can run in parallel (e.g., different processors)?
+<span class="p">3.</span> What are the input/output dependencies between different task types?
+<span class="p">4.</span> How should the new DSL syntax look to be intuitive for users?
+<span class="p">5.</span> What Gradle features should we leverage for parallel execution?
+<span class="p">6.</span> How do we maintain backward compatibility with existing build scripts?
+<span class="p">7.</span> What validation is needed to prevent circular dependencies in flows?
+<span class="p">8.</span> How do we handle error propagation in parallel flows?
+<span class="p">9.</span> What monitoring/logging is needed for parallel execution debugging?
+<span class="p">10.</span> How do we test the parallel execution scenarios effectively?
+
+<span class="gu">## Next Steps</span>
+
+<span class="gu">### Phase 1: Domain Model Design (Steps 1-3)</span>
+<span class="p">1.</span> <span class="gs">**Design Flow Domain Model**</span> - Create core domain entities for Flow, FlowStep, FlowDependency, and FlowExecutor in the flows domain
+<span class="p">   -</span> Rationale: Establishes the foundational business logic for flow management
+<span class="p">
+2.</span> <span class="gs">**Define Flow DSL Syntax**</span> - Design the Kotlin DSL syntax for defining flows in build.gradle.kts files
+<span class="p">   -</span> Rationale: Users need an intuitive way to define parallel execution flows
+<span class="p">
+3.</span> <span class="gs">**Create Flow Dependency Graph**</span> - Implement logic to build and validate dependency graphs between flows
+<span class="p">   -</span> Rationale: Essential for determining which flows can execute in parallel
+
+<span class="gu">### Phase 2: Core Implementation (Steps 4-7)</span>
+<span class="p">4.</span> <span class="gs">**Implement Flow Domain Layer**</span> - Build the core business logic for flow execution and dependency management
+<span class="p">   -</span> Rationale: Contains the parallelization logic independent of Gradle specifics
+<span class="p">
+5.</span> <span class="gs">**Create Gradle Adapter Layer**</span> - Build adapters that integrate flow domain with Gradle's task system
+<span class="p">   -</span> Rationale: Bridges domain logic with Gradle's parallel execution capabilities
+<span class="p">
+6.</span> <span class="gs">**Enhance Plugin Registration**</span> - Update RetroAssemblerPlugin to register flows instead of individual tasks
+<span class="p">   -</span> Rationale: Enables the plugin to orchestrate parallel execution
+<span class="p">
+7.</span> <span class="gs">**Implement Flow DSL Extension**</span> - Create Gradle extensions that provide the flow DSL to build scripts
+<span class="p">   -</span> Rationale: Provides user-facing API for defining flows
+
+<span class="gu">### Phase 3: Integration and Testing (Steps 8-10)</span>
+<span class="p">8.</span> <span class="gs">**Create Integration Tests**</span> - Build comprehensive tests for parallel flow execution scenarios
+<span class="p">   -</span> Rationale: Ensures parallel execution works correctly and safely
+<span class="p">
+9.</span> <span class="gs">**Update Existing Task Implementations**</span> - Migrate existing processors and compilers to use flow system
+<span class="p">   -</span> Rationale: Leverages new parallelization for existing functionality
+<span class="p">
+10.</span> <span class="gs">**Performance Benchmarking**</span> - Implement benchmarks to measure parallelization improvements
+<span class="p">    -</span> Rationale: Validates that the changes actually improve build performance
+
+<span class="gu">### Phase 4: Documentation and Release (Steps 11-13)</span>
+<span class="p">11.</span> <span class="gs">**Update Documentation**</span> - Enhance AsciiDoctor documentation with flow DSL examples and migration guide
+<span class="p">    -</span> Rationale: Users need clear guidance on using the new parallelization features
+<span class="p">
+12.</span> <span class="gs">**Update CHANGES.adoc**</span> - Document the new flow parallelization feature and breaking changes
+<span class="p">    -</span> Rationale: Maintains project change log as per guidelines
+<span class="p">
+13.</span> <span class="gs">**Create Migration Examples**</span> - Build example projects showing before/after flow definitions
+<span class="p">    -</span> Rationale: Helps users adopt the new parallelization features
+
+<span class="gu">### Phase 5: Advanced Features (Steps 14-15)</span>
+<span class="p">14.</span> <span class="gs">**Implement Flow Monitoring**</span> - Add logging and metrics for parallel execution debugging
+<span class="p">    -</span> Rationale: Essential for troubleshooting parallel execution issues
+<span class="p">
+15.</span> <span class="gs">**Add Flow Validation**</span> - Implement compile-time validation for flow definitions and dependencies
+<span class="p">    -</span> Rationale: Prevents runtime errors from misconfigured flows
+
+<span class="gu">## Additional Notes</span>
+<span class="p">-</span> <span class="gs">**Backward Compatibility**</span>: The implementation should maintain compatibility with existing build scripts while providing migration path to flows
+<span class="p">-</span> <span class="gs">**Error Handling**</span>: Parallel execution requires robust error handling and propagation mechanisms
+<span class="p">-</span> <span class="gs">**Resource Contention**</span>: Consider file system and memory resource management for parallel tasks
+<span class="p">-</span> <span class="gs">**Testing Strategy**</span>: Focus on BDD-style tests using Kotest's Given/When/Then DSL as per project guidelines
+<span class="p">-</span> <span class="gs">**Gradle Integration**</span>: Leverage Gradle's built-in parallel execution features rather than implementing custom threading
+<span class="p">-</span> <span class="gs">**Performance Monitoring**</span>: Include metrics collection to validate performance improvements and identify bottlenecks
+</code></pre></div></div>
+
+<p>I got a very detailed plan consisting of 15 steps divided into five phases. I got an identification of potentially relevant files and resources. I got a root cause hypothesis that describe why do I need this feature and why current implementation is not good enough for me. Eventually, I have a self reflecting questions showing how broad the context and the scope of thinking for selected model is. At any point I can review this plan, even manually correct it and then use it as an attachment to any interaction with agent mode. Even if I exceed token window, I can create a new conversation, put the plan into the context and continue with much smaller penalty comparing with situation when agent needs to plan the work from scratch.</p>
+
+<h2 id="preliminary-conclusions">Preliminary conclusions</h2>
+
+<p>I have successfully implememented three features using this technique:</p>
+
+<ol>
+  <li>I have prototyped flow DSL and created placeholders for all types of flow steps that I would need.</li>
+  <li>I have implemented assemble step and integrate it with existing <a href="https://theweb.dk/KickAssembler/Main.html#frontpage">Kick Assembler task</a>.</li>
+  <li>I have implemented CLI step allowing to execute arbitrary CLI command in the flow.</li>
+</ol>
+
+<p>I have tested generated code and checked, that it already supports file sensing and differential builds, however, it still does not use parallelization.</p>
+
+<p>I have spent roughly 12 hours on coding with agent and burned about 25% of my monthly quota of premium tokens (YES!). That’s a lot, but mostly I used Claude Sonnet 4 premium model.</p>
+
+<h3 id="a-rant-on-models">A rant on models</h3>
+
+<p>I have tried different models once I discovered on how fast premium credits gets consumed. I always started with Claude Sonnet models and after a short while I decided to use version 4 from this family, as it seems to be the fastest one. I strongly prefer Claude for planning. Gemini model usually failed to execute but it was the time when it was still in “preview” phase. I falled back to GPT models and was completely appalled by their performance, especially GPT-4o - both models have very limited token window and require restarting conversation quite often, they have huge problems with using tools and capturing their output and GPT models were the only from the set that were prone to hallucinations. The only problem that was capable of executing the plan with good results is <em>o4-mini</em>, although execution can be very slow (it’s still in <em>preview</em>). o4 seems to be a good choice keeping in mind it costs only 30% of Claude models.</p>
+
+<p>I have some positive experience with GPT-4.1, even with creating a plan with that model, but this still requires a lot of work on my system prompt to be fully useful.</p>
+
+<blockquote>
+  <p><strong>Hypothesis:</strong>
+<em>GPT-4.1</em> is an economical approach for simple tasks, <em>Claude Sonnet 4</em> + <em>o4-mini</em> are best combination for most complex tasks. If you can afford, use <em>Claude Sonnet 4</em> solely.</p>
+</blockquote>
+
+<p>So my current ranking of models is:</p>
+
+<ol>
+  <li>Claude Sonnet 4 (3.7, 3.5) - best</li>
+  <li>o4-mini (preview) - ok</li>
+  <li>GPT-4.1 - acceptable for simple tasks</li>
+  <li>GPT-4o - don’t use it</li>
+  <li>Gemini 2.5 Pro - no idea, preview version usually didn’t work</li>
+</ol>
+
+<h3 id="a-rant-on-the-future">A rant on the future</h3>
+
+<p><strong>If you are a software developer, please read this carefully</strong>. Of course can cannot see the future and this is just my opinion, but I think that:</p>
+
+<ol>
+  <li>Knowledge of multiple programming languages is no longer an advantage. With AI Agent it is sufficient that you know a single language well and rather understand programming paradigm than a concrete syntax. I know Java very well and only a little of Kotlin, and my project is in Kotlin.</li>
+  <li>Knowledge of multiple frameworks no longer matters. You need to understand the concept (i.e. SPA, IoC, etc) and let AI do the concrete stuff. I don’t understand Gradle API to sufficient extent, but AI fills that gap.</li>
+  <li>Knowledge of alghoritms is no longer a must, but you need to understand what a complexity is if you care about performance or resources. You need to know, how to instruct AI in that matter.</li>
+  <li>Knowledge about libraries - forget about it - as long as this is a mainstream knowledge, AI will do this for you.</li>
+</ol>
+
+<p>If you are an IT interviewer, consider asking questions checking knowledge specified in points 1-4.</p>
+
+<p><strong>What do you need to know?</strong></p>
+
+<ol>
+  <li>You need to know how to define the problem in natural language. In other words: you need to have some of domain and business analyst skills.</li>
+  <li>You need to know to define and guard the architecture (as I wrote <a href="significance-of-architecture">here</a>, I don’t believe, that architecture lost its significance).</li>
+  <li>You need to be ready to jump in. That is, at least at the current stage of tool maturity, you need to be able to understand generated code to sufficient extend, just in order to fix it manually.</li>
+</ol>
+
+<p>To me, it seems that AI Agent still rewards seniority.</p>
+
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+
+		  <!-- Pagination links -->
+      
+
+	  </div>
+
+	    <!-- Footer -->
+	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-08-23 18:21</span></footer>
+
+
+      <div id="gdpr" style="display: none;">
+        <p>
+          This web page uses cookies to track anonymous user activities. By continuing using this site
+          or by closing this banner you indicate your consent to use these cookies.
+          You can change settings, i.e. disable user tracking on <a href="privacy.html">privacy</a> page.
+        </p>
+        <button id="gdprClose">Close</button>
+      </div>
+
+	    <!-- Script -->
+      <script src="/js/main.js"></script>	
+
+
+	</div>
+
+</body>
+</html>
