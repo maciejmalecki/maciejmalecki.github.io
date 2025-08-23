@@ -31,7 +31,7 @@ In my free time, I do some assembly coding for an outdated machine called the Co
 ![Commodore 64](/cbm/img/commodore64.jpg)
 *That's a Commodore 64 — I've owned one since 1990. The blurry badge proudly reads: 'Personal Computer'.*
 
-The majority of my GitHub repositories are MOS 6502 assembly projects, except for one called [Retro Build Tool](rbt-home-page) (RBT), which is essentially a Gradle build system plugin implemented in the Kotlin language.
+The majority of my GitHub repositories are MOS 6502 assembly projects, except for one called [Retro Build Tool](rbt-home-page) (RBT), which is essentially a Gradle build system plugin implemented in the Kotlin language. RBT is simply a Gradle plugin that knows how to build assembly projects for Commodore 64.
 
 RBT is not a large project; it currently comprises around 13,000 lines of code, but its complexity means it is not straightforward. It is comparable to the typical microservice. If vibe coding works for this project, it should be useful for real-life microservice-based codebases. However, if it fails, it cannot be used as a reliable development method for the majority of existing software.
 
@@ -72,31 +72,60 @@ It would be tedious to orchestrate the agent so that it does exactly what I want
 
 ```markdown
 # Coding guidelines
-...a place to put your specific guidelines, including architecture guidelines...
+...a place to put your specific guidelines, 
+including architecture guidelines...
 
 # Testing guidelines
-...a place to put some more details on how test automation is done...
+...a place to put some more details on how 
+test automation is done...
 
 # General notes on working approach relevant for Agent mode
 ## Tools
-1. We use Powershell so always use syntax of powershell when running commands. In particular do not use `&&`.
+1. We use Powershell so always use syntax of powershell
+ when running commands. In particular do not use `&&`.
 2. Use `gradle build` to quickly compile the client code
 3. Use `gradle test` to run all tests in the client code
-4. use `gradle spotlessApply` to format the code according to the coding style
-5. always run `gradle spotlessApply` after creating or editing any source files to ensure the code is formatted correctly
+4. use `gradle spotlessApply` to format the code according
+ to the coding style
+5. always run `gradle spotlessApply` after creating or 
+editing any source files to ensure the code is formatted 
+correctly
 
 ## Prepare plan
-Always use this approach when user asks in agent mode to create an action plan.
-At the beginning of each task, prepare a plan for the task. If not specified in the user prompt explicitly, ask user for a feature name to name the plan MD file accordingly.
+Always use this approach when user asks in agent mode to 
+create an action plan.
+At the beginning of each task, prepare a plan for the 
+task. If not specified in the user prompt explicitly, ask 
+user for a feature name to name the plan MD file 
+accordingly.
 
 
-1. Identify Relevant Codebase Parts: Based on the issue description and project onboarding document, determine which parts of the codebase are most likely connected to this issue. List and number specific parts of the codebase mentioned in both documents. Explain your reasoning for each.
-2. Hypothesize Root Cause: Based on the information gathered, list potential causes for the issue. Then, choose the most likely cause and explain your reasoning.
-3. Identify Potential Contacts: List names or roles mentioned in the documents that might be helpful to contact for assistance with this issue. For each contact, explain why they would be valuable to consult.
-4. Self-Reflection Questions: Generate a list of questions that should be asked to further investigate and understand the issue. Include both self-reflective questions and questions for others. Number each question as you write it.
-5. Next Steps: Outline the next steps for addressing this issue, including specific actions for logging, debugging and documenting. Provide a clear, actionable plan. Number each step and provide a brief rationale for why it's necessary.
+1. Identify Relevant Codebase Parts: Based on the issue
+ description and project onboarding document, determine 
+ which parts of the codebase are most likely connected to 
+ this issue. List and number specific parts of the 
+ codebase mentioned in both documents. Explain your 
+ reasoning for each.
+2. Hypothesize Root Cause: Based on the information 
+gathered, list potential causes for the issue. Then, 
+choose the most likely cause and explain your reasoning.
+3. Identify Potential Contacts: List names or roles 
+mentioned in the documents that might be helpful to 
+contact for assistance with this issue. For each contact, 
+explain why they would be valuable to consult.
+4. Self-Reflection Questions: Generate a list of questions 
+that should be asked to further investigate and understand
+ the issue. Include both self-reflective questions and 
+ questions for others. Number each question as you write 
+ it.
+5. Next Steps: Outline the next steps for addressing this 
+issue, including specific actions for logging, debugging 
+and documenting. Provide a clear, actionable plan. Number 
+each step and provide a brief rationale for why it's 
+necessary.
 
-After completing your analysis, create a Markdown document with the following structure:
+After completing your analysis, create a Markdown document 
+with the following structure:
 ``markdown
 # Action Plan for [Issue Name]
 
@@ -117,18 +146,36 @@ After completing your analysis, create a Markdown document with the following st
 
 ## Additional Notes
 [Any other relevant information or considerations]
-Ensure that your action plan is comprehensive, follows a step-by-step approach, and is presented in an easy-to-read Markdown format. The final document should be named .ai/feature-{feature name}-action-plan.md
+Ensure that your action plan is comprehensive, follows a 
+step-by-step approach, and is presented in an easy-to-read 
+Markdown format. The final document should be named .ai/
+feature-{feature name}-action-plan.md
 ``
 
 ## Execute plan
-1. When developer asks for executing plan step, it is always meant to be a step from the *next steps* section of the action plan.
-2. When developer asks for complete plan execution, execute the plan step by step but stop and ask for confirmation before executing each step
-3. When developer asks for single step execution, execute only that step
-4. When developer asks additionally for some changes, update existing plan with the changes being made
-5. Once finishing executing of the step, always mark the step as completed in the action plan by adding a ✅ right before step name.
-6. Once finishing executing the whole phase, always mark the phase as completed in the action plan by adding a ✅ right before phase name.
-7. If by any reason the step is skipped, it should be marked as skipped in the action plan by adding a ⏭️ right before step name. It should be clearly stated why it was skipped.
-8. Always update action plan with relevant findings during plan execution, such as new questions, new contacts, new codebase parts, etc.
+1. When developer asks for executing plan step, it is 
+always meant to be a step from the *next steps* section of 
+the action plan.
+2. When developer asks for complete plan execution, 
+execute the plan step by step but stop and ask for 
+confirmation before executing each step
+3. When developer asks for single step execution, execute 
+only that step
+4. When developer asks additionally for some changes, 
+update existing plan with the changes being made
+5. Once finishing executing of the step, always mark the 
+step as completed in the action plan by adding a ✅ right 
+before step name.
+6. Once finishing executing the whole phase, always mark 
+the phase as completed in the action plan by adding a ✅ 
+right before phase name.
+7. If by any reason the step is skipped, it should be 
+marked as skipped in the action plan by adding a ⏭️ right 
+before step name. It should be clearly stated why it was 
+skipped.
+8. Always update action plan with relevant findings during 
+plan execution, such as new questions, new contacts, new 
+codebase parts, etc.
 ```
 *Note: I don't know how to nest Markdown in Markdown, therefore if you decide to reuse my copilot instructions, please replace two backticks (``) with three of them, to get a proper Markdown syntax.*
 
@@ -150,96 +197,164 @@ Using Claude's Sonnet 4 as a model, I came up with the following action plan:
 # Action Plan for Flows Parallelization Enhancement
 
 ## Issue Description
-Currently, all tasks in the Retro Assembler Plugin are executed sequentially, not leveraging Gradle's parallelization features. This results in very long build times for complex projects that execute compilation, preprocessing, and postprocessing. The existing `flows` bounded context exists but lacks implementation. We need to enhance it with a new DSL syntax that allows organizing tasks into chains (flows) that can depend on each other, where outputs of one flow can feed inputs of another flows, enabling parallel execution.
+Currently, all tasks in the Retro Assembler Plugin are 
+executed sequentially, not leveraging Gradle's 
+parallelization features. This results in very long build
+ times for complex projects that execute compilation, 
+ preprocessing, and postprocessing. The existing `flows` 
+ bounded context exists but lacks implementation. We need 
+ to enhance it with a new DSL syntax that allows 
+ organizing tasks into chains (flows) that can depend on 
+ each other, where outputs of one flow can feed inputs of 
+ another flows, enabling parallel execution.
 
 ## Relevant Codebase Parts
-1. **flows/** - Empty bounded context directory that needs to be populated with domain logic and adapters
-2. **infra/gradle/src/main/kotlin/com/github/c64lib/gradle/RetroAssemblerPlugin.kt** - Main plugin where tasks are currently registered sequentially
-3. **shared/gradle//** - Contains existing DSL extensions and task utilities that need to be enhanced
-4. **compilers/kickass//** - Kick Assembler integration that represents the main compilation flow
-5. **processors//** - Various processor modules (charpad, goattracker, image, spritepad) that can be parallelized
+1. **flows/** - Empty bounded context directory that needs 
+to be populated with domain logic and adapters
+2. **infra/gradle/src/main/kotlin/com/github/c64lib/gradle/RetroAssemblerPlugin.kt** 
+- Main plugin where tasks are currently registered 
+sequentially
+3. **shared/gradle//** - Contains existing DSL extensions 
+and task utilities that need to be enhanced
+4. **compilers/kickass//** - Kick Assembler integration 
+that represents the main compilation flow
+5. **processors//** - Various processor modules (charpad, 
+goattracker, image, spritepad) that can be parallelized
 6. **dependencies//** - Dependency resolution that can run in parallel with other tasks
 7. **emulators/vice//** - Testing execution that depends on compilation outputs
 8. **buildSrc//** - Contains Gradle plugin definitions that need enhancement for flow support
 
 ## Root Cause Hypothesis
 The current architecture treats each task as an independent Gradle task with simple dependencies, but doesn't leverage Gradle's built-in parallelization capabilities. The missing piece is:
-1. **Flow Definition DSL** - A way to define task chains with explicit input/output relationships
-2. **Dependency Graph Analysis** - Logic to analyze which flows can run in parallel
-3. **Task Orchestration** - Enhanced task registration that respects parallel execution capabilities
-4. **Resource Management** - Proper handling of shared resources and output artifacts
+1. **Flow Definition DSL** - A way to define task chains 
+with explicit input/output relationships
+2. **Dependency Graph Analysis** - Logic to analyze which 
+flows can run in parallel
+3. **Task Orchestration** - Enhanced task registration 
+that respects parallel execution capabilities
+4. **Resource Management** - Proper handling of shared 
+resources and output artifacts
 
 ## Investigation Questions
-1. What are the current bottlenecks in build execution time?
-2. Which tasks are independent and can run in parallel (e.g., different processors)?
-3. What are the input/output dependencies between different task types?
-4. How should the new DSL syntax look to be intuitive for users?
-5. What Gradle features should we leverage for parallel execution?
-6. How do we maintain backward compatibility with existing build scripts?
-7. What validation is needed to prevent circular dependencies in flows?
+1. What are the current bottlenecks in build execution 
+time?
+2. Which tasks are independent and can run in parallel (e.g.
+, different processors)?
+3. What are the input/output dependencies between 
+different task types?
+4. How should the new DSL syntax look to be intuitive for 
+users?
+5. What Gradle features should we leverage for parallel 
+execution?
+6. How do we maintain backward compatibility with existing 
+build scripts?
+7. What validation is needed to prevent circular 
+dependencies in flows?
 8. How do we handle error propagation in parallel flows?
-9. What monitoring/logging is needed for parallel execution debugging?
-10. How do we test the parallel execution scenarios effectively?
+9. What monitoring/logging is needed for parallel 
+execution debugging?
+10. How do we test the parallel execution scenarios 
+effectively?
 
 ## Next Steps
 
 ### Phase 1: Domain Model Design (Steps 1-3)
-1. **Design Flow Domain Model** - Create core domain entities for Flow, FlowStep, FlowDependency, and FlowExecutor in the flows domain
-   - Rationale: Establishes the foundational business logic for flow management
+1. **Design Flow Domain Model** - Create core domain 
+entities for Flow, FlowStep, FlowDependency, and 
+FlowExecutor in the flows domain
+   - Rationale: Establishes the foundational business 
+   logic for flow management
 
-2. **Define Flow DSL Syntax** - Design the Kotlin DSL syntax for defining flows in build.gradle.kts files
-   - Rationale: Users need an intuitive way to define parallel execution flows
+2. **Define Flow DSL Syntax** - Design the Kotlin DSL 
+syntax for defining flows in build.gradle.kts files
+   - Rationale: Users need an intuitive way to define 
+   parallel execution flows
 
-3. **Create Flow Dependency Graph** - Implement logic to build and validate dependency graphs between flows
-   - Rationale: Essential for determining which flows can execute in parallel
+3. **Create Flow Dependency Graph** - Implement logic to 
+build and validate dependency graphs between flows
+   - Rationale: Essential for determining which flows can 
+   execute in parallel
 
 ### Phase 2: Core Implementation (Steps 4-7)
-4. **Implement Flow Domain Layer** - Build the core business logic for flow execution and dependency management
-   - Rationale: Contains the parallelization logic independent of Gradle specifics
+4. **Implement Flow Domain Layer** - Build the core 
+business logic for flow execution and dependency management
+   - Rationale: Contains the parallelization logic 
+   independent of Gradle specifics
 
-5. **Create Gradle Adapter Layer** - Build adapters that integrate flow domain with Gradle's task system
-   - Rationale: Bridges domain logic with Gradle's parallel execution capabilities
+5. **Create Gradle Adapter Layer** - Build adapters that 
+integrate flow domain with Gradle's task system
+   - Rationale: Bridges domain logic with Gradle's 
+   parallel execution capabilities
 
-6. **Enhance Plugin Registration** - Update RetroAssemblerPlugin to register flows instead of individual tasks
-   - Rationale: Enables the plugin to orchestrate parallel execution
+6. **Enhance Plugin Registration** - Update 
+RetroAssemblerPlugin to register flows instead of 
+individual tasks
+   - Rationale: Enables the plugin to orchestrate parallel 
+   execution
 
-7. **Implement Flow DSL Extension** - Create Gradle extensions that provide the flow DSL to build scripts
+7. **Implement Flow DSL Extension** - Create Gradle 
+extensions that provide the flow DSL to build scripts
    - Rationale: Provides user-facing API for defining flows
 
 ### Phase 3: Integration and Testing (Steps 8-10)
-8. **Create Integration Tests** - Build comprehensive tests for parallel flow execution scenarios
-   - Rationale: Ensures parallel execution works correctly and safely
+8. **Create Integration Tests** - Build comprehensive 
+tests for parallel flow execution scenarios
+   - Rationale: Ensures parallel execution works correctly 
+   and safely
 
-9. **Update Existing Task Implementations** - Migrate existing processors and compilers to use flow system
-   - Rationale: Leverages new parallelization for existing functionality
+9. **Update Existing Task Implementations** - Migrate 
+existing processors and compilers to use flow system
+   - Rationale: Leverages new parallelization for existing 
+   functionality
 
-10. **Performance Benchmarking** - Implement benchmarks to measure parallelization improvements
-    - Rationale: Validates that the changes actually improve build performance
+10. **Performance Benchmarking** - Implement benchmarks to 
+measure parallelization improvements
+    - Rationale: Validates that the changes actually 
+    improve build performance
 
 ### Phase 4: Documentation and Release (Steps 11-13)
-11. **Update Documentation** - Enhance AsciiDoctor documentation with flow DSL examples and migration guide
-    - Rationale: Users need clear guidance on using the new parallelization features
+11. **Update Documentation** - Enhance AsciiDoctor 
+documentation with flow DSL examples and migration guide
+    - Rationale: Users need clear guidance on using the 
+    new parallelization features
 
-12. **Update CHANGES.adoc** - Document the new flow parallelization feature and breaking changes
-    - Rationale: Maintains project change log as per guidelines
+12. **Update CHANGES.adoc** - Document the new flow 
+parallelization feature and breaking changes
+    - Rationale: Maintains project change log as per 
+    guidelines
 
-13. **Create Migration Examples** - Build example projects showing before/after flow definitions
-    - Rationale: Helps users adopt the new parallelization features
+13. **Create Migration Examples** - Build example projects 
+showing before/after flow definitions
+    - Rationale: Helps users adopt the new parallelization 
+    features
 
 ### Phase 5: Advanced Features (Steps 14-15)
-14. **Implement Flow Monitoring** - Add logging and metrics for parallel execution debugging
-    - Rationale: Essential for troubleshooting parallel execution issues
+14. **Implement Flow Monitoring** - Add logging and 
+metrics for parallel execution debugging
+    - Rationale: Essential for troubleshooting parallel 
+    execution issues
 
-15. **Add Flow Validation** - Implement compile-time validation for flow definitions and dependencies
-    - Rationale: Prevents runtime errors from misconfigured flows
+15. **Add Flow Validation** - Implement compile-time 
+validation for flow definitions and dependencies
+    - Rationale: Prevents runtime errors from 
+    misconfigured flows
 
 ## Additional Notes
-- **Backward Compatibility**: The implementation should maintain compatibility with existing build scripts while providing migration path to flows
-- **Error Handling**: Parallel execution requires robust error handling and propagation mechanisms
-- **Resource Contention**: Consider file system and memory resource management for parallel tasks
-- **Testing Strategy**: Focus on BDD-style tests using Kotest's Given/When/Then DSL as per project guidelines
-- **Gradle Integration**: Leverage Gradle's built-in parallel execution features rather than implementing custom threading
-- **Performance Monitoring**: Include metrics collection to validate performance improvements and identify bottlenecks
+- **Backward Compatibility**: The implementation should 
+maintain compatibility with existing build scripts while 
+providing migration path to flows
+- **Error Handling**: Parallel execution requires robust 
+error handling and propagation mechanisms
+- **Resource Contention**: Consider file system and memory 
+resource management for parallel tasks
+- **Testing Strategy**: Focus on BDD-style tests using 
+Kotest's Given/When/Then DSL as per project guidelines
+- **Gradle Integration**: Leverage Gradle's built-in 
+parallel execution features rather than implementing 
+custom threading
+- **Performance Monitoring**: Include metrics collection 
+to validate performance improvements and identify 
+bottlenecks
 ```
 
 I received a very detailed plan consisting of 15 steps, which were divided into five phases. I received an identification of potentially relevant files and resources. I have a root cause hypothesis describing why I need this feature and why the current implementation is not good enough for me. Finally, I have a set of reflective questions showing how broad the context and scope of thinking for the selected model is. 
@@ -302,7 +417,7 @@ So my current ranking of models is:
 3. Knowledge of algorithms is no longer essential, but you need to understand complexity if you care about performance or resources. You need to know how to instruct AI in this respect.
 4. Forget about knowledge of libraries — as long as it's mainstream, AI will do it for you.
 
-If you are an IT interviewer, consider asking questions to check the knowledge specified in points 1–4.
+If you are an IT interviewer, consider points 1-4 and rethink the questions you used to ask.
 
 **What do you need to know?**
 
@@ -310,7 +425,7 @@ If you are an IT interviewer, consider asking questions to check the knowledge s
 2. You need to know how to define and protect the architecture. As I wrote [here](significance-of-architecture), I don't believe that architecture has lost its significance.
 3. You need to be ready to jump in. At the current stage of tool maturity, this means you need to be able to understand the generated code well enough to fix it manually.
 
-To me, it seems that the AI Agent still rewards seniority. We are not yet at the stage where engineering skills can be completely eliminated from software development. As always, and especially on commercial projects, it is highly advisable to proceed with caution. Perhaps in the future one will see the 'plan and execute' technique as 'overengineering', but for now it's still useful to understand how it works.
+To me, it seems that the AI Agent still rewards seniority. We are not yet at the stage where engineering skills can be completely eliminated from software development. As always, and especially on commercial projects, it is highly advisable to proceed with caution. Perhaps in the future one will see the "plan and execute" technique as "prompt overengineering", but for now it's still useful to understand how it works.
 
 In subsequent articles, I will describe my journey in detail. I will share more prompts, action plans, and complete Git branches with all the Vibe coding history.
 
