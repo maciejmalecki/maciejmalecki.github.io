@@ -248,12 +248,42 @@ I have tested generated code and checked, that it already supports file sensing 
 
 I have spent roughly 12 hours on coding with agent and burned about 25% of my monthly quota of premium tokens (YES!). That's a lot, but mostly I used Claude Sonnet 4 premium model.
 
+### A rant on models
+
 I have tried different models once I discovered on how fast premium credits gets consumed. I always started with Claude Sonnet models and after a short while I decided to use version 4 from this family, as it seems to be the fastest one. I strongly prefer Claude for planning. Gemini model usually failed to execute but it was the time when it was still in "preview" phase. I falled back to GPT models and was completely appalled by their performance, especially GPT-4o - both models have very limited token window and require restarting conversation quite often, they have huge problems with using tools and capturing their output and GPT models were the only from the set that were prone to hallucinations. The only problem that was capable of executing the plan with good results is *o4-mini*, although execution can be very slow (it's still in *preview*). o4 seems to be a good choice keeping in mind it costs only 30% of Claude models.
 
 I have some positive experience with GPT-4.1, even with creating a plan with that model, but this still requires a lot of work on my system prompt to be fully useful.
 
 > **Hypothesis:**
 > *GPT-4.1* is an economical approach for simple tasks, *Claude Sonnet 4* + *o4-mini* are best combination for most complex tasks. If you can afford, use *Claude Sonnet 4* solely.
+
+So my current ranking of models is:
+
+1. Claude Sonnet 4 (3.7, 3.5) - best
+2. o4-mini (preview) - ok
+3. GPT-4.1 - acceptable for simple tasks
+4. GPT-4o - don't use it
+5. Gemini 2.5 Pro - no idea, preview version usually didn't work
+
+### A rant on the future
+
+**If you are a software developer, please read this carefully**. Of course can cannot see the future and this is just my opinion, but I think that:
+
+1. Knowledge of multiple programming languages is no longer an advantage. With AI Agent it is sufficient that you know a single language well and rather understand programming paradigm than a concrete syntax. I know Java very well and only a little of Kotlin, and my project is in Kotlin.
+2. Knowledge of multiple frameworks no longer matters. You need to understand the concept (i.e. SPA, IoC, etc) and let AI do the concrete stuff. I don't understand Gradle API to sufficient extent, but AI fills that gap.
+3. Knowledge of alghoritms is no longer a must, but you need to understand what a complexity is if you care about performance or resources. You need to know, how to instruct AI in that matter.
+4. Knowledge about libraries - forget about it - as long as this is a mainstream knowledge, AI will do this for you.
+
+If you are an IT interviewer, consider asking questions checking knowledge specified in points 1-4.
+
+**What do you need to know?**
+
+1. You need to know how to define the problem in natural language. In other words: you need to have some of domain and business analyst skills.
+2. You need to know to define and guard the architecture (as I wrote [here](significance-of-architecture), I don't believe, that architecture lost its significance).
+3. You need to be ready to jump in. That is, at least at the current stage of tool maturity, you need to be able to understand generated code to sufficient extend, just in order to fix it manually.
+
+To me, it seems that AI Agent still rewards seniority.
+
 
 [vibe-coding-definition]: https://en.wikipedia.org/wiki/Vibe_coding
 [rbt-home-page]: https://c64lib.github.io/gradle-retro-assembler-plugin/
