@@ -4,7 +4,7 @@
  <title>()=>{} | Void's blog</title>
  <link href="https://maciejmalecki.github.io//atom.xml" rel="self"/>
  <id>https://maciejmalecki.github.io/</id>
- <updated>2025-08-23T19:32:11+00:00</updated>
+ <updated>2025-08-23T19:50:50+00:00</updated>
  <author>
    <name></name>
    <uri></uri>
@@ -39,16 +39,6 @@
    <id>https://maciejmalecki.github.io//when-does-ai-take-my-job</id>
    <updated>2025-08-01T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;May was the second anniversary of my personal journey with AI, or generative AI to be precise. A few weeks ago before that moment, we had a quick chat on Zoom with some guys from all over the world, from Switzerland to New Zealand. So, the news was like, “You’ve...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Make Internet Great Again</title>
-   <link href="https://maciejmalecki.github.io//make-internet-great-again"/>
-   <id>https://maciejmalecki.github.io//make-internet-great-again</id>
-   <updated>2025-07-29T00:00:00+00:00</updated>
-   <content type="html">&lt;p&gt;I think we’re at a turning point in the history of our civilisation. We’ve all thought stability was the way to go, but it feels like things are changing more quickly than ever before, at least in our lifetime. It’s a shame, but it looks like the internet, one of...</content>
  </entry>
 
  
@@ -109,6 +99,16 @@
    <id>https://maciejmalecki.github.io//assembler-libraries</id>
    <updated>2018-04-26T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Review&#58; New PSU for Commodore 64/128</title>
+   <link href="https://maciejmalecki.github.io//new-psu-for-c64"/>
+   <id>https://maciejmalecki.github.io//new-psu-for-c64</id>
+   <updated>2018-02-04T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;Reliability of original C64 CPU has been disputed in community for long time. Commodore had problems with it in the past, plenty of houses were put on fire. Today, over 35 years after first Commodore 64 was produced another issue becomes especially painful: some of bricks decide now to ignore...</content>
  </entry>
 
  
