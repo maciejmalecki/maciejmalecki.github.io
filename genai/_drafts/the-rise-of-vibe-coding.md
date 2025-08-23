@@ -35,5 +35,8 @@ So, majority of my GitHub repositories are MOS 6502 assembly projects except one
 
 RBT is not a big project, it's currently around 13K lines of code but the complexity makes it not trivial. We can assume it is a comparable to the typical microservice. If vibe coding works for this project, it should be useful for a real life microservice based code bases. If it fails, however, it cannot be used as a reliable development method for majority of existing software.
 
+One problem I have noticed while working with RBT is, that while it offers a seamless experience when working with simple, straightforward, "one pass" assembly project, it fails miserably in more complex works. That is, once I started working on [Tony: Montezuma's Gold][tony] and wend beyond one-file demo version, I have discovered that RBT now needs to support multi module, multi part project that has two compilation targets: a 5'25" floppy disk and a ROM Cartridge in Magic Desk format. I had to include packing (as assets grow really big) as well as kind of linking, that is, an intermediate compilation step followed by additional compression and then yet another compilation to desired format (disk image/ROM image). I was able to do it within Gradle, by using a lot of custom at hoc tasks and CLI commands, but result was a bit messy, just to say.
+
 [vibe-coding-definition]: https://en.wikipedia.org/wiki/Vibe_coding
 [rbt-home-page]: https://c64lib.github.io/gradle-retro-assembler-plugin/
+[tony]: https://monochrome-productions.itch.io/tony
