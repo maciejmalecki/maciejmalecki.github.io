@@ -421,7 +421,10 @@ goattracker, image, spritepad) that can be parallelized
 <span class="p">8.</span> <span class="gs">**buildSrc//**</span> - Contains Gradle plugin definitions that need enhancement for flow support
 
 <span class="gu">## Root Cause Hypothesis</span>
-The current architecture treats each task as an independent Gradle task with simple dependencies, but doesn't leverage Gradle's built-in parallelization capabilities. The missing piece is:
+The current architecture treats each task as an 
+independent Gradle task with simple dependencies, but 
+doesn't leverage Gradle's built-in parallelization 
+capabilities. The missing piece is:
 <span class="p">1.</span> <span class="gs">**Flow Definition DSL**</span> - A way to define task chains 
 with explicit input/output relationships
 <span class="p">2.</span> <span class="gs">**Dependency Graph Analysis**</span> - Logic to analyze which 
@@ -650,7 +653,7 @@ bottlenecks
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-08-23 19:50</span></footer>
+	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-08-23 20:04</span></footer>
 
 
       <div id="gdpr" style="display: none;">
