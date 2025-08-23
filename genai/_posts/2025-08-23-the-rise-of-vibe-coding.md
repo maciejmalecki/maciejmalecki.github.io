@@ -266,11 +266,17 @@ I spent around 12 hours coding with the agent and used about 25% of my monthly p
 
 Once I discovered how quickly premium credits get consumed, I tried different models. 
 
+![Abby Normal](/genai/img/abby-normal.jpg)
+*- What kind of model have you chose? - Abby. - Abby what? - Abby Normal!*
+
 I always started with any of Claude Sonnet models, but after a while I decided to use version 4, as it seemed to be the fastest. I strongly prefer Claude for planning purposes. 
 
 The Gemini model usually failed to execute, but that was when it was still in the 'preview' phase. 
 
 I fell back to GPT models and was appalled by their performance, especially that of GPT-4o. Both models have a very limited token window, require frequent restarts and have significant issues with tool usage and output capture. GPT models were also prone to hallucinations. 
+
+![Tools](/genai/img/hackman-to-use-tools.jpg)
+*A LLM prepares to use a tool, properly.*
 
 Other than Claude, the only model capable of executing the plan with good results is o4-mini, although it can be very slow (it's still in preview). o4 seems to be a good choice, especially since it costs only 30% of a Claude model.
 
