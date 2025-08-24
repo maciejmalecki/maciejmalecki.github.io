@@ -143,7 +143,7 @@ As you can see, you can include a lot of useful information in the instructions 
 
 Having completed all the preparations described above, I can start vibe coding simply by selecting Agent Mode in the Copilot plugin and entering a prompt that describes the problem.
 
-> Currently, all tasks in the problem are executed sequentially, not leveraging parallelization feature of Gradle. This results in very long build times for complex projects that execute compilation, preprocessing and postprocessing of long projects. Propose a new bounded context named 'flows' that will allow to organize tasks into chains (flows) that can depend on each other (outputs of one flow can feed input of another flows). This new flow mechanism should have a separate, new DSL syntax. Create an action plan.
+> Currently, all tasks in the project are executed sequentially, not leveraging parallelization feature of Gradle. This results in very long build times for complex projects that execute compilation, preprocessing and postprocessing of long projects. Propose a new bounded context named 'flows' that will allow to organize tasks into chains (flows) that can depend on each other (outputs of one flow can feed input of another flows). This new flow mechanism should have a separate, new DSL syntax. Create an action plan.
 
 Using Claude's Sonnet 4 as a model, I came up with the following action plan:
 
