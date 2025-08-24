@@ -351,171 +351,162 @@ test automation is done…</p>
 
 <p>Using Claude’s Sonnet 4 as a model, I came up with the following action plan:</p>
 
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Action Plan for Flows Parallelization Enhancement</span>
+<blockquote>
+  <h1 id="action-plan-for-flows-parallelization-enhancement">Action Plan for Flows Parallelization Enhancement</h1>
 
-<span class="gu">## Issue Description</span>
-Currently, all tasks in the Retro Assembler Plugin are 
-executed sequentially, not leveraging Gradle's 
-parallelization features. This results in very long build
- times for complex projects that execute compilation, 
- preprocessing, and postprocessing. The existing <span class="sb">`flows`</span> 
- bounded context exists but lacks implementation. We need 
- to enhance it with a new DSL syntax that allows 
- organizing tasks into chains (flows) that can depend on 
- each other, where outputs of one flow can feed inputs of 
- another flows, enabling parallel execution.
+  <h2 id="issue-description">Issue Description</h2>
+  <p>Currently, all tasks in the Retro Assembler Plugin are executed sequentially, not leveraging Gradle’s parallelization features. This results in very long build times for complex projects that execute compilation,  preprocessing, and postprocessing. The existing <code class="language-plaintext highlighter-rouge">flows</code>  bounded context exists but lacks implementation. We need to enhance it with a new DSL syntax that allows organizing tasks into chains (flows) that can depend on  each other, where outputs of one flow can feed inputs of  another flows, enabling parallel execution.</p>
 
-<span class="gu">## Relevant Codebase Parts</span>
-<span class="p">1.</span> <span class="gs">**flows/**</span> - Empty bounded context directory that needs 
-to be populated with domain logic and adapters
-<span class="p">2.</span> <span class="gs">**infra/gradle/src/main/kotlin/com/github/c64lib/gradle/RetroAssemblerPlugin.kt**</span> 
-<span class="p">-</span> Main plugin where tasks are currently registered 
-sequentially
-<span class="p">3.</span> <span class="gs">**shared/gradle//**</span> - Contains existing DSL extensions 
-and task utilities that need to be enhanced
-<span class="p">4.</span> <span class="gs">**compilers/kickass//**</span> - Kick Assembler integration 
-that represents the main compilation flow
-<span class="p">5.</span> <span class="gs">**processors//**</span> - Various processor modules (charpad, 
-goattracker, image, spritepad) that can be parallelized
-<span class="p">6.</span> <span class="gs">**dependencies//**</span> - Dependency resolution that can run in parallel with other tasks
-<span class="p">7.</span> <span class="gs">**emulators/vice//**</span> - Testing execution that depends on compilation outputs
-<span class="p">8.</span> <span class="gs">**buildSrc//**</span> - Contains Gradle plugin definitions that need enhancement for flow support
+  <h2 id="relevant-codebase-parts">Relevant Codebase Parts</h2>
+  <ol>
+    <li><strong>flows/</strong> - Empty bounded context directory that needs to be populated with domain logic and adapters</li>
+    <li><strong>infra/gradle/src/main/kotlin/com/github/c64lib/gradle/RetroAssemblerPlugin.kt</strong>
+      <ul>
+        <li>Main plugin where tasks are currently registered sequentially</li>
+      </ul>
+    </li>
+    <li><strong>shared/gradle//</strong> - Contains existing DSL extensions and task utilities that need to be enhanced</li>
+    <li><strong>compilers/kickass//</strong> - Kick Assembler integration that represents the main compilation flow</li>
+    <li><strong>processors//</strong> - Various processor modules (charpad, goattracker, image, spritepad) that can be parallelized</li>
+    <li><strong>dependencies//</strong> - Dependency resolution that can run in parallel with other tasks</li>
+    <li><strong>emulators/vice//</strong> - Testing execution that depends on compilation outputs</li>
+    <li><strong>buildSrc//</strong> - Contains Gradle plugin definitions that need enhancement for flow support</li>
+  </ol>
 
-<span class="gu">## Root Cause Hypothesis</span>
-The current architecture treats each task as an 
-independent Gradle task with simple dependencies, but 
-doesn't leverage Gradle's built-in parallelization 
-capabilities. The missing piece is:
-<span class="p">1.</span> <span class="gs">**Flow Definition DSL**</span> - A way to define task chains 
-with explicit input/output relationships
-<span class="p">2.</span> <span class="gs">**Dependency Graph Analysis**</span> - Logic to analyze which 
-flows can run in parallel
-<span class="p">3.</span> <span class="gs">**Task Orchestration**</span> - Enhanced task registration 
-that respects parallel execution capabilities
-<span class="p">4.</span> <span class="gs">**Resource Management**</span> - Proper handling of shared 
-resources and output artifacts
+  <h2 id="root-cause-hypothesis">Root Cause Hypothesis</h2>
+  <p>The current architecture treats each task as an independent Gradle task with simple dependencies, but doesn’t leverage Gradle’s built-in parallelization capabilities. The missing piece is:</p>
+  <ol>
+    <li><strong>Flow Definition DSL</strong> - A way to define task chains with explicit input/output relationships</li>
+    <li><strong>Dependency Graph Analysis</strong> - Logic to analyze which flows can run in parallel</li>
+    <li><strong>Task Orchestration</strong> - Enhanced task registration that respects parallel execution capabilities</li>
+    <li><strong>Resource Management</strong> - Proper handling of shared resources and output artifacts</li>
+  </ol>
 
-<span class="gu">## Investigation Questions</span>
-<span class="p">1.</span> What are the current bottlenecks in build execution 
-time?
-<span class="p">2.</span> Which tasks are independent and can run in parallel (e.g.
-, different processors)?
-<span class="p">3.</span> What are the input/output dependencies between 
-different task types?
-<span class="p">4.</span> How should the new DSL syntax look to be intuitive for 
-users?
-<span class="p">5.</span> What Gradle features should we leverage for parallel 
-execution?
-<span class="p">6.</span> How do we maintain backward compatibility with existing 
-build scripts?
-<span class="p">7.</span> What validation is needed to prevent circular 
-dependencies in flows?
-<span class="p">8.</span> How do we handle error propagation in parallel flows?
-<span class="p">9.</span> What monitoring/logging is needed for parallel 
-execution debugging?
-<span class="p">10.</span> How do we test the parallel execution scenarios 
-effectively?
+  <h2 id="investigation-questions">Investigation Questions</h2>
+  <ol>
+    <li>What are the current bottlenecks in build execution time?</li>
+    <li>Which tasks are independent and can run in parallel (e.g., different processors)?</li>
+    <li>What are the input/output dependencies between different task types?</li>
+    <li>How should the new DSL syntax look to be intuitive for users?</li>
+    <li>What Gradle features should we leverage for parallel execution?</li>
+    <li>How do we maintain backward compatibility with existing build scripts?</li>
+    <li>What validation is needed to prevent circular dependencies in flows?</li>
+    <li>How do we handle error propagation in parallel flows?</li>
+    <li>What monitoring/logging is needed for parallel execution debugging?</li>
+    <li>How do we test the parallel execution scenarios effectively?</li>
+  </ol>
 
-<span class="gu">## Next Steps</span>
+  <h2 id="next-steps">Next Steps</h2>
 
-<span class="gu">### Phase 1: Domain Model Design (Steps 1-3)</span>
-<span class="p">1.</span> <span class="gs">**Design Flow Domain Model**</span> - Create core domain 
-entities for Flow, FlowStep, FlowDependency, and 
-FlowExecutor in the flows domain
-<span class="p">   -</span> Rationale: Establishes the foundational business 
-   logic for flow management
-<span class="p">
-2.</span> <span class="gs">**Define Flow DSL Syntax**</span> - Design the Kotlin DSL 
-syntax for defining flows in build.gradle.kts files
-<span class="p">   -</span> Rationale: Users need an intuitive way to define 
-   parallel execution flows
-<span class="p">
-3.</span> <span class="gs">**Create Flow Dependency Graph**</span> - Implement logic to 
-build and validate dependency graphs between flows
-<span class="p">   -</span> Rationale: Essential for determining which flows can 
-   execute in parallel
+  <h3 id="phase-1-domain-model-design-steps-1-3">Phase 1: Domain Model Design (Steps 1-3)</h3>
+  <ol>
+    <li><strong>Design Flow Domain Model</strong> - Create core domain entities for Flow, FlowStep, FlowDependency, and FlowExecutor in the flows domain
+      <ul>
+        <li>Rationale: Establishes the foundational business logic for flow management</li>
+      </ul>
+    </li>
+    <li><strong>Define Flow DSL Syntax</strong> - Design the Kotlin DSL syntax for defining flows in build.gradle.kts files
+      <ul>
+        <li>Rationale: Users need an intuitive way to define 
+parallel execution flows</li>
+      </ul>
+    </li>
+    <li><strong>Create Flow Dependency Graph</strong> - Implement logic to build and validate dependency graphs between flows
+      <ul>
+        <li>Rationale: Essential for determining which flows can    execute in parallel</li>
+      </ul>
+    </li>
+  </ol>
 
-<span class="gu">### Phase 2: Core Implementation (Steps 4-7)</span>
-<span class="p">4.</span> <span class="gs">**Implement Flow Domain Layer**</span> - Build the core 
-business logic for flow execution and dependency management
-<span class="p">   -</span> Rationale: Contains the parallelization logic 
-   independent of Gradle specifics
-<span class="p">
-5.</span> <span class="gs">**Create Gradle Adapter Layer**</span> - Build adapters that 
-integrate flow domain with Gradle's task system
-<span class="p">   -</span> Rationale: Bridges domain logic with Gradle's 
-   parallel execution capabilities
-<span class="p">
-6.</span> <span class="gs">**Enhance Plugin Registration**</span> - Update 
-RetroAssemblerPlugin to register flows instead of 
-individual tasks
-<span class="p">   -</span> Rationale: Enables the plugin to orchestrate parallel 
-   execution
-<span class="p">
-7.</span> <span class="gs">**Implement Flow DSL Extension**</span> - Create Gradle 
-extensions that provide the flow DSL to build scripts
-<span class="p">   -</span> Rationale: Provides user-facing API for defining flows
+  <h3 id="phase-2-core-implementation-steps-4-7">Phase 2: Core Implementation (Steps 4-7)</h3>
+  <ol>
+    <li><strong>Implement Flow Domain Layer</strong> - Build the core business logic for flow execution and dependency management
+      <ul>
+        <li>Rationale: Contains the parallelization logic independent of Gradle specifics</li>
+      </ul>
+    </li>
+    <li><strong>Create Gradle Adapter Layer</strong> - Build adapters that integrate flow domain with Gradle’s task system
+      <ul>
+        <li>Rationale: Bridges domain logic with Gradle’s parallel execution capabilities</li>
+      </ul>
+    </li>
+    <li><strong>Enhance Plugin Registration</strong> - Update 
+RetroAssemblerPlugin to register flows instead of individual tasks
+      <ul>
+        <li>Rationale: Enables the plugin to orchestrate parallel execution</li>
+      </ul>
+    </li>
+    <li><strong>Implement Flow DSL Extension</strong> - Create Gradle extensions that provide the flow DSL to build scripts
+      <ul>
+        <li>Rationale: Provides user-facing API for defining flows</li>
+      </ul>
+    </li>
+  </ol>
 
-<span class="gu">### Phase 3: Integration and Testing (Steps 8-10)</span>
-<span class="p">8.</span> <span class="gs">**Create Integration Tests**</span> - Build comprehensive 
-tests for parallel flow execution scenarios
-<span class="p">   -</span> Rationale: Ensures parallel execution works correctly 
-   and safely
-<span class="p">
-9.</span> <span class="gs">**Update Existing Task Implementations**</span> - Migrate 
-existing processors and compilers to use flow system
-<span class="p">   -</span> Rationale: Leverages new parallelization for existing 
-   functionality
-<span class="p">
-10.</span> <span class="gs">**Performance Benchmarking**</span> - Implement benchmarks to 
-measure parallelization improvements
-<span class="p">    -</span> Rationale: Validates that the changes actually 
-    improve build performance
+  <h3 id="phase-3-integration-and-testing-steps-8-10">Phase 3: Integration and Testing (Steps 8-10)</h3>
+  <ol>
+    <li><strong>Create Integration Tests</strong> - Build comprehensive tests for parallel flow execution scenarios
+      <ul>
+        <li>Rationale: Ensures parallel execution works correctly and safely</li>
+      </ul>
+    </li>
+    <li><strong>Update Existing Task Implementations</strong> - Migrate existing processors and compilers to use flow system
+      <ul>
+        <li>Rationale: Leverages new parallelization for existing  functionality</li>
+      </ul>
+    </li>
+    <li><strong>Performance Benchmarking</strong> - Implement benchmarks to measure parallelization improvements
+      <ul>
+        <li>Rationale: Validates that the changes actually improve build performance</li>
+      </ul>
+    </li>
+  </ol>
 
-<span class="gu">### Phase 4: Documentation and Release (Steps 11-13)</span>
-<span class="p">11.</span> <span class="gs">**Update Documentation**</span> - Enhance AsciiDoctor 
-documentation with flow DSL examples and migration guide
-<span class="p">    -</span> Rationale: Users need clear guidance on using the 
-    new parallelization features
-<span class="p">
-12.</span> <span class="gs">**Update CHANGES.adoc**</span> - Document the new flow 
-parallelization feature and breaking changes
-<span class="p">    -</span> Rationale: Maintains project change log as per 
-    guidelines
-<span class="p">
-13.</span> <span class="gs">**Create Migration Examples**</span> - Build example projects 
-showing before/after flow definitions
-<span class="p">    -</span> Rationale: Helps users adopt the new parallelization 
-    features
+  <h3 id="phase-4-documentation-and-release-steps-11-13">Phase 4: Documentation and Release (Steps 11-13)</h3>
+  <ol>
+    <li><strong>Update Documentation</strong> - Enhance AsciiDoctor documentation with flow DSL examples and migration guide
+      <ul>
+        <li>Rationale: Users need clear guidance on using the new parallelization features</li>
+      </ul>
+    </li>
+    <li><strong>Update CHANGES.adoc</strong> - Document the new flow parallelization feature and breaking changes
+      <ul>
+        <li>Rationale: Maintains project change log as per guidelines</li>
+      </ul>
+    </li>
+    <li><strong>Create Migration Examples</strong> - Build example projects showing before/after flow definitions
+      <ul>
+        <li>Rationale: Helps users adopt the new parallelization features</li>
+      </ul>
+    </li>
+  </ol>
 
-<span class="gu">### Phase 5: Advanced Features (Steps 14-15)</span>
-<span class="p">14.</span> <span class="gs">**Implement Flow Monitoring**</span> - Add logging and 
-metrics for parallel execution debugging
-<span class="p">    -</span> Rationale: Essential for troubleshooting parallel 
-    execution issues
-<span class="p">
-15.</span> <span class="gs">**Add Flow Validation**</span> - Implement compile-time 
-validation for flow definitions and dependencies
-<span class="p">    -</span> Rationale: Prevents runtime errors from 
-    misconfigured flows
+  <h3 id="phase-5-advanced-features-steps-14-15">Phase 5: Advanced Features (Steps 14-15)</h3>
+  <ol>
+    <li><strong>Implement Flow Monitoring</strong> - Add logging and metrics for parallel execution debugging
+      <ul>
+        <li>Rationale: Essential for troubleshooting parallel execution issues</li>
+      </ul>
+    </li>
+    <li><strong>Add Flow Validation</strong> - Implement compile-time validation for flow definitions and dependencies
+      <ul>
+        <li>Rationale: Prevents runtime errors from misconfigured flows</li>
+      </ul>
+    </li>
+  </ol>
 
-<span class="gu">## Additional Notes</span>
-<span class="p">-</span> <span class="gs">**Backward Compatibility**</span>: The implementation should 
-maintain compatibility with existing build scripts while 
-providing migration path to flows
-<span class="p">-</span> <span class="gs">**Error Handling**</span>: Parallel execution requires robust 
-error handling and propagation mechanisms
-<span class="p">-</span> <span class="gs">**Resource Contention**</span>: Consider file system and memory 
-resource management for parallel tasks
-<span class="p">-</span> <span class="gs">**Testing Strategy**</span>: Focus on BDD-style tests using 
-Kotest's Given/When/Then DSL as per project guidelines
-<span class="p">-</span> <span class="gs">**Gradle Integration**</span>: Leverage Gradle's built-in 
-parallel execution features rather than implementing 
-custom threading
-<span class="p">-</span> <span class="gs">**Performance Monitoring**</span>: Include metrics collection 
-to validate performance improvements and identify 
-bottlenecks
-</code></pre></div></div>
+  <h2 id="additional-notes">Additional Notes</h2>
+  <ul>
+    <li><strong>Backward Compatibility</strong>: The implementation should maintain compatibility with existing build scripts while providing migration path to flows</li>
+    <li><strong>Error Handling</strong>: Parallel execution requires robust error handling and propagation mechanisms</li>
+    <li><strong>Resource Contention</strong>: Consider file system and memory resource management for parallel tasks</li>
+    <li><strong>Testing Strategy</strong>: Focus on BDD-style tests using Kotest’s Given/When/Then DSL as per project guidelines</li>
+    <li><strong>Gradle Integration</strong>: Leverage Gradle’s built-in parallel execution features rather than implementing custom threading</li>
+    <li><strong>Performance Monitoring</strong>: Include metrics collection to validate performance improvements and identify bottlenecks</li>
+  </ul>
+</blockquote>
+
+<p><em>Get latest version of this action plan <a href="https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.ai/62-pipelines/feature-flows-parallelization-action-plan.md">here</a>.</em></p>
 
 <p>I received a very detailed plan consisting of 15 steps, which were divided into five phases. I received an identification of potentially relevant files and resources. I have a root cause hypothesis describing why I need this feature and why the current implementation is not good enough for me. Finally, I have a set of reflective questions showing how broad the context and scope of thinking for the selected model is.</p>
 
@@ -614,7 +605,7 @@ bottlenecks
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-08-24 16:52</span></footer>
+	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-08-24 17:08</span></footer>
 
 
       <div id="gdpr" style="display: none;">
