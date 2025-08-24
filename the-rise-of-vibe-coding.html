@@ -264,113 +264,74 @@
 
 <p>It would be tedious to orchestrate the agent so that it does exactly what I want (planning, execution, enhancement, updating the plan document, etc.), therefore I use the copilot instructions file as a kind of system prompt. Let’s take a look at my instructions file.</p>
 
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Coding guidelines</span>
-...a place to put your specific guidelines, 
-including architecture guidelines...
+<blockquote>
+  <h1 id="coding-guidelines">Coding guidelines</h1>
+  <p>…a place to put your specific guidelines, 
+including architecture guidelines…</p>
 
-<span class="gh"># Testing guidelines</span>
-...a place to put some more details on how 
-test automation is done...
+  <h1 id="testing-guidelines">Testing guidelines</h1>
+  <p>…a place to put some more details on how 
+test automation is done…</p>
 
-<span class="gh"># General notes on working approach relevant for Agent mode</span>
-<span class="gu">## Tools</span>
-<span class="p">1.</span> We use Powershell so always use syntax of powershell
- when running commands. In particular do not use <span class="sb">`&amp;&amp;`</span>.
-<span class="p">2.</span> Use <span class="sb">`gradle build`</span> to quickly compile the client code
-<span class="p">3.</span> Use <span class="sb">`gradle test`</span> to run all tests in the client code
-<span class="p">4.</span> use <span class="sb">`gradle spotlessApply`</span> to format the code according
- to the coding style
-<span class="p">5.</span> always run <span class="sb">`gradle spotlessApply`</span> after creating or 
-editing any source files to ensure the code is formatted 
-correctly
+  <h1 id="general-notes-on-working-approach-relevant-for-agent-mode">General notes on working approach relevant for Agent mode</h1>
+  <h2 id="tools">Tools</h2>
+  <ol>
+    <li>We use Powershell so always use syntax of powershell when running commands. In p articular do not use <code class="language-plaintext highlighter-rouge">&amp;&amp;</code>.</li>
+    <li>Use <code class="language-plaintext highlighter-rouge">gradle build</code> to quickly compile the client code</li>
+    <li>Use <code class="language-plaintext highlighter-rouge">gradle test</code> to run all tests in the client code</li>
+    <li>use <code class="language-plaintext highlighter-rouge">gradle spotlessApply</code> to format the code according to the coding style</li>
+    <li>always run <code class="language-plaintext highlighter-rouge">gradle spotlessApply</code> after creating or editing any source files to ensure the code is formatted correctly</li>
+  </ol>
 
-<span class="gu">## Prepare plan</span>
-Always use this approach when user asks in agent mode to 
-create an action plan.
-At the beginning of each task, prepare a plan for the 
-task. If not specified in the user prompt explicitly, ask 
-user for a feature name to name the plan MD file 
-accordingly.<span class="sb">
+  <h2 id="prepare-plan">Prepare plan</h2>
+  <p>Always use this approach when user asks in agent mode to create an action plan. At the beginning of each task, prepare a plan for the task. If not specified in the user prompt explicitly, ask user for a feature name to name the plan MD file accordingly.</p>
 
+  <ol>
+    <li>Identify Relevant Codebase Parts: Based on the issue description and project onboarding document, determine  which parts of the codebase are most likely connected to this issue. List and number specific parts of the  codebase mentioned in both documents. Explain your  reasoning for each.</li>
+    <li>Hypothesize Root Cause: Based on the information gathered, list potential causes for the issue. Then, choose the most likely cause and explain your reasoning.</li>
+    <li>Identify Potential Contacts: List names or roles mentioned in the documents that might be helpful to contact for assistance with this issue. For each contact, explain why they would be valuable to consult.</li>
+    <li>Self-Reflection Questions: Generate a list of questions that should be asked to further investigate and understand the issue. Include both self-reflective questions and  questions for others. Number each question as you write it.</li>
+    <li>Next Steps: Outline the next steps for addressing this issue, including specific actions for logging, debugging and documenting. Provide a clear, actionable plan. Number each step and provide a brief rationale for why it’s necessary.</li>
+  </ol>
 
-</span><span class="p">1.</span> Identify Relevant Codebase Parts: Based on the issue
- description and project onboarding document, determine 
- which parts of the codebase are most likely connected to 
- this issue. List and number specific parts of the 
- codebase mentioned in both documents. Explain your 
- reasoning for each.
-<span class="p">2.</span> Hypothesize Root Cause: Based on the information 
-gathered, list potential causes for the issue. Then, 
-choose the most likely cause and explain your reasoning.
-<span class="p">3.</span> Identify Potential Contacts: List names or roles 
-mentioned in the documents that might be helpful to 
-contact for assistance with this issue. For each contact, 
-explain why they would be valuable to consult.
-<span class="p">4.</span> Self-Reflection Questions: Generate a list of questions 
-that should be asked to further investigate and understand
- the issue. Include both self-reflective questions and 
- questions for others. Number each question as you write 
- it.
-<span class="p">5.</span> Next Steps: Outline the next steps for addressing this 
-issue, including specific actions for logging, debugging 
-and documenting. Provide a clear, actionable plan. Number 
-each step and provide a brief rationale for why it's 
-necessary.
+  <p>After completing your analysis, create a Markdown document with the following structure:</p>
+  <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Action Plan for [Issue Name]</span>
 
-After completing your analysis, create a Markdown document 
-with the following structure:
-<span class="sb">``markdown
-# Action Plan for [Issue Name]
-
-## Issue Description
+<span class="gu">## Issue Description</span>
 [Briefly summarize the issue]
 
-## Relevant Codebase Parts
+<span class="gu">## Relevant Codebase Parts</span>
 [List and briefly describe the relevant parts of the codebase]
 
-## Root Cause Hypothesis
+<span class="gu">## Root Cause Hypothesis</span>
 [State and explain your hypothesis]
 
-## Investigation Questions
+<span class="gu">## Investigation Questions</span>
 [List self-reflection questions and questions for others]
 
-## Next Steps
+<span class="gu">## Next Steps</span>
 [Provide a numbered list of actionable steps, including logging and debugging tasks]
 
-## Additional Notes
+<span class="gu">## Additional Notes</span>
 [Any other relevant information or considerations]
-Ensure that your action plan is comprehensive, follows a 
-step-by-step approach, and is presented in an easy-to-read 
-Markdown format. The final document should be named .ai/
-feature-{feature name}-action-plan.md
-``</span>
+</code></pre></div>  </div>
 
-<span class="gu">## Execute plan</span>
-<span class="p">1.</span> When developer asks for executing plan step, it is 
-always meant to be a step from the <span class="ge">*next steps*</span> section of 
-the action plan.
-<span class="p">2.</span> When developer asks for complete plan execution, 
-execute the plan step by step but stop and ask for 
-confirmation before executing each step
-<span class="p">3.</span> When developer asks for single step execution, execute 
-only that step
-<span class="p">4.</span> When developer asks additionally for some changes, 
-update existing plan with the changes being made
-<span class="p">5.</span> Once finishing executing of the step, always mark the 
-step as completed in the action plan by adding a ✅ right 
-before step name.
-<span class="p">6.</span> Once finishing executing the whole phase, always mark 
-the phase as completed in the action plan by adding a ✅ 
-right before phase name.
-<span class="p">7.</span> If by any reason the step is skipped, it should be 
-marked as skipped in the action plan by adding a ⏭️ right 
-before step name. It should be clearly stated why it was 
-skipped.
-<span class="p">8.</span> Always update action plan with relevant findings during 
-plan execution, such as new questions, new contacts, new 
-codebase parts, etc.
-</code></pre></div></div>
-<p><em>Note: I don’t know how to nest Markdown in Markdown, therefore if you decide to reuse my copilot instructions, please replace two backticks (``) with three of them, to get a proper Markdown syntax.</em></p>
+  <p>Ensure that your action plan is comprehensive, follows a step-by-step approach, and is presented in an easy-to-read Markdown format. The final document should be named .ai/feature-{feature name}-action-plan.md</p>
+
+  <h2 id="execute-plan">Execute plan</h2>
+  <ol>
+    <li>When developer asks for executing plan step, it is always meant to be a step from the <em>next steps</em> section of the action plan.</li>
+    <li>When developer asks for complete plan execution, execute the plan step by step but stop and ask for confirmation before executing each step</li>
+    <li>When developer asks for single step execution, execute only that step</li>
+    <li>When developer asks additionally for some changes, update existing plan with the changes being made</li>
+    <li>Once finishing executing of the step, always mark the step as completed in the action plan by adding a ✅ right before step name.</li>
+    <li>Once finishing executing the whole phase, always mark the phase as completed in the action plan by adding a ✅ right before phase name.</li>
+    <li>If by any reason the step is skipped, it should be marked as skipped in the action plan by adding a ⏭️ right before step name. It should be clearly stated why it was skipped.</li>
+    <li>Always update action plan with relevant findings during plan execution, such as new questions, new contacts, new codebase parts, etc.</li>
+  </ol>
+</blockquote>
+
+<p><em>Get current version of “copilot-instructions” file <a href="https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.github/copilot-instructions.md">here</a>.</em></p>
 
 <p>As you can see, you can include a lot of useful information in the instructions file, but bear in mind the LLM limits and aim to be brief and concise. The key information is included in the <strong>General notes on working approach relevant for Agent mode</strong> section.</p>
 
@@ -653,7 +614,7 @@ bottlenecks
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-08-23 20:19</span></footer>
+	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-08-24 16:52</span></footer>
 
 
       <div id="gdpr" style="display: none;">
