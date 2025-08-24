@@ -346,7 +346,7 @@ test automation is done…</p>
 <p>Having completed all the preparations described above, I can start vibe coding simply by selecting Agent Mode in the Copilot plugin and entering a prompt that describes the problem.</p>
 
 <blockquote>
-  <p>Currently, all tasks in the problem are executed sequentially, not leveraging parallelization feature of Gradle. This results in very long build times for complex projects that execute compilation, preprocessing and postprocessing of long projects. Propose a new bounded context named ‘flows’ that will allow to organize tasks into chains (flows) that can depend on each other (outputs of one flow can feed input of another flows). This new flow mechanism should have a separate, new DSL syntax. Create an action plan.</p>
+  <p>Currently, all tasks in the project are executed sequentially, not leveraging parallelization feature of Gradle. This results in very long build times for complex projects that execute compilation, preprocessing and postprocessing of long projects. Propose a new bounded context named ‘flows’ that will allow to organize tasks into chains (flows) that can depend on each other (outputs of one flow can feed input of another flows). This new flow mechanism should have a separate, new DSL syntax. Create an action plan.</p>
 </blockquote>
 
 <p>Using Claude’s Sonnet 4 as a model, I came up with the following action plan:</p>
@@ -605,7 +605,7 @@ RetroAssemblerPlugin to register flows instead of individual tasks
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-08-24 17:30</span></footer>
+	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-08-24 18:38</span></footer>
 
 
       <div id="gdpr" style="display: none;">
