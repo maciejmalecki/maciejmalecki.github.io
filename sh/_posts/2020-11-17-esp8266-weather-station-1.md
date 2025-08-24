@@ -1,5 +1,5 @@
 ---
-title: Weather Station with ESP 8266 (part 1)
+title: Weather Station with ESP 8266
 description: Introduction to the battery powered, ESP 8266 IoT project.
 layout: post
 post-url: weather-station
