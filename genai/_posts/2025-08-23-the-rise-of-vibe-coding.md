@@ -70,114 +70,68 @@ So, my work basically requires three kinds of prompts:
 
 It would be tedious to orchestrate the agent so that it does exactly what I want (planning, execution, enhancement, updating the plan document, etc.), therefore I use the copilot instructions file as a kind of system prompt. Let's take a look at my instructions file.
 
-```markdown
-# Coding guidelines
-...a place to put your specific guidelines, 
-including architecture guidelines...
+> # Coding guidelines
+> ...a place to put your specific guidelines, 
+> including architecture guidelines...
+> 
+> # Testing guidelines
+> ...a place to put some more details on how 
+> test automation is done...
+>
+> # General notes on working approach relevant for Agent mode
+> ## Tools
+> 1. We use Powershell so always use syntax of powershell when running commands. In p articular do not use `&&`.
+> 2. Use `gradle build` to quickly compile the client code
+> 3. Use `gradle test` to run all tests in the client code
+> 4. use `gradle spotlessApply` to format the code according to the coding style
+> 5. always run `gradle spotlessApply` after creating or editing any source files to ensure the code is formatted correctly
+> 
+> ## Prepare plan
+> Always use this approach when user asks in agent mode to create an action plan. At the beginning of each task, prepare a plan for the task. If not specified in the user prompt explicitly, ask user for a feature name to name the plan MD file accordingly.
+>
+> 1. Identify Relevant Codebase Parts: Based on the issue description and project onboarding document, determine  which parts of the codebase are most likely connected to this issue. List and number specific parts of the  codebase mentioned in both documents. Explain your  reasoning for each.
+> 2. Hypothesize Root Cause: Based on the information gathered, list potential causes for the issue. Then, choose the most likely cause and explain your reasoning.
+> 3. Identify Potential Contacts: List names or roles mentioned in the documents that might be helpful to contact for assistance with this issue. For each contact, explain why they would be valuable to consult.
+> 4. Self-Reflection Questions: Generate a list of questions that should be asked to further investigate and understand the issue. Include both self-reflective questions and  questions for others. Number each question as you write it.
+> 5. Next Steps: Outline the next steps for addressing this issue, including specific actions for logging, debugging and documenting. Provide a clear, actionable plan. Number each step and provide a brief rationale for why it's necessary.
+>
+> After completing your analysis, create a Markdown document with the following structure:
+> ```markdown
+> # Action Plan for [Issue Name]
+>
+> ## Issue Description
+> [Briefly summarize the issue]
+>
+> ## Relevant Codebase Parts
+> [List and briefly describe the relevant parts of the codebase]
+>
+> ## Root Cause Hypothesis
+>[State and explain your hypothesis]
+>
+> ## Investigation Questions
+> [List self-reflection questions and questions for others]
+>
+> ## Next Steps
+> [Provide a numbered list of actionable steps, including logging and debugging tasks]
+>
+> ## Additional Notes
+> [Any other relevant information or considerations]
+> ```
+>
+> Ensure that your action plan is comprehensive, follows a step-by-step approach, and is presented in an easy-to-read Markdown format. The final document should be named .ai/feature-{feature name}-action-plan.md
+>
+>
+> ## Execute plan
+> 1. When developer asks for executing plan step, it is always meant to be a step from the *next steps* section of the action plan.
+> 2. When developer asks for complete plan execution, execute the plan step by step but stop and ask for confirmation before executing each step
+> 3. When developer asks for single step execution, execute only that step
+> 4. When developer asks additionally for some changes, update existing plan with the changes being made
+> 5. Once finishing executing of the step, always mark the step as completed in the action plan by adding a ✅ right before step name.
+> 6. Once finishing executing the whole phase, always mark the phase as completed in the action plan by adding a ✅ right before phase name.
+> 7. If by any reason the step is skipped, it should be marked as skipped in the action plan by adding a ⏭️ right before step name. It should be clearly stated why it was skipped.
+> 8. Always update action plan with relevant findings during plan execution, such as new questions, new contacts, new codebase parts, etc.
 
-# Testing guidelines
-...a place to put some more details on how 
-test automation is done...
-
-# General notes on working approach relevant for Agent mode
-## Tools
-1. We use Powershell so always use syntax of powershell
- when running commands. In particular do not use `&&`.
-2. Use `gradle build` to quickly compile the client code
-3. Use `gradle test` to run all tests in the client code
-4. use `gradle spotlessApply` to format the code according
- to the coding style
-5. always run `gradle spotlessApply` after creating or 
-editing any source files to ensure the code is formatted 
-correctly
-
-## Prepare plan
-Always use this approach when user asks in agent mode to 
-create an action plan.
-At the beginning of each task, prepare a plan for the 
-task. If not specified in the user prompt explicitly, ask 
-user for a feature name to name the plan MD file 
-accordingly.
-
-
-1. Identify Relevant Codebase Parts: Based on the issue
- description and project onboarding document, determine 
- which parts of the codebase are most likely connected to 
- this issue. List and number specific parts of the 
- codebase mentioned in both documents. Explain your 
- reasoning for each.
-2. Hypothesize Root Cause: Based on the information 
-gathered, list potential causes for the issue. Then, 
-choose the most likely cause and explain your reasoning.
-3. Identify Potential Contacts: List names or roles 
-mentioned in the documents that might be helpful to 
-contact for assistance with this issue. For each contact, 
-explain why they would be valuable to consult.
-4. Self-Reflection Questions: Generate a list of questions 
-that should be asked to further investigate and understand
- the issue. Include both self-reflective questions and 
- questions for others. Number each question as you write 
- it.
-5. Next Steps: Outline the next steps for addressing this 
-issue, including specific actions for logging, debugging 
-and documenting. Provide a clear, actionable plan. Number 
-each step and provide a brief rationale for why it's 
-necessary.
-
-After completing your analysis, create a Markdown document 
-with the following structure:
-``markdown
-# Action Plan for [Issue Name]
-
-## Issue Description
-[Briefly summarize the issue]
-
-## Relevant Codebase Parts
-[List and briefly describe the relevant parts of the codebase]
-
-## Root Cause Hypothesis
-[State and explain your hypothesis]
-
-## Investigation Questions
-[List self-reflection questions and questions for others]
-
-## Next Steps
-[Provide a numbered list of actionable steps, including logging and debugging tasks]
-
-## Additional Notes
-[Any other relevant information or considerations]
-Ensure that your action plan is comprehensive, follows a 
-step-by-step approach, and is presented in an easy-to-read 
-Markdown format. The final document should be named .ai/
-feature-{feature name}-action-plan.md
-``
-
-## Execute plan
-1. When developer asks for executing plan step, it is 
-always meant to be a step from the *next steps* section of 
-the action plan.
-2. When developer asks for complete plan execution, 
-execute the plan step by step but stop and ask for 
-confirmation before executing each step
-3. When developer asks for single step execution, execute 
-only that step
-4. When developer asks additionally for some changes, 
-update existing plan with the changes being made
-5. Once finishing executing of the step, always mark the 
-step as completed in the action plan by adding a ✅ right 
-before step name.
-6. Once finishing executing the whole phase, always mark 
-the phase as completed in the action plan by adding a ✅ 
-right before phase name.
-7. If by any reason the step is skipped, it should be 
-marked as skipped in the action plan by adding a ⏭️ right 
-before step name. It should be clearly stated why it was 
-skipped.
-8. Always update action plan with relevant findings during 
-plan execution, such as new questions, new contacts, new 
-codebase parts, etc.
-```
-*Note: I don't know how to nest Markdown in Markdown, therefore if you decide to reuse my copilot instructions, please replace two backticks (``) with three of them, to get a proper Markdown syntax.*
+*Get current version of "copilot-instructions" file [here][instructions].*
 
 As you can see, you can include a lot of useful information in the instructions file, but bear in mind the LLM limits and aim to be brief and concise. The key information is included in the **General notes on working approach relevant for Agent mode** section.
 
@@ -438,3 +392,4 @@ In subsequent articles, I will describe my journey in detail. I will share more 
 [tony]: https://monochrome-productions.itch.io/tony
 [plan-and-execute]: https://langchain-ai.github.io/langgraph/tutorials/plan-and-execute/plan-and-execute/#planning-step
 [kick-ass]: https://theweb.dk/KickAssembler/Main.html#frontpage
+[instructions]: https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.github/copilot-instructions.md
