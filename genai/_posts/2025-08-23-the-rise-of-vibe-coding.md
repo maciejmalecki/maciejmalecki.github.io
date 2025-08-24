@@ -339,7 +339,7 @@ I spent around 12 hours coding with the agent and used about 25% of my monthly p
 Once I discovered how quickly premium credits get consumed, I tried different models. 
 
 ![Abby Normal](/genai/img/abby-normal.jpg)
-*- What kind of model have you chose? - Abby. - Abby what? - Abby Normal!*
+*- What kind of model did you choose? - Abby. - Abby what? - Abby Normal!*
 
 I always started with any of Claude Sonnet models, but after a while I decided to use version 4, as it seemed to be the fastest. I strongly prefer Claude for planning purposes. 
 
