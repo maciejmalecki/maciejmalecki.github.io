@@ -30,7 +30,9 @@ Yes, don't even dare to store your prompts in GIT instead of the code. The code 
 
 There was a time when we had a designers in IT project. That is, design closed the gap between architecture and software developers. Solution was passed over by analysts into the architects to check, that it fits into the boundaries of the architecture and then designers took the job to model data structures and compose the code into the business components, classes, perhaps methods even. Developers, mostly junior employees got a design checklist and just filled in source files with content. That was before Agile came. And no, that wasn't just bound to the "waterfall" project. Trust me, I work for more than 20 years and *never* saw a true waterfall project in my life. Before agile we usually did an iterative-incremental development. And yes, iterative is not a synonym of Agile!
 
-Software designer as a separate role has slowly died and its remnant can be found partially in software architect role and partially in development.
+Software designer as a separate role has slowly died and its remnant can be found partially in software architect role and partially in development. I am not missing that role if architect and developers do their job properly. If so, then just preparing a separate design document is a waste of time, especially that it is a volatile document that can be used only during given iteration and gets outdated quickly afterwards (nobody is willing to update it in subsequent iterations and I fully understand this). So, usually architect is the one in charge of writing "technical consideration" or "solution details" in story description or just writes a solution design for bigger features.
+
+I can imagine doing a formal design if only it is cheap to prepare. And guess what? Now we have an AI agent that will do it for me.
 
 [the-rise]: the-rise-of-vibe-coding
 [fowler]: https://martinfowler.com/articles/2025-nature-abstraction.html
