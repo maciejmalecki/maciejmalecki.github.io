@@ -34,6 +34,14 @@ Software designer as a separate role has slowly died and its remnant can be foun
 
 I can imagine doing a formal design if only it is cheap to prepare. And guess what? Now we have an AI agent that will do it for me.
 
+## A good design also requires a plan
+
+[Last time][the-rise] I have presented a prompting strategy called "plan and execute". Apparently this strategy, and underlying system prompt in particular, is a general purpose tool. It can be used for implementing new features, changing existing functionality, troubleshooting, bugfixing and, in particular, planning.
+
+I will continue with my already presented hobby project, [RBT][rbt], that is a Gradle plugin that can build assembly projects for Commodore 64 and other 8-bit targets.
+
 [the-rise]: the-rise-of-vibe-coding
 [fowler]: https://martinfowler.com/articles/2025-nature-abstraction.html
 [karpathy]: https://x.com/karpathy/status/1886192184808149383?t=7EBkBxJuW-5De2hqxso_jA&s=03
+[rbt]: https://c64lib.github.io/gradle-retro-assembler-plugin/
+
