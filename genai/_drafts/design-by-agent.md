@@ -38,10 +38,85 @@ I can imagine doing a formal design if only it is cheap to prepare. And guess wh
 
 [Last time][the-rise] I have presented a prompting strategy called "plan and execute". Apparently this strategy, and underlying system prompt in particular, is a general purpose tool. It can be used for implementing new features, changing existing functionality, troubleshooting, bugfixing and, in particular, planning.
 
-I will continue with my already presented hobby project, [RBT][rbt], that is a Gradle plugin that can build assembly projects for Commodore 64 and other 8-bit targets.
+I will continue with my already presented hobby project, [RBT][rbt], that is a Gradle plugin that can build assembly projects for Commodore 64 and other 8-bit targets. The project is useful by itself, but I also use it for experiments. One is to use Kotlin as a main programming language, second is to use Gradle as build system (instead of Maven, that I never liked), third is to use so-called Hexagonal Architecture. I use `copilot-instructions.md` file to put some essential information about the project and it's architecture, remembering to keep these informations short and concise. Let me reveal these chapters, as I kept them empty [last time][the-rise].
+
+> ### Coding guidelines
+> 1. This application is a Gradle plugin for building Assembly projects for MOS 65xx family of microprocessors, using Kick Assembler as the only supported ASM dialect.
+> 2. This application is implemented in Kotlin and uses Gradle as the build tool.
+> 3. This application uses Hexagonal Architecture, with the domain layer containing the business logic and the adapters layer containing the glue code between the domain layer and specific technology, such as Gradle.
+> 4. Top level directories denote bounded context, each having internal hexagonal structure.
+> 5. There are dedicated at-hoc gradle plugins declared for each kind of module, all being located in the `buildSrc` folder.
+> 6. Each module should have its own `build.gradle.kts` file, with the root `build.gradle.kts` file aggregating all modules and applying the necessary plugins.
+> 7. There is an end user documentation stored in `doc` folder that is implemented in AsciiDoctor, keep it up to date with the code changes.
+> 8. There is `CHANGES.adoc` file in the root of the project that contains the change log for the project, keep it up to date with the code changes.
+>
+> ### Testing guidelines
+> 1. This application uses Kotest as testing library for unit and integration tests.
+> 2. This application prefers using BDD style of testing, using Given/When/Then DSL of Kotest.
+>
+> *(for more check my GIT [repository][instructions])*
+
+So, as you can see, I put all essential information related to the project, including the purpose, main technology stack, file layout, where to find documentation and so on. I used some important key words such as `bounded context`, `business logic`, `adapters`. I also use a very specific library to write unit tests (Kotest), so I named it here as well as which style of testing do I prefer (BDD).
+
+Having all this in my repository, plus a "plan and execute" prompt as defined in [The Rise of Vibe Coding][the-rise], I open my Agent tab, select right model (that's one of Claude Sonnet family) and type my first prompt, ordering preparation of a plan:
+
+> Currently, all tasks in the problem are executed sequentially, not leveraging parallelization feature of Gradle. This results in very long build times for complex projects that execute compilation, preprocessing and postprocessing of long projects. Propose a new bounded context named 'flows' that will allow to organize tasks into chains (flows) that can depend on each other (outputs of one flow can feed input of another flows). This new flow mechanism should have a separate, new DSL syntax. Create an action plan.
+
+Honestly speaking, I was shaping this feature for a very long time. Not because it is a very difficult one, but rather that I really had no idea how to model it. I would need to do some prototyping to see what kind of DSL (Domain Specific Language, that is the main notation that Gradle uses as a "language" for its `build.gradle` files) works best for my purpose. I could sit with a pencil and sheet of paper and try to sketch it, but that is something "non coding"-related, that I don't like to spend my free time on.
+
+I have imagined that perhaps I can arrange "steps" in something I called "pipelines", later renamed to flows. I thought that maybe flows can depend on other flows and possibly run in parallel if feasible. I had no idea, however, how to link steps together. In "classic" RBT notation such linking is very limited and built-in into the existing DSL, but this will not work here. I can have a flow that will convert graphical data into binary asset, then pack it, import and compile using assembler and then another flow that will gather these compiled programs and link it together into the floppy disk image using again the assembler. Each step can produce multiple files and consume also multiple files, this is not that easy.
+
+So I made this prompt (above) and was curious whether AI Agent can propose something for me. After a short while an [action plan][action-plan] was generated and this is what I found there.
+
+First, Agent has rewritten my "user story" into more elaborated form as "Issue Description".
+
+> ## Issue Description
+> Currently, all tasks in the Retro Assembler Plugin are executed sequentially, not leveraging Gradle's parallelization features. This results in very long build times for complex projects that execute compilation, preprocessing, and postprocessing. The existing `flows` bounded context exists but lacks implementation. We need to enhance it with a new DSL syntax that allows organizing tasks into chains (flows) that can depend on each other, where outputs of one flow can feed inputs of another flows, enabling parallel execution.
+
+
+All that is essential is included there: what? (organize build into flows), the reason (performance), how? (run independent tasks parallely) and most importantly "that can depend on each other", meaning - not everything can run in parallel.
+
+Then, Agent went straight into the design, first identifying relevant code parts (as instructed!):
+
+> ## Relevant Codebase Parts
+> 1. **flows/** - Empty bounded context directory that needs to be populated with domain logic and adapters
+> 2. **infra/gradle/src/main/kotlin/com/github/c64lib/gradle/RetroAssemblerPlugin.kt** - Main plugin where tasks are currently registered sequentially
+> 3. **shared/gradle/** - Contains existing DSL extensions and task utilities that need to be enhanced
+> 4. **compilers/kickass/** - Kick Assembler integration that represents the main compilation flow
+> 5. **processors/** - Various processor modules (charpad, goattracker, image, spritepad) that can be parallelized
+> 6. **dependencies/** - Dependency resolution that can run in parallel with other tasks
+> 7. **emulators/vice/** - Testing execution that depends on compilation outputs
+> 8. **buildSrc/** - Contains Gradle plugin definitions that need enhancement for flow support
+
+Yes, I did one thing manually before using AI Agent. I have created an empty bounded context `flows`, and forgot to remove it. So, Agent found it and enlisted as point 1. Point 2 is essential, this is the main plugin class and surely it must be modified to register new DSL constructs (flows). Then, Agent has found essential functionalities that would need to be plugged into the flows, that is 4 and 5. Very good, I am impressed.
+
+Then, following instructions, Agent formulates a root cause hypothesis:
+
+> ## Root Cause Hypothesis
+> The current architecture treats each task as an independent Gradle task with simple dependencies, but doesn't leverage Gradle's built-in parallelization capabilities. The missing piece is:
+> 1. **Flow Definition DSL** - A way to define task chains with explicit input/output relationships
+> 2. **Dependency Graph Analysis** - Logic to analyze which flows can run in parallel
+> 3. **Task Orchestration** - Enhanced task registration that respects parallel execution capabilities
+> 4. **Resource Management** - Proper handling of shared resources and output artifacts
+
+That was a creative part of the Agent.
+
+> ## Investigation Questions
+> 1. What are the current bottlenecks in build execution time?
+> 2. Which tasks are independent and can run in parallel (e.g., different processors)?
+> 3. What are the input/output dependencies between different task types?
+> 4. How should the new DSL syntax look to be intuitive for users?
+> 5. What Gradle features should we leverage for parallel execution?
+> 6. How do we maintain backward compatibility with existing build scripts?
+> 7. What validation is needed to prevent circular dependencies in flows?
+> 8. How do we handle error propagation in parallel flows?
+> 9. What monitoring/logging is needed for parallel execution debugging?
+> 10. How do we test the parallel execution scenarios effectively?
+
 
 [the-rise]: the-rise-of-vibe-coding
 [fowler]: https://martinfowler.com/articles/2025-nature-abstraction.html
 [karpathy]: https://x.com/karpathy/status/1886192184808149383?t=7EBkBxJuW-5De2hqxso_jA&s=03
 [rbt]: https://c64lib.github.io/gradle-retro-assembler-plugin/
-
+[instructions]: https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.github/copilot-instructions.md
+[action-plan]: https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.ai/62-pipelines/feature-flows-parallelization-action-plan.md
