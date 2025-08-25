@@ -9,7 +9,7 @@ In my previous, Vibe coding related article, [The Rise of Vibe Coding][the-rise]
 Let me just cite Andrey Karpathy:
 
 > There's a new kind of coding I call "vibe coding", where you fully give in to the vibes, embrace exponentials, and **forget that the code even exists**. It's possible because the LLMs (e.g. Cursor Composer w Sonnet) are getting too good. Also I just talk to Composer with SuperWhisper so I barely even touch the keyboard. I ask for the dumbest things like "decrease the padding on the sidebar by half" because I'm too lazy to find it. **I "Accept All" always**, **I don't read the diffs anymore**. When I get error messages I just copy paste them in with no comment, usually that fixes it. The code grows **beyond my usual comprehension**, I'd have to really read through it for a while. Sometimes the LLMs can't fix a bug so I just work around it or ask for random changes until it goes away. It's not too bad for throwaway weekend projects, but still quite amusing. I'm building a project or webapp, but it's not really coding - I just see stuff, say stuff, run stuff, and copy paste stuff, and it mostly works.
-> Source: [X][karpathy]
+> *Source: [Andrei Karpathy on X][karpathy]*
 
 It is too good, I've found this particular X entry now, while writing this article, because I must admit, I do exactly the same, since I started using AI Agent for coding. I also accept all changes always, I blindly click "run" on tools (because GitHub Copilot always asks for confirmation, nobody knows why), i type "contninue" when Agent reaches internal limits. So I didn't know that Andrei wrote exactly this and I just started to use this approach anyway, because, honestly, there is no other choice. The reason why is very simple: if you do otherwise, meaning, review every single line of generated code, check everything with libraries API documentation and so on, you will end up on being as slow as before, except paying extra fee for a tool and tokens. It is an either-or kind of game.
 
@@ -22,7 +22,15 @@ I am more than certain, that the enterprise story of vibe coding will be followi
 Let's summarize this short introductionary rant with a cite from Martin Fowler:
 
 > I'm convinced that this is another fundamental change: talking to the machine in prompts is as different to Ruby as Fortran to assembler. But this is more than a huge jump in abstraction. When I wrote a Fortran function, I could compile it a hundred times, and the result still manifested the exact same bugs. Large Language Models introduce a non-deterministic abstraction, so I can't just store my prompts in git and know that I'll get the same behavior each time. As my colleague Birgitta put it, we're not just moving up the abstraction levels, we're moving sideways into non-determinism at the same time.
-> Source: [Martin Fowler][fowler]
+> *Source: [Martin Fowler][fowler]*
+
+Yes, don't even dare to store your prompts in GIT instead of the code. The code is there and wishful thinking will not change it.
+
+## Resurrection of Design
+
+There was a time when we had a designers in IT project. That is, design closed the gap between architecture and software developers. Solution was passed over by analysts into the architects to check, that it fits into the boundaries of the architecture and then designers took the job to model data structures and compose the code into the business components, classes, perhaps methods even. Developers, mostly junior employees got a design checklist and just filled in source files with content. That was before Agile came. And no, that wasn't just bound to the "waterfall" project. Trust me, I work for more than 20 years and *never* saw a true waterfall project in my life. Before agile we usually did an iterative-incremental development. And yes, iterative is not a synonym of Agile!
+
+Software designer as a separate role has slowly died and its remnant can be found partially in software architect role and partially in development.
 
 [the-rise]: the-rise-of-vibe-coding
 [fowler]: https://martinfowler.com/articles/2025-nature-abstraction.html
