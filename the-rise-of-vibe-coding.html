@@ -265,16 +265,16 @@
 <p>It would be tedious to orchestrate the agent so that it does exactly what I want (planning, execution, enhancement, updating the plan document, etc.), therefore I use the copilot instructions file as a kind of system prompt. Let’s take a look at my instructions file.</p>
 
 <blockquote>
-  <h1 id="coding-guidelines">Coding guidelines</h1>
+  <h2 id="coding-guidelines">Coding guidelines</h2>
   <p>…a place to put your specific guidelines, 
 including architecture guidelines…</p>
 
-  <h1 id="testing-guidelines">Testing guidelines</h1>
+  <h2 id="testing-guidelines">Testing guidelines</h2>
   <p>…a place to put some more details on how 
 test automation is done…</p>
 
-  <h1 id="general-notes-on-working-approach-relevant-for-agent-mode">General notes on working approach relevant for Agent mode</h1>
-  <h2 id="tools">Tools</h2>
+  <h2 id="general-notes-on-working-approach-relevant-for-agent-mode">General notes on working approach relevant for Agent mode</h2>
+  <h3 id="tools">Tools</h3>
   <ol>
     <li>We use Powershell so always use syntax of powershell when running commands. In p articular do not use <code class="language-plaintext highlighter-rouge">&amp;&amp;</code>.</li>
     <li>Use <code class="language-plaintext highlighter-rouge">gradle build</code> to quickly compile the client code</li>
@@ -283,7 +283,7 @@ test automation is done…</p>
     <li>always run <code class="language-plaintext highlighter-rouge">gradle spotlessApply</code> after creating or editing any source files to ensure the code is formatted correctly</li>
   </ol>
 
-  <h2 id="prepare-plan">Prepare plan</h2>
+  <h3 id="prepare-plan">Prepare plan</h3>
   <p>Always use this approach when user asks in agent mode to create an action plan. At the beginning of each task, prepare a plan for the task. If not specified in the user prompt explicitly, ask user for a feature name to name the plan MD file accordingly.</p>
 
   <ol>
@@ -318,7 +318,7 @@ test automation is done…</p>
 
   <p>Ensure that your action plan is comprehensive, follows a step-by-step approach, and is presented in an easy-to-read Markdown format. The final document should be named .ai/feature-{feature name}-action-plan.md</p>
 
-  <h2 id="execute-plan">Execute plan</h2>
+  <h3 id="execute-plan">Execute plan</h3>
   <ol>
     <li>When developer asks for executing plan step, it is always meant to be a step from the <em>next steps</em> section of the action plan.</li>
     <li>When developer asks for complete plan execution, execute the plan step by step but stop and ask for confirmation before executing each step</li>
@@ -352,12 +352,12 @@ test automation is done…</p>
 <p>Using Claude’s Sonnet 4 as a model, I came up with the following action plan:</p>
 
 <blockquote>
-  <h1 id="action-plan-for-flows-parallelization-enhancement">Action Plan for Flows Parallelization Enhancement</h1>
+  <h2 id="action-plan-for-flows-parallelization-enhancement">Action Plan for Flows Parallelization Enhancement</h2>
 
-  <h2 id="issue-description">Issue Description</h2>
+  <h3 id="issue-description">Issue Description</h3>
   <p>Currently, all tasks in the Retro Assembler Plugin are executed sequentially, not leveraging Gradle’s parallelization features. This results in very long build times for complex projects that execute compilation,  preprocessing, and postprocessing. The existing <code class="language-plaintext highlighter-rouge">flows</code>  bounded context exists but lacks implementation. We need to enhance it with a new DSL syntax that allows organizing tasks into chains (flows) that can depend on  each other, where outputs of one flow can feed inputs of  another flows, enabling parallel execution.</p>
 
-  <h2 id="relevant-codebase-parts">Relevant Codebase Parts</h2>
+  <h3 id="relevant-codebase-parts">Relevant Codebase Parts</h3>
   <ol>
     <li><strong>flows/</strong> - Empty bounded context directory that needs to be populated with domain logic and adapters</li>
     <li><strong>infra/gradle/src/main/kotlin/com/github/c64lib/gradle/RetroAssemblerPlugin.kt</strong>
@@ -373,7 +373,7 @@ test automation is done…</p>
     <li><strong>buildSrc//</strong> - Contains Gradle plugin definitions that need enhancement for flow support</li>
   </ol>
 
-  <h2 id="root-cause-hypothesis">Root Cause Hypothesis</h2>
+  <h3 id="root-cause-hypothesis">Root Cause Hypothesis</h3>
   <p>The current architecture treats each task as an independent Gradle task with simple dependencies, but doesn’t leverage Gradle’s built-in parallelization capabilities. The missing piece is:</p>
   <ol>
     <li><strong>Flow Definition DSL</strong> - A way to define task chains with explicit input/output relationships</li>
@@ -382,7 +382,7 @@ test automation is done…</p>
     <li><strong>Resource Management</strong> - Proper handling of shared resources and output artifacts</li>
   </ol>
 
-  <h2 id="investigation-questions">Investigation Questions</h2>
+  <h3 id="investigation-questions">Investigation Questions</h3>
   <ol>
     <li>What are the current bottlenecks in build execution time?</li>
     <li>Which tasks are independent and can run in parallel (e.g., different processors)?</li>
@@ -396,9 +396,9 @@ test automation is done…</p>
     <li>How do we test the parallel execution scenarios effectively?</li>
   </ol>
 
-  <h2 id="next-steps">Next Steps</h2>
+  <h3 id="next-steps">Next Steps</h3>
 
-  <h3 id="phase-1-domain-model-design-steps-1-3">Phase 1: Domain Model Design (Steps 1-3)</h3>
+  <h4 id="phase-1-domain-model-design-steps-1-3">Phase 1: Domain Model Design (Steps 1-3)</h4>
   <ol>
     <li><strong>Design Flow Domain Model</strong> - Create core domain entities for Flow, FlowStep, FlowDependency, and FlowExecutor in the flows domain
       <ul>
@@ -418,7 +418,7 @@ parallel execution flows</li>
     </li>
   </ol>
 
-  <h3 id="phase-2-core-implementation-steps-4-7">Phase 2: Core Implementation (Steps 4-7)</h3>
+  <h4 id="phase-2-core-implementation-steps-4-7">Phase 2: Core Implementation (Steps 4-7)</h4>
   <ol>
     <li><strong>Implement Flow Domain Layer</strong> - Build the core business logic for flow execution and dependency management
       <ul>
@@ -443,7 +443,7 @@ RetroAssemblerPlugin to register flows instead of individual tasks
     </li>
   </ol>
 
-  <h3 id="phase-3-integration-and-testing-steps-8-10">Phase 3: Integration and Testing (Steps 8-10)</h3>
+  <h4 id="phase-3-integration-and-testing-steps-8-10">Phase 3: Integration and Testing (Steps 8-10)</h4>
   <ol>
     <li><strong>Create Integration Tests</strong> - Build comprehensive tests for parallel flow execution scenarios
       <ul>
@@ -462,7 +462,7 @@ RetroAssemblerPlugin to register flows instead of individual tasks
     </li>
   </ol>
 
-  <h3 id="phase-4-documentation-and-release-steps-11-13">Phase 4: Documentation and Release (Steps 11-13)</h3>
+  <h4 id="phase-4-documentation-and-release-steps-11-13">Phase 4: Documentation and Release (Steps 11-13)</h4>
   <ol>
     <li><strong>Update Documentation</strong> - Enhance AsciiDoctor documentation with flow DSL examples and migration guide
       <ul>
@@ -481,7 +481,7 @@ RetroAssemblerPlugin to register flows instead of individual tasks
     </li>
   </ol>
 
-  <h3 id="phase-5-advanced-features-steps-14-15">Phase 5: Advanced Features (Steps 14-15)</h3>
+  <h4 id="phase-5-advanced-features-steps-14-15">Phase 5: Advanced Features (Steps 14-15)</h4>
   <ol>
     <li><strong>Implement Flow Monitoring</strong> - Add logging and metrics for parallel execution debugging
       <ul>
@@ -605,7 +605,7 @@ RetroAssemblerPlugin to register flows instead of individual tasks
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-08-25 17:01</span></footer>
+	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-08-25 18:21</span></footer>
 
 
       <div id="gdpr" style="display: none;">
