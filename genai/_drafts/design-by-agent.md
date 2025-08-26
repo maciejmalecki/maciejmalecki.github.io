@@ -99,7 +99,9 @@ Then, following instructions, Agent formulates a root cause hypothesis:
 > 3. **Task Orchestration** - Enhanced task registration that respects parallel execution capabilities
 > 4. **Resource Management** - Proper handling of shared resources and output artifacts
 
-That was a creative part of the Agent.
+That was a creative part of the Agent. It is not particularily detailed, but as was my prompt. Point 1 (DSL) is obvious, dependency graph analysis (pt 2) is good, certainly it is a necessary logic to check correctness of the definition written in forementioned DSL as well as to detect right order of task execution (however, I have a feeling, that this is also something Gradle can figure out by itself, but let's see). Task orchestration is also a good point, I can imagine there must be a layer of gradle tasks dynamically created based on the DSL defition. It will be - for sure - much more complex than the one that is currently implemented in RBT. Resource management point is good too - the artifacts, either source or products of task execution can be shared across tasks and this indeed requires additional logic.
+
+Let's now switch into the next part, which is perhaps the most interesting one: investigation questions.
 
 > ## Investigation Questions
 > 1. What are the current bottlenecks in build execution time?
@@ -112,6 +114,8 @@ That was a creative part of the Agent.
 > 8. How do we handle error propagation in parallel flows?
 > 9. What monitoring/logging is needed for parallel execution debugging?
 > 10. How do we test the parallel execution scenarios effectively?
+
+All these questions are excellent. Particularily I like 4 and the way the Agent has thought about user experience. Backward compatibility (6) - I haven't asked for that, but indeed, I need this one. Circular dependencies (7) is also good - I haven't prompted but it has been clearly derived from my requirement, because you just match input with output and has an infinite execution cycle - we wan't to detect them and prevent.
 
 
 [the-rise]: the-rise-of-vibe-coding
