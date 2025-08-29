@@ -2,6 +2,7 @@
 title: The Rise of Vibe Coding
 layout: post
 categories: genai arch
+description: Everybody talks about Vibe coding, but does everybody understand, what does it mean?
 pic: /genai/img/YoungFrankenstein.jpg
 ---
 
