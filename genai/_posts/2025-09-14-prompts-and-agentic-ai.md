@@ -38,7 +38,7 @@ Next, we find a useful recommendation for the structure of the `copilot-instruct
 
 There's nothing about prompts or how to react to certain requests from users. This is certainly the wrong place.
 
-### Prompts are a different kind of beast.
+### Prompts are a different kind of beast
 
 When prompting, we are asking the AI agent to perform a specific task; it is an instruction, not a suggestion or neutral information. If you have already undertaken any prompt engineering training, you will be aware that there are usually some specifics that should be used when prompting. A well-crafted prompt should be properly structured and contain enough contextual information and a precise task definition, as well as utilising a few prompting techniques, such as role-playing, few-shot learning and structured output formatting. This is a lot of information to send to the agent, and we would prefer not to do it all the time, only when needed. Certainly, we require a certain type of information structure, and Copilot (and other tools such as Windsurf) provide this.
 
@@ -47,7 +47,7 @@ When prompting, we are asking the AI agent to perform a specific task; it is an 
 
 Indeed, whenever you wish to use an AI agent to perform a complex task, you should select a prompt template from your scratchpad, notepad or whatever you use to store text. Fill it with your desired prompt and then paste it into the agent mode chat window. Remember to select an appropriate language model (see the 'Rant on Models' section in the [aforementioned article][the-rise-of-vibe-coding]).
 
-### A prompt library provides the answer.
+### A prompt library provides the answer
 
 GitHub Copilot supports so-called prompt files. This is a relatively new feature, introduced in September 2025, but it has been available in Visual Studio Code for some time. I had an epiphany when a colleague shared a [link][awesome] containing a Git repository with lots of custom instructions and prompt files. So why shouldn't I organise my repository in exactly the same way? Meanwhile, I discovered that prompt files had been added to the IntelliJ plugin without my noticing (perhaps I didn't read the release notes).
 
