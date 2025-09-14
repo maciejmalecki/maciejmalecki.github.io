@@ -20,7 +20,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>AI agents require specialisation.</title>
+	<title>AI agents require specialisation</title>
   <meta name="description" content="AI agents can be used for a variety of purposes. Do we really need multiple agents?">
 
 	<!-- CSS & fonts -->
@@ -184,7 +184,7 @@
 		<main>
 
 			<article id="post-page">
-	<h2>AI agents require specialisation.</h2>		
+	<h2>AI agents require specialisation</h2>		
 	<time datetime="2025-09-14T00:00:00+00:00" class="by-line">14 Sep 2025</time>
 	<div class="disclaimer">
 		The views and opinions expressed in this blog are solely my own and do not reflect the views, policies, or positions of my employer or any professional organization with which I am affiliated.
@@ -254,11 +254,14 @@
 <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
 <span class="na">mode</span><span class="pi">:</span> <span class="s1">'</span><span class="s">agent'</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Execute</span><span class="nv"> </span><span class="s">step</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">multiple</span><span class="nv"> </span><span class="s">steps</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attached</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">plan</span><span class="nv"> </span><span class="s">md</span><span class="nv"> </span><span class="s">file.'</span>
-<span class="na">tools</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">read_file'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">edit_file'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">codebase'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">search'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">searchResults'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">changes'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">editFiles'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">run_in_terminal'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">runCommands'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">runTests'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">findTestFiles'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">testFailure'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">git'</span><span class="pi">]</span>
+<span class="na">tools</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">read_file'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">edit_file'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">codebase'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">search'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">searchResults'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">changes'</span><span class="pi">,</span>
+<span class="s1">'</span><span class="s">editFiles'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">run_in_terminal'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">runCommands'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">runTests'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">findTestFiles'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">testFailure'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">git'</span><span class="pi">]</span>
 <span class="nn">---</span>
-You are an experienced software developer tasked with executing an attached action plan md file to implemented an issue.
+You are an experienced software developer tasked with executing an attached action plan md 
+file to implemented an issue.
 
-You should focus only on executing following steps, identified by their numbers, as specified in the action plan:
+You should focus only on executing following steps, identified by their numbers, 
+as specified in the action plan:
 
 <span class="nt">&lt;steps_to_execute&gt;</span>
 
@@ -269,13 +272,20 @@ ${input:steps}
 
 </span>Follow the following rules during plan execution.
 <span class="p">
-1.</span> When developer asks for executing plan step, it is always meant to be a step from the <span class="ge">*next steps*</span> section of the action plan.
-<span class="p">2.</span> When developer asks for complete plan execution, execute the plan step by step but stop and ask for confirmation before executing each step
+1.</span> When developer asks for executing plan step, it is always meant to be a step 
+from the <span class="ge">*next steps*</span> section of the action plan.
+<span class="p">2.</span> When developer asks for complete plan execution, execute the plan step by step 
+but stop and ask for confirmation before executing each step
 <span class="p">3.</span> When developer asks for single step execution, execute only that step
-<span class="p">4.</span> When developer asks additionally for some changes, update existing plan with the changes being made
-<span class="p">5.</span> Once finishing executing of the step, always mark the step as completed in the action plan by adding a ✅ right before step name.
-<span class="p">6.</span> Once finishing executing the whole phase, always mark the phase as completed in the action plan by adding a ✅ right before phase name.
-<span class="p">7.</span> If by any reason the step is skipped, it should be marked as skipped in the action plan by adding a ⏭️ right before step name. It should be clearly stated why it was skipped.
+<span class="p">4.</span> When developer asks additionally for some changes, update existing plan with 
+the changes being made
+<span class="p">5.</span> Once finishing executing of the step, always mark the step as completed in 
+the action plan by adding a ✅ right before step name.
+<span class="p">6.</span> Once finishing executing the whole phase, always mark the phase as completed 
+in the action plan by adding a ✅ right before phase name.
+<span class="p">7.</span> If by any reason the step is skipped, it should be marked as skipped in the 
+action plan by adding a ⏭️ right before step name. It should be clearly stated why 
+it was skipped.
 </code></pre></div></div>
 
 <p>When this file is stored in the <code class="language-plaintext highlighter-rouge">.github/prompts</code> folder of your repository and its suffix conforms to <code class="language-plaintext highlighter-rouge">*.prompt.md</code>, it is automatically made available in your chat window when you type the ‘/’ character.</p>
@@ -292,10 +302,16 @@ ${input:steps}
 
 <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
 <span class="na">mode</span><span class="pi">:</span> <span class="s1">'</span><span class="s">agent'</span>
-<span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Update</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">plan</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">issue</span><span class="nv"> </span><span class="s">details,</span><span class="nv"> </span><span class="s">marks</span><span class="nv"> </span><span class="s">resolved</span><span class="nv"> </span><span class="s">questions</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">updates</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">plan</span><span class="nv"> </span><span class="s">steps</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">needed.'</span>
-<span class="na">tools</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">read_file'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">edit_file'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">codebase'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">search'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">searchResults'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">changes'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">findTestFiles'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">git'</span><span class="pi">]</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Update</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">plan</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">issue</span><span class="nv"> </span><span class="s">details,</span><span class="nv"> </span><span class="s">marks</span><span class="nv"> </span><span class="s">resolved</span><span class="nv"> </span><span class="s">questions</span> 
+<span class="s">and</span><span class="nv"> </span><span class="s">updates</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">plan</span><span class="nv"> </span><span class="s">steps</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">needed.'</span>
+<span class="na">tools</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">read_file'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">edit_file'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">codebase'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">search'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">searchResults'</span><span class="pi">,</span> 
+<span class="s1">'</span><span class="s">changes'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">findTestFiles'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">git'</span><span class="pi">]</span>
 <span class="nn">---</span>
-You are an experienced software developer tasked with creating an action plan to address an issue. Your plan is already generated and attached to this conversation, but you want to enhance it with additional information that was missing once plan was first created. Your goal is to produce a comprehensive, step-by-step plan that will guide the resolution of this issue.
+You are an experienced software developer tasked with creating an action plan 
+to address an issue. Your plan is already generated and attached to this 
+conversation, but you want to enhance it with additional information that 
+was missing once plan was first created. Your goal is to produce a comprehensive, 
+step-by-step plan that will guide the resolution of this issue.
 
 First, review the following information:
 
@@ -307,13 +323,20 @@ ${input:update}
 
 With information provided above, perform the following steps:
 <span class="p">
-1.</span> Incorporate information provided as issue_update to the action plan; crosscheck the plan to see if it requires an update having in mind issue_update information.
-<span class="p">2.</span> Check if any of the questions for others hasn't been answered by acceptance criteria and mark it accordingly if so.
-<span class="p">3.</span> If any new questions for others arise from the issue_update information, add them to the list of questions for others.
-<span class="p">4.</span> If at any point you see that relevant code parts section needs to be updated, update it accordingly.
+1.</span> Incorporate information provided as issue_update to the action plan; 
+crosscheck the plan to see if it requires an update having in mind issue_update 
+information.
+<span class="p">2.</span> Check if any of the questions for others hasn't been answered by acceptance 
+criteria and mark it accordingly if so.
+<span class="p">3.</span> If any new questions for others arise from the issue_update information, add 
+them to the list of questions for others.
+<span class="p">4.</span> If at any point you see that relevant code parts section needs to be updated, 
+update it accordingly.
 </code></pre></div></div>
 
 <p>Now we can really see the power of the prompt library and the ability to put these prompts into separate files. I doubt role-playing and other techniques would ever work if all these behaviours were coded directly into the copilot instructions file. I would expect chaos and completely erratic behaviour from an agent orchestrated in this way.</p>
+
+<p>As an added bonus, I have noticed that the AI Agent performs significantly better when I use dedicated prompt templates instead of a single large instructions file. Perhaps this is because the Agent is now more focused, or maybe it’s because I can apply more of the recommended prompting techniques with this approach. Either way, I have a subjective feeling that the Agent makes fewer mistakes and chooses paths much more cleverly.</p>
 
 <h3 id="summary">Summary</h3>
 
@@ -340,7 +363,7 @@ With information provided above, perform the following steps:
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-09-14 11:12</span></footer>
+	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-09-14 11:18</span></footer>
 
 
       <div id="gdpr" style="display: none;">
