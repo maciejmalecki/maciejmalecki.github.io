@@ -130,7 +130,7 @@ We can already see the clear direction in which all AI-aided coding tools are he
 
 With a well-crafted set of prompt templates, we can effectively get a set of specialised agents that serve different purposes. My three prompts give me a specialised set of agents: a tech lead agent that performs software design and feature breakdowns using the ['plan'][plan.prompt] and ['update-plan'][plan-update.prompt] prompts, and a software engineer that implements according to the plan using the ['exec'][exec.prompt] prompt. The list of roles that can be orchestrated in this way is open.
 
-The beauty of the design is that all these files are easy-to-write Markdown text documents with a relatively flexible structure. Each tech lead can now customise the AI agent to maximise benefits. Most importantly, all these files can be easily shared via a Git repository amongst all team members. This achieves yet another level of standardisation, which is actually a good thing (trust me).
+The beauty of the design is that all of these files are Markdown text documents that are easy to write and have a relatively flexible structure. This means that each tech lead can now customise the AI agent to maximise benefits. Most importantly, these files can easily be shared amongst all team members via a Git repository. This achieves another level of standardisation, which is actually beneficial (trust me). We don't need to start coding our own AI agent — we can see what is already available and orchestrate it with simple Markdown!
 
 Don't forget to review [Awesome Copilot][Awesome] for inspiration!
 
