@@ -35,12 +35,17 @@ Next, we also find a good recommendation on how `copilot-instructions.md` file s
 
 There's nothing about prompts, nothing on how to react on a certain asks from an user. It's certainly a wrong place.
 
-<!-- Elaborate on the difference between instructions and prompts -->
 ### Prompts are different kind of beasts
 
-When prompting, we ask AI Agent to do a certain thing, it is an order, not a suggestion or neutral information. If by any reason you already made any prompt engineering training (if not, I strongly recommend to do it now), you already know, that usually there are some specifics that shall be used when prompting.
+When prompting, we ask AI Agent to do a certain thing, it is an order, not a suggestion or neutral information. If by any reason you already made any prompt engineering training (if not, I strongly recommend to do it now), you already know, that usually there are some specifics that shall be used when prompting. Well crafted prompt should be properly structured, contain enough context information, precise task definition and usually utilizes a few prompting techniques such as role-playing, few-shots learnings and structured output formatting. This is a lot of information that must be send to the agent and we would not like to do it all the time, but only when needed. We certainy require a sort of information structure and Copilot (and other tools like Windsurf) provide it.
 
-### Show that we can keep instructions and prompts separate
+![Copilot architecture](/genai/img/copilot-prompt-architecture.excalidraw.png)
+*How you should use GitHub Copilot to build the prompt for the AI Agent.*
+
+Indeed, each time you would like to use an AI Agent to perform a complex task, you should choose a prompt template from your scratch pad / notepad / whatever you use to store texts, fill it with your wish (an user prompt) and then paste it into the agent mode chat window, remembering to select an appropriate language model (see "Rant on Models" section in forementioned [article][the-rise-of-vibe-coding]).
+
+<!-- ### Show that we can keep instructions and prompts separate -->
+### A prompt library is an answer
 
 ### Conclude on that resulting setup is more scalable and also more accurate when using
 
