@@ -96,6 +96,8 @@ action plan by adding a ⏭️ right before step name. It should be clearly stat
 it was skipped.
 ```
 
+It is also noteworthy that this prompt uses a role-playing technique at the top, but the task is defined differently (i.e. to execute the plan). The steps to be executed are now explicitly defined in the next paragraph (it accepts 'Step 1', 'Steps 1, 2', or even 'all steps'). I will not repeat a description of the plan and its structure here, since the document generated using the 'Plan' prompt is self-contained and self-explanatory.
+
 When this file is stored in the `.github/prompts` folder of your repository and its suffix conforms to `*.prompt.md`, it is automatically made available in your chat window when you type the '/' character.
 
 ![launch prompt](/genai/img/launch-prompt.png)
@@ -106,7 +108,7 @@ However, passing a single value is sufficient for now, so we can carefully pass 
 
 As you can see, with the prompt template, we can leverage a wide range of different prompting techniques. This allows us to properly define a role ('You are an experienced software developer...') and concrete rules that should be obeyed by the agent. There is also a special header that uses a syntax called 'front matter', where you can specify a set of metadata that characterises this prompt. You can limit the prompt to a specific Copilot mode (here, we only use the "agent" mode), limit the set of tools the agent can use to execute this prompt and specify the language model to be used with this prompt. If unspecified, the agent will always use the model selected by the user.
 
-Using this newly discovered capability, I quickly developed another prompt template, [plan-update][plan-update.prompt], which I use to supplement an existing plan with additional information. I also use this prompt template when I want to answer the questions that the AI agent asked in the original plan. Let's take a look:
+Using this newly discovered capability, I quickly developed another prompt template, [plan-update][plan-update.prompt], which I use to supplement an existing plan with additional information. Let's take a look:
 
 ```markdown
 ---
@@ -142,6 +144,8 @@ them to the list of questions for others.
 4. If at any point you see that relevant code parts section needs to be updated, 
 update it accordingly.
 ```
+
+As before, I set up the agent's role from scratch, this time as someone tasked with updating an existing document. This time, I have not included any information on how the plan is constructed because the existing plan should be provided as an input file (attachment) to the agent conversation. Now, I focus on instructing the agent which parts of the plan need to be updated. Note that this involves not only explicit updates (e.g. adding a next step to the action plan), but also asking the agent to revise existing questions and relevant code bases in the context of the newly provided information (as a parameter to this prompt) and update them. With this plan, I can provide additional 'acceptance criteria' or 'change requests', or answer the 'Questions for others' section.
 
 Now we can really see the power of the prompt library and the ability to put these prompts into separate files. I doubt role-playing and other techniques would ever work if all these behaviours were coded directly into the copilot instructions file. I would expect chaos and completely erratic behaviour from an agent orchestrated in this way.
 
