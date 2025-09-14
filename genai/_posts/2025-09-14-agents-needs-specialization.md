@@ -62,11 +62,14 @@ Now let's take a look at the second one.
 ---
 mode: 'agent'
 description: 'Execute step or multiple steps from an attached action plan md file.'
-tools: ['read_file', 'edit_file', 'codebase', 'search', 'searchResults', 'changes', 'editFiles', 'run_in_terminal', 'runCommands', 'runTests', 'findTestFiles', 'testFailure', 'git']
+tools: ['read_file', 'edit_file', 'codebase', 'search', 'searchResults', 'changes',
+'editFiles', 'run_in_terminal', 'runCommands', 'runTests', 'findTestFiles', 'testFailure', 'git']
 ---
-You are an experienced software developer tasked with executing an attached action plan md file to implemented an issue.
+You are an experienced software developer tasked with executing an attached action plan md 
+file to implemented an issue.
 
-You should focus only on executing following steps, identified by their numbers, as specified in the action plan:
+You should focus only on executing following steps, identified by their numbers, 
+as specified in the action plan:
 
 <steps_to_execute>
 
@@ -77,13 +80,20 @@ ${input:steps}
 
 Follow the following rules during plan execution.
 
-1. When developer asks for executing plan step, it is always meant to be a step from the *next steps* section of the action plan.
-2. When developer asks for complete plan execution, execute the plan step by step but stop and ask for confirmation before executing each step
+1. When developer asks for executing plan step, it is always meant to be a step 
+from the *next steps* section of the action plan.
+2. When developer asks for complete plan execution, execute the plan step by step 
+but stop and ask for confirmation before executing each step
 3. When developer asks for single step execution, execute only that step
-4. When developer asks additionally for some changes, update existing plan with the changes being made
-5. Once finishing executing of the step, always mark the step as completed in the action plan by adding a ✅ right before step name.
-6. Once finishing executing the whole phase, always mark the phase as completed in the action plan by adding a ✅ right before phase name.
-7. If by any reason the step is skipped, it should be marked as skipped in the action plan by adding a ⏭️ right before step name. It should be clearly stated why it was skipped.
+4. When developer asks additionally for some changes, update existing plan with 
+the changes being made
+5. Once finishing executing of the step, always mark the step as completed in 
+the action plan by adding a ✅ right before step name.
+6. Once finishing executing the whole phase, always mark the phase as completed 
+in the action plan by adding a ✅ right before phase name.
+7. If by any reason the step is skipped, it should be marked as skipped in the 
+action plan by adding a ⏭️ right before step name. It should be clearly stated why 
+it was skipped.
 ```
 
 When this file is stored in the `.github/prompts` folder of your repository and its suffix conforms to `*.prompt.md`, it is automatically made available in your chat window when you type the '/' character.
@@ -101,10 +111,16 @@ Using this newly discovered capability, I quickly developed another prompt templ
 ```markdown
 ---
 mode: 'agent'
-description: 'Update action plan with new issue details, marks resolved questions and updates action plan steps as needed.'
-tools: ['read_file', 'edit_file', 'codebase', 'search', 'searchResults', 'changes', 'findTestFiles', 'git']
+description: 'Update action plan with new issue details, marks resolved questions 
+and updates action plan steps as needed.'
+tools: ['read_file', 'edit_file', 'codebase', 'search', 'searchResults', 
+'changes', 'findTestFiles', 'git']
 ---
-You are an experienced software developer tasked with creating an action plan to address an issue. Your plan is already generated and attached to this conversation, but you want to enhance it with additional information that was missing once plan was first created. Your goal is to produce a comprehensive, step-by-step plan that will guide the resolution of this issue.
+You are an experienced software developer tasked with creating an action plan 
+to address an issue. Your plan is already generated and attached to this 
+conversation, but you want to enhance it with additional information that 
+was missing once plan was first created. Your goal is to produce a comprehensive, 
+step-by-step plan that will guide the resolution of this issue.
 
 First, review the following information:
 
@@ -116,13 +132,20 @@ ${input:update}
 
 With information provided above, perform the following steps:
 
-1. Incorporate information provided as issue_update to the action plan; crosscheck the plan to see if it requires an update having in mind issue_update information.
-2. Check if any of the questions for others hasn't been answered by acceptance criteria and mark it accordingly if so.
-3. If any new questions for others arise from the issue_update information, add them to the list of questions for others.
-4. If at any point you see that relevant code parts section needs to be updated, update it accordingly.
+1. Incorporate information provided as issue_update to the action plan; 
+crosscheck the plan to see if it requires an update having in mind issue_update 
+information.
+2. Check if any of the questions for others hasn't been answered by acceptance 
+criteria and mark it accordingly if so.
+3. If any new questions for others arise from the issue_update information, add 
+them to the list of questions for others.
+4. If at any point you see that relevant code parts section needs to be updated, 
+update it accordingly.
 ```
 
 Now we can really see the power of the prompt library and the ability to put these prompts into separate files. I doubt role-playing and other techniques would ever work if all these behaviours were coded directly into the copilot instructions file. I would expect chaos and completely erratic behaviour from an agent orchestrated in this way.
+
+As an added bonus, I have noticed that the AI Agent performs significantly better when I use dedicated prompt templates instead of a single large instructions file. Perhaps this is because the Agent is now more focused, or maybe it's because I can apply more of the recommended prompting techniques with this approach. Either way, I have a subjective feeling that the Agent makes fewer mistakes and chooses paths much more cleverly.
 
 ### Summary
 
