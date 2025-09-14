@@ -4,7 +4,7 @@
  <title>()=>{} | Void's blog</title>
  <link href="https://maciejmalecki.github.io//atom.xml" rel="self"/>
  <id>https://maciejmalecki.github.io/</id>
- <updated>2025-09-14T11:18:39+00:00</updated>
+ <updated>2025-09-14T11:37:03+00:00</updated>
  <author>
    <name></name>
    <uri></uri>
@@ -14,9 +14,9 @@
  
 
  <entry>
-   <title>AI agents require specialisation</title>
-   <link href="https://maciejmalecki.github.io//agents-needs-specialization"/>
-   <id>https://maciejmalecki.github.io//agents-needs-specialization</id>
+   <title>How to organise and share your prompts in Agentic AI</title>
+   <link href="https://maciejmalecki.github.io//prompts-and-agentic-ai"/>
+   <id>https://maciejmalecki.github.io//prompts-and-agentic-ai</id>
    <updated>2025-09-14T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;&lt;a href=&quot;the-rise-of-vibe-coding&quot;&gt;Last time&lt;/a&gt;, I demonstrated how to use an AI agent for complex coding tasks. I opted for GitHub Copilot Agent Mode, but I could also have used Windsurf’s Cascade, Claude Code, or any other mature Agentic Coding tool. I tried to follow the approach outlined by Andrej Karpathy, who...</content>
  </entry>
