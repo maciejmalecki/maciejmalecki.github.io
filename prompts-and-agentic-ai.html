@@ -193,7 +193,7 @@
 
 		<p><a href="the-rise-of-vibe-coding">Last time</a>, I demonstrated how to use an AI agent for complex coding tasks. I opted for GitHub Copilot Agent Mode, but I could also have used Windsurf’s Cascade, Claude Code, or any other mature Agentic Coding tool. I tried to follow the approach outlined by Andrej Karpathy, who refers to it as <a href="https://x.com/karpathy/status/1886192184808149383?t=7EBkBxJuW-5De2hqxso_jA&amp;s=03">Vibe Coding</a>.</p>
 
-<p>Initially sceptical, I employed a special prompting technique called ‘Plan and Execute’, which I had learned elsewhere, to gain some level of control over what the AI agent was doing. As a result, I vastly improved the agent’s efficiency and accuracy by creating a detailed plan and letting the agent execute it precisely. This led me to question whether there are other prompts and techniques that can be applied to the same AI agent to make it perform slightly or even very different tasks with equally good quality. If so, perhaps we don’t need any other agents besides the one we already have. In particular, perhaps we don’t need to code our own agents at all.</p>
+<p>Initially sceptical, I used a special prompting technique called ‘Plan and Execute’, which I had learnt about elsewhere (refer <a href="https://www.promptlayer.com/glossary/plan-and-execute-agents#:~:text=Plan%20and%20execute%20agents%20are%20a%20type,necessarily%20consulting%20the%20LLM%20for%20every%20action.">this source</a> to learn more about “Plan and Execute” agent architecture), to try to control what the AI agent was doing to some extent. As a result, I vastly improved the agent’s efficiency and accuracy by creating a detailed plan and letting the agent execute it precisely. This made me wonder if there are other prompts and techniques that could be used with the same AI agent to perform different tasks to a similarly high standard. If so, perhaps we don’t need any other agents besides the one we already have, at least for the very limited scope of software engineering and the specific coding tasks we perform daily.</p>
 
 <h3 id="be-careful-with-instructions-file">Be careful with instructions file</h3>
 
@@ -344,9 +344,16 @@ update it accordingly.
 
 <p>With a well-crafted set of prompt templates, we can effectively get a set of specialised agents that serve different purposes. My three prompts give me a specialised set of agents: a tech lead agent that performs software design and feature breakdowns using the <a href="https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.github/prompts/plan.prompt.md">‘plan’</a> and <a href="https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.github/prompts/plan-update.prompt.md">‘update-plan’</a> prompts, and a software engineer that implements according to the plan using the <a href="https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.github/prompts/exec.prompt.md">‘exec’</a> prompt. The list of roles that can be orchestrated in this way is open.</p>
 
-<p>The beauty of the design is that all of these files are Markdown text documents that are easy to write and have a relatively flexible structure. This means that each tech lead can now customise the AI agent to maximise benefits. Most importantly, these files can easily be shared amongst all team members via a Git repository. This achieves a higher level of standardisation, which can actually be beneficial for a large proportion of IT projects. We don’t always need to start coding our own AI agent from scratch — we can see what’s already available and orchestrate it using simple Markdown!</p>
+<p>The beauty of the design is that all of these files are Markdown text documents that are easy to write and have a relatively flexible structure. This means that each tech lead can now customise the AI agent to maximise benefits. Most importantly, these files can easily be shared amongst all team members via a Git repository. This achieves a higher level of standardisation, which can actually be beneficial for a large proportion of IT projects. We don’t always need to start coding our own AI agent from scratch — we can see what’s already available and orchestrate it using simple Markdown! Don’t forget to review <a href="https://github.com/github/awesome-copilot/">Awesome Copilot</a> for inspiration!</p>
 
-<p>Don’t forget to review <a href="https://github.com/github/awesome-copilot/">Awesome Copilot</a> for inspiration!</p>
+<p>Of course, there are certain risks associated with growing your own prompt library.</p>
+
+<ul>
+  <li>Firstly, you become heavily dependent on a certain technology, as prompt files are not standardised across different vendors. This means your team has to use the same tools, and as the library grows, porting it to another agent technology could require substantial effort. Secondly, you develop a new layer of code base that is essentially unstructured text in English.</li>
+  <li>Secondly, you develop a new layer of code that is essentially semi-structured English text. We don’t yet have tools that can check the consistency of all these files together at the level that we have for classical programming languages as part of our IDEs. There is nothing worse than one of your instruction files contradicting one of your prompts.</li>
+</ul>
+
+<p>Bearing this in mind, I would suggest keeping this ‘orchestration code’ minimal, at least for now.</p>
 
 
 		
@@ -363,7 +370,7 @@ update it accordingly.
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-09-14 11:40</span></footer>
+	    <footer><span>&#169; 2018-2025 Maciej Małecki &#10540; last update: 2025-09-14 12:05</span></footer>
 
 
       <div id="gdpr" style="display: none;">
