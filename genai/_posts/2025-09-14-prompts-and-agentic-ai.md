@@ -1,8 +1,8 @@
 ---
-title: AI agents require specialisation
+title: How to organise and share your prompts in Agentic AI
 layout: post
 categories: genai
-description: AI agents can be used for a variety of purposes. Do we really need multiple agents?
+description: The purpose for which AI agents can be used depends on the prompt used. 
 pic: /genai/img/kramer.jpg
 ---
 
@@ -145,7 +145,7 @@ update it accordingly.
 
 Now we can really see the power of the prompt library and the ability to put these prompts into separate files. I doubt role-playing and other techniques would ever work if all these behaviours were coded directly into the copilot instructions file. I would expect chaos and completely erratic behaviour from an agent orchestrated in this way.
 
-As an added bonus, I have noticed that the AI Agent performs significantly better when I use dedicated prompt templates instead of a single large instructions file. Perhaps this is because the Agent is now more focused, or maybe it's because I can apply more of the recommended prompting techniques with this approach. Either way, I have a subjective feeling that the Agent makes fewer mistakes and chooses paths much more cleverly.
+As an added bonus, I have noticed that the AI agent performs slightly better when I use dedicated prompt templates instead of a single, large instructions file. Perhaps this is because the agent is now more focused, or maybe it's because this approach allows me to apply more of the recommended prompting techniques. Either way, I have a subjective feeling that the agent makes fewer mistakes and chooses paths much more cleverly. However, this could also be the result of a plugin update that occurred in the meantime, so I need to conduct more experiments in this area.
 
 ### Summary
 
@@ -153,7 +153,7 @@ We can already see the clear direction in which all AI-aided coding tools are he
 
 With a well-crafted set of prompt templates, we can effectively get a set of specialised agents that serve different purposes. My three prompts give me a specialised set of agents: a tech lead agent that performs software design and feature breakdowns using the ['plan'][plan.prompt] and ['update-plan'][plan-update.prompt] prompts, and a software engineer that implements according to the plan using the ['exec'][exec.prompt] prompt. The list of roles that can be orchestrated in this way is open.
 
-The beauty of the design is that all of these files are Markdown text documents that are easy to write and have a relatively flexible structure. This means that each tech lead can now customise the AI agent to maximise benefits. Most importantly, these files can easily be shared amongst all team members via a Git repository. This achieves another level of standardisation, which is actually beneficial (trust me). We don't need to start coding our own AI agent — we can see what is already available and orchestrate it with simple Markdown!
+The beauty of the design is that all of these files are Markdown text documents that are easy to write and have a relatively flexible structure. This means that each tech lead can now customise the AI agent to maximise benefits. Most importantly, these files can easily be shared amongst all team members via a Git repository. This achieves a higher level of standardisation, which can actually be beneficial for a large proportion of IT projects. We don't always need to start coding our own AI agent from scratch — we can see what's already available and orchestrate it using simple Markdown!
 
 Don't forget to review [Awesome Copilot][Awesome] for inspiration!
 
