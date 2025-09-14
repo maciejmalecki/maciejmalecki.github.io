@@ -1,5 +1,5 @@
 ---
-title: AI agents require specialisation.
+title: AI agents require specialisation
 layout: post
 categories: genai
 description: AI agents can be used for a variety of purposes. Do we really need multiple agents?
