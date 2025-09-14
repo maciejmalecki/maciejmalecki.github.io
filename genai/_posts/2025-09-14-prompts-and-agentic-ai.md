@@ -157,7 +157,7 @@ The beauty of the design is that all of these files are Markdown text documents 
 
 Of course, there are certain risks associated with growing your own prompt library.
 
-* Firstly, you become heavily dependent on a certain technology, as prompt files are not standardised across different vendors. This means your team has to use the same tools, and as the library grows, porting it to another agent technology could require substantial effort. Secondly, you develop a new layer of code base that is essentially unstructured text in English.
+* Firstly, you become heavily dependent on a certain technology, as prompt files are not standardised across different vendors. This means your team has to use the same tools, and as the library grows, porting it to another agent technology could require substantial effort.
 * Secondly, you develop a new layer of code that is essentially semi-structured English text. We don't yet have tools that can check the consistency of all these files together at the level that we have for classical programming languages as part of our IDEs. There is nothing worse than one of your instruction files contradicting one of your prompts.
 
 Bearing this in mind, I would suggest keeping this 'orchestration code' minimal, at least for now.
