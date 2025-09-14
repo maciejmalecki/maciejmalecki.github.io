@@ -4,12 +4,22 @@
  <title>()=>{} | Void's blog</title>
  <link href="https://maciejmalecki.github.io//atom.xml" rel="self"/>
  <id>https://maciejmalecki.github.io/</id>
- <updated>2025-09-14T09:51:05+00:00</updated>
+ <updated>2025-09-14T11:07:32+00:00</updated>
  <author>
    <name></name>
    <uri></uri>
    <email></email>
  </author>
+
+ 
+
+ <entry>
+   <title>AI agents require specialisation.</title>
+   <link href="https://maciejmalecki.github.io//agents-needs-specialization"/>
+   <id>https://maciejmalecki.github.io//agents-needs-specialization</id>
+   <updated>2025-09-14T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;the-rise-of-vibe-coding&quot;&gt;Last time&lt;/a&gt;, I demonstrated how to use an AI agent for complex coding tasks. I opted for GitHub Copilot Agent Mode, but I could also have used Windsurf’s Cascade, Claude Code, or any other mature Agentic Coding tool. I tried to follow the approach outlined by Andrej Karpathy, who...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://maciejmalecki.github.io//assembler-libraries</id>
    <updated>2018-04-26T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Review&#58; New PSU for Commodore 64/128</title>
-   <link href="https://maciejmalecki.github.io//new-psu-for-c64"/>
-   <id>https://maciejmalecki.github.io//new-psu-for-c64</id>
-   <updated>2018-02-04T00:00:00+00:00</updated>
-   <content type="html">&lt;p&gt;Reliability of original C64 CPU has been disputed in community for long time. Commodore had problems with it in the past, plenty of houses were put on fire. Today, over 35 years after first Commodore 64 was produced another issue becomes especially painful: some of bricks decide now to ignore...</content>
  </entry>
 
  
