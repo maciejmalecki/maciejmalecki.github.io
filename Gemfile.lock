@@ -150,7 +150,9 @@ DEPENDENCIES
   jekyll (~> 4)
   jekyll-paginate
   jekyll-sitemap
+  listen (~> 3.7)
   rake (~> 12.3.2)
+  rb-inotify (~> 0.10)
   tzinfo-data
 
 BUNDLED WITH

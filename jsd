@@ -1,2 +1,2 @@
 #!/bin/bash
-bundle exec jekyll serve --draft --livereload
+LISTEN_GEM_FORCE_POLLING=true bundle exec jekyll serve --drafts -w --livereload
