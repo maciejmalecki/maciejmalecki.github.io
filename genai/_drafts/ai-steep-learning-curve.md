@@ -117,8 +117,6 @@ Of course, the advent of agentic AI does not mean that you can now ignore the un
 
 ### What should I do?
 
-<!-- not corrected -->
-
 The answer to this question depends on which group you belong to.
 
 If you are a **junior enthusiast**, you are on the right track to becoming a seasoned enthusiast, but remember that you are now very exposed to the 'training on the job' cut-off. In any case, you need expertise in order to work with AI-generated code efficiently. Here's how you can use AI to boost your skills:
