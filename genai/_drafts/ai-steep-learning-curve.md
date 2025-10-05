@@ -73,22 +73,26 @@ But why can't all source files be provided as context automatically? It's simple
 
 It turned out that the way you [prompt][prompt-engineering] is even relevant. There are plenty of techniques supported by most models, such as in-context learning and chain-of-thought, that can be used to improve model efficiency. However, there is always a trade-off between prompt specificity and length.
 
-This is the minimum information you need to know when using this technology. You cannot use diesel to fuel a petrol engine. If you do, you will need to clean your engine, which will be messy. Similarly, if you don't understand how AI works, you will misuse it, generate garbage, and ultimately stop using it completely.
+TThis is the minimum information you need to know when using this technology. Diesel cannot be used to fuel a petrol engine. If you do, you will need to clean your engine, which will be a messy process. Similarly, if you don't understand how AI works, you will misuse it, produce poor results, and ultimately stop using it completely.
 
 ### #3 Poor usability
 
 <!-- Messing up with tabs, fake, untransparent access to output and recently closed tabs -->
 <!-- not corrected -->
 
-
+In case of AI coding tools, worst thing the tool provider can do is to mimic the functionality that isn't there. We all know, that at the beginning coding assistants were not able to build up the context automatically. Pushing all sources into the context window will surely overload it, automatic context building was intially too difficult to accomplish, especially, that coding assistants were supporting wide range of mainstream programming languages --- so parsing all 'imports' wasn't a viable option, as logic of 'importing' varies depending on the language --- it's simply too complex and costly to implement such feature. The tool will loose it's 'language agnostic' feature, and being 'language agnostic' is one of the contribution to the (over)selling materials.
 
 ### But tools are evolving in right direction
 
 <!-- Agentic AI -->
 
+![Tools are getting better](/genai/img/John-Matrix-Commando-Schwarzenegger-e.jpg)
+
 ### Summary
 
 <!-- Recommendations per group -->
+
+![Just bodies](/genai/img/leave-anything-us-just-bodies.jpg)
 
 > **Disclaimer:**
 > All photos used in this article come from the brilliant 'Commando', a VHS era film which celebrates its 40th anniversary today.
