@@ -39,12 +39,11 @@ Early versions of GitHub Copilot went largely unnoticed until [ChatGPT][chatgpt]
 
 The problem arose because some people were able to deliver impressive work, such as implementing a video game from scratch. This was then applied to all software engineering tasks, including development on existing code bases, some of which were legacy systems with significant technical debt. 
 
-Tool providers started to claim that their tools could significantly speed up development, and the numbers were astonishing. In early 2023, a [paper][Arxiv GH CoP] was published claiming evidence that using an AI coding assistant speeds up task completion by an incredible 55.8%. The evaluators received a basic introduction to how to properly use the tool (GitHub Copilot). They were tasked with developing a HTTP server in JavaScript. From scratch, of course.
+Tool providers started to claim that their tools could significantly speed up development, and the numbers were astonishing. In early 2023, a [paper][Arxiv-GH-CoP] was published claiming evidence that using an AI coding assistant speeds up task completion by an incredible 55.8%. The evaluators received a basic introduction to how to properly use the tool (GitHub Copilot). They were tasked with developing a HTTP server in JavaScript. From scratch, of course.
 
 ![You can do big things with little effort](/genai/img/arnold-commando-ayn-rand-fasces.jpg)
-*'You can do big things with little effort' --- they said.*
+*'You can do big things with little effort' --- they said (the log is fake).*
 
-<!-- not corrected -->
 Here's why the marketing behaviour of the leading AI tool providers has become problematic. It's because the 'evidence' includes the most typical and common programming tasks, which are represented in open-source repositories with tons of examples. It doesn't matter if it's a snake game in Python, a Tetris game in JavaScript, or an HTTP server implemented in any mainstream programming language. The aforementioned study describes the problem of writing an HTTP server from scratch, which is the easiest case for AI because you don't have to deal with an existing codebase to establish the context for a conversation. We usually work with an existing codebase rather than a new one, in about 95% of cases, if not more.
 
 A simple search on GitHub revealed 643 public JavaScript repositories implementing an HTTP server (tagged with http-server) and 467 public Python repositories implementing a snake game. This is perhaps enough for Large Language Models to acquire complete knowledge during their training processes, which is why they can implement such typical cases flawlessly. However, this does not work for your project because, sadly, you are not tasked with implementing yet another snake game. The study contains a serious methodological error.
@@ -52,6 +51,7 @@ A simple search on GitHub revealed 643 public JavaScript repositories implementi
 ### Complexity of the technology is the reason number 2
 
 <!-- Context building, prompt engineering -->
+<!-- not corrected -->
 
 ![You'are using that wrong](/genai/img/commando-rocket-launcher-instruction-manual.jpg)
 *You're clearly using that wrong!*
