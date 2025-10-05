@@ -108,12 +108,30 @@ As an added bonus, agents can integrate with tools and offer great flexibility. 
 ![Tools are getting better](/genai/img/John-Matrix-Commando-Schwarzenegger-e.jpg)
 *The AI Coding Agent is well equipped with tools.*
 
+The picture below illustrates why Agentic AI is making our lives so much easier. With a 'bottom-up' approach, most of the work is still done manually, unlike with a 'top-down' approach, where, if you're lucky, everything can be done by the agent with just a prompt.
+
+![bottom vs top](/genai/img/bottom-top.excalidraw.png)
+*Two eras of AI assisted software engineering.*
+
+Of course, the advent of agentic AI does not mean that you can now ignore the underlying technology's complexity. Unfortunately, it is still not acceptable. There are many things that can go wrong. For example, context resolution may not be as accurate as it should be, particularly if you do not have good, consistent naming conventions. Tool output may be ignored, or tool launch may be omitted. If your quality assurance is not fully automated, you will still need to perform a lot of manual tests because code can be generated very quickly. If your static code analysis tools are not good enough, you will have extra work on reviewing generated code (a lot of code), in addition to the fact, that you may need to review it anyway (remeber [Miguel][ai-is-not-faster]?)
+
+### What should I do?
+
 <!-- not corrected -->
 
-### Summary
+The answer to this question depends on which group you belong to.
 
-<!-- Recommendations per group -->
+If you are a **junior enthusiast**, you are on the right track to becoming a seasoned enthusiast, but remember that you are now very exposed to the 'training on the job' cut-off. In any case, you need expertise in order to work with AI-generated code efficiently. Here's how you can use AI to boost your skills:
 
+Use the 'Ask' function to ask questions and learn from the output (you can double-check on Google if you don't trust the answer).
+Use the 'Ask' function or 'Agent Mode' to troubleshoot and analyse the output. Treat this as an ad hoc generated tutorial and learn from it.
+If you're unsure about the code being generated, generate unit tests for it and analyse the test methods and invariants — it's often easier to analyse the tests than the code itself.
+
+If you are a **seasoned enthusiast**, become a leader for your colleagues. Becoming a mentor is a great responsibility. However, it is also a lot of fun, as you will be the one discovering new methods and strategies for using AI. New language models pop up every month, so the game will never end.
+
+If you're a **junior sceptic**, perhaps you gave up too early. Start with simple steps: generate unit tests for code that you have written, for example. Alternatively, you could try a TDD approach: hand-code an interface, then generate tests for it, and then use code completion to generate production code while keeping the interface and tests in context (opened tabs!).
+
+For **seasoned sceptics**, I would advise taking a professional course in AI-aided software engineering. It may be that your project is especially challenging — the language is not mainstream, or the code base is bloated. My experience shows that Agentic AI can work pretty well with a messy code base and that, for a non-mainstream language, fine-tuning is a good solution. Alternatively, such dedicated language models may already be available. However, if you are considering trying to reverse the clock, I recommend against it. In my humble opinion, this trend cannot be reversed.
 
 > **Disclaimer:**
 > All photos used in this article come from the brilliant 'Commando', a VHS era film which celebrates its 40th anniversary today.
