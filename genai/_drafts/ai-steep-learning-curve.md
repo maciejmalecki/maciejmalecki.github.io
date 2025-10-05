@@ -61,13 +61,26 @@ Given such a simple user interface, it's not surprising that people tend to use 
 ![You'are using that wrong](/genai/img/commando-rocket-launcher-instruction-manual.jpg)
 *You're clearly using that wrong!*
 
-<!-- Context building, prompt engineering -->
-<!-- not corrected -->
+To understand the contrast between the simplicity of the user interface and the underlying complexity, take a look at the following picture:
 
+![LLM in a nutshell](/genai/img/coding-assistant.excalidraw.png)
+
+This is perhaps the simplest possible AI-driven chatbot, with the ability to upload documents (contextual data) and conversation history — after all, this is a chatbot. It has no web access, thinking process or deep research function. As you can see, the Large Language Model block is labelled 'built-in knowledge', meaning that it contains knowledge that was injected during the training and fine-tuning processes. However, this knowledge may be outdated and incomplete, and, most importantly, inaccurate. This is because LLMs are not document storage systems. Therefore, you will never get an exact copy of the training sample, but rather a paraphrase of it. Sometimes, when a fact was not sufficiently represented in the training data, you may experience an effect known as 'hallucinations'.
+
+In order for an LLM to work reliably, you must provide context, i.e. all the information necessary to accomplish the task. In the case of coding assistants, this means providing all the source files necessary to generate new code or modify existing code. This includes all declarations, custom data types, classes, functions, etc. If you ignore this, don't be surprised if you get a random or erratic answer. At the beginning of the GenAI revolution, this context could only be built manually. If you used an IDE, you just had to open additional files as tabs in the editor. This approach was never intuitive; it was based on statistical analysis and the assumption that most of the required files had been opened recently and were still open as tabs. 
+
+But why can't all source files be provided as context automatically? It's simple: initially, it was simply too much because each LLM is characterised by something like a context window size. This applies to everything: context data, conversation history (when using the chat function), and of course the prompt itself. Even with LLMs accompanied by large context window sizes, processing everything does not work because recent models suffer from the [lost in the middle][lost-in-the-middle] phenomenon.
+
+It turned out that the way you [prompt][prompt-engineering] is even relevant. There are plenty of techniques supported by most models, such as in-context learning and chain-of-thought, that can be used to improve model efficiency. However, there is always a trade-off between prompt specificity and length.
+
+This is the minimum information you need to know when using this technology. You cannot use diesel to fuel a petrol engine. If you do, you will need to clean your engine, which will be messy. Similarly, if you don't understand how AI works, you will misuse it, generate garbage, and ultimately stop using it completely.
 
 ### #3 Poor usability
 
 <!-- Messing up with tabs, fake, untransparent access to output and recently closed tabs -->
+<!-- not corrected -->
+
+
 
 ### But tools are evolving in right direction
 
@@ -90,3 +103,5 @@ Given such a simple user interface, it's not surprising that people tend to use 
 [gh-http-cases]: https://github.com/topics/http-server?l=javascript
 [gh-snake-cases]: https://github.com/topics/snake?l=python
 [attention]: https://en.wikipedia.org/wiki/Attention_Is_All_You_Need
+[lost-in-the-middle]: https://cs.stanford.edu/~nfliu/papers/lost-in-the-middle.arxiv2023.pdf
+[prompt-engineering]: https://en.wikipedia.org/wiki/Prompt_engineering
