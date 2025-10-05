@@ -29,12 +29,17 @@ Now, let's focus on 'junior sceptics'. Most of them have tried, but after some i
 
 Last but not least, my favourite group is 'seasoned sceptics'. I was perhaps there twice, especially when it came to coding assistants. I started using a leading tool from this group, but then quickly reverted to a plain AI chatbot and the copy-and-paste technique because I noticed the earlier one was random. I had the same experience when I first tried a multi-agent tool and then reverted to a more classical approach. In fact, there are two kinds of people in this group: those with very little knowledge of AI, particularly Generative AI, and those with a good awareness of AI who nevertheless try to turn back the clock by neglecting to use any AI in their work, fearing (and with good reason) that they will be eliminated from the market sooner or later. The people in this group can play two roles. One positive role is that of critic and realist. But there is a negative role as well — that of the defeatist, who can spoil the atmosphere and break up your teams.
 
-<!-- not corrected -->
-Once we have sketched different actors in this drama, let's now elaborate more on reasons.
+Now that we have sketched out the different actors in this drama, let's elaborate more on the reasons.
 
 ### Overselling is the reason number 1
 
 <!-- AI providers are to be blamed -->
+
+<!-- not corrected -->
+According to [Wikipedia][gh-wiki], first version of GitHub Copilot was shipped as preview in a form of Visual Studio Code plugin already in late June, 2021. Powered with [OpenAI Codex][openai-codex] model, a fine tuned version of GPT-3, GitHub Copilot was capable of just completing programmer's 'thought' as he type his code into the IDE. I am personally a big fan of AI assisted code completions, the only problem with this mode of working is a very limited set of capabilities that you can use to build the context, and it is not as straightforward to phrase your intent --- you have either to name your identifiers very precisely, and, if not enough, put additional 'prompts' as a code comments.
+
+The early GitHub Copilot went largely unnoticed until [ChatGPT][chatgpt] was released by the end of 2022, using very much the same technology as Copilot underneath. With GPT-3.5 and later GPT-4 being able to generate quite big and complex pieces of code 'out of thin air' --- meaning, just by English (or even Polish) prompts, everybody gets totally crazy. Immediately, coding assistants like GitHub Copilot were revealed and remarketed. The only problem is that once users of ChatGPT started to use Copilot, they got totally puzzled, as still the only way to use it is to prompt via 'source code' in the editor window of your IDE. People noticed that code completions were more or less randomly accurate, sometimes completely stupid. Nobody read the manual to learn, that 'you need to build context'. How? By opening editor's tabs! How obvious...
+
 
 ![You can do big things with little effort](/genai/img/arnold-commando-ayn-rand-fasces.jpg)
 *'You can do big things with little effort' --- they said.*
@@ -65,3 +70,6 @@ All photos used in this article come from the brilliant 'Kommando', a VHS era fi
 [when-does-ai]: when-does-ai-take-my-job
 [ai-is-not-faster]: https://blog.miguelgrinberg.com/post/why-generative-ai-coding-tools-and-agents-do-not-work-for-me
 [metr]: https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
+[gh-wiki]: https://en.wikipedia.org/wiki/GitHub_Copilot
+[openai-codex]: https://en.wikipedia.org/wiki/OpenAI_Codex
+[chatgpt]: https://en.wikipedia.org/wiki/ChatGPT
