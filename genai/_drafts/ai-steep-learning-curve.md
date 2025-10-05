@@ -31,7 +31,7 @@ Last but not least, my favourite group is 'seasoned sceptics'. I was perhaps the
 
 Now that we have sketched out the different actors in this drama, let's elaborate more on the reasons.
 
-### Overselling is the reason number 1
+### #1 Overselling
 
 According to [Wikipedia][gh-wiki], the first version of GitHub Copilot was released as a preview in the form of a Visual Studio Code plugin in late June 2021. Powered by the [OpenAI Codex][openai-codex] model --- a fine-tuned version of GPT-3 --- GitHub Copilot was capable of completing a programmer's thoughts as they typed code into the IDE. I am personally a big fan of AI-assisted code completion. The only problem with this mode of working is the very limited set of capabilities you can use to build context, and it is not as straightforward to phrase your intent --- you either have to name your identifiers very precisely or add additional 'prompts' as code comments.
 
@@ -48,7 +48,7 @@ Here's why the marketing behaviour of the leading AI tool providers has become p
 
 A simple search on GitHub revealed 643 public JavaScript repositories implementing an HTTP server (tagged with http-server) and 467 public Python repositories implementing a snake game. This is perhaps enough for Large Language Models to acquire complete knowledge during their training processes, which is why they can implement such typical cases flawlessly. However, this does not work for your project because, sadly, you are not tasked with implementing yet another snake game. The study contains a serious methodological error.
 
-### Complexity of the technology is the reason number 2
+### #2 Complexity of the technology
 
 <!-- Context building, prompt engineering -->
 <!-- not corrected -->
@@ -56,7 +56,7 @@ A simple search on GitHub revealed 643 public JavaScript repositories implementi
 ![You'are using that wrong](/genai/img/commando-rocket-launcher-instruction-manual.jpg)
 *You're clearly using that wrong!*
 
-### Poor usability of the tooling is the reason number 3
+### #3 Poor usability
 
 <!-- Messing up with tabs, fake, untransparent access to output and recently closed tabs -->
 
@@ -68,9 +68,8 @@ A simple search on GitHub revealed 643 public JavaScript repositories implementi
 
 <!-- Recommendations per group -->
 
-### Disclaimer
-
-All photos used in this article come from the brilliant 'Kommando', a VHS era film which celebrates its 40th anniversary today.
+> **Disclaimer:**
+> All photos used in this article come from the brilliant 'Commando', a VHS era film which celebrates its 40th anniversary today.
 
 [when-does-ai]: when-does-ai-take-my-job
 [ai-is-not-faster]: https://blog.miguelgrinberg.com/post/why-generative-ai-coding-tools-and-agents-do-not-work-for-me
