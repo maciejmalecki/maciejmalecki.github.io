@@ -73,20 +73,32 @@ But why can't all source files be provided as context automatically? It's simple
 
 It turned out that the way you [prompt][prompt-engineering] is even relevant. There are plenty of techniques supported by most models, such as in-context learning and chain-of-thought, that can be used to improve model efficiency. However, there is always a trade-off between prompt specificity and length.
 
-TThis is the minimum information you need to know when using this technology. Diesel cannot be used to fuel a petrol engine. If you do, you will need to clean your engine, which will be a messy process. Similarly, if you don't understand how AI works, you will misuse it, produce poor results, and ultimately stop using it completely.
+This is the minimum information you need to know when using this technology. Diesel cannot be used to fuel a petrol engine. If you do, you will need to clean your engine, which will be a messy process. Similarly, if you don't understand how AI works, you will misuse it, produce poor results, and ultimately stop using it completely.
 
 ### #3 Poor usability
 
-<!-- Messing up with tabs, fake, untransparent access to output and recently closed tabs -->
+The worst thing a provider of AI coding tools can do is mimic functionality that isn't there. As we know, coding assistants were initially unable to build context automatically. Pushing all sources into the context window would overload it. Automatic context building was initially too difficult to accomplish, especially since coding assistants support a wide range of mainstream programming languages — parsing all 'imports' was not a viable option since the logic of 'importing' varies depending on the language. It would simply be too complex and costly to implement such a feature. The tool would lose its 'language agnostic' feature, and being 'language agnostic' is one of the selling points.
+
+One might argue that, if the tool is limited in terms of context building and size, it would be better to make context management more explicit, offering the option to mark and unmark files as being included or excluded. The only way to manage context for code completion was to keep relevant tabs open. However, one of the market-leading tools retains recently closed files in the context. The only way to remove a file was to restart the tool. The worst thing about this is that inexperienced users might conclude that managing tabs — thus building the context — is no longer necessary, so they will skip doing this. I have witnessed this happening.
+
+Another limitation was that early coding assistants were unable to perform complex tasks when using chat functionality, except perhaps for implementing a snake game. Unfortunately, from a user experience point of view, a chat window essentially invited a top-down approach, meaning 'specify the high-level requirements and the tool will change the necessary files'. However, coding assistants without agent mode were unable to do this!
+
+### The way you were intended to work with early AI tools
+
 <!-- not corrected -->
 
-In case of AI coding tools, worst thing the tool provider can do is to mimic the functionality that isn't there. We all know, that at the beginning coding assistants were not able to build up the context automatically. Pushing all sources into the context window will surely overload it, automatic context building was intially too difficult to accomplish, especially, that coding assistants were supporting wide range of mainstream programming languages --- so parsing all 'imports' wasn't a viable option, as logic of 'importing' varies depending on the language --- it's simply too complex and costly to implement such feature. The tool will loose it's 'language agnostic' feature, and being 'language agnostic' is one of the contribution to the (over)selling materials.
+The only reliable way to use early coding assistants was what I call the 'bottom-up' approach. This means doing the first part of the work manually — selecting the context by opening the relevant files, for example — and splitting the work into smaller steps. This involves creating or editing every single file in your project that needs to be changed, and asking the AI to fulfil only the most basic tasks at the bottom, such as implementing a class or a function, or changing a tiny part of the code. You can also optionally generate a unit test, which worked exceptionally well even with code completion.
 
-### But tools are evolving in right direction
+With the 'bottom-up' approach, you get down to the function level and literally generate code there, either using code completion (which works surprisingly well here), or by entering prompts into the chat window. Alternatively, you can use the inline chat function, which is also available in tools such as Codeium (now Windsurf) and GitHub Copilot.
+
+The problem with this usage strategy is that deciding what to include and what to exclude can be a lot of work. The same applies to planning the work and splitting it into easily digestible chunks for the AI. This is why reported gains from such tools are at most 20–30%, nowhere near the proclaimed 55%.
+
+### Coding AI agent changes everything
 
 <!-- Agentic AI -->
 
 ![Tools are getting better](/genai/img/John-Matrix-Commando-Schwarzenegger-e.jpg)
+*The AI Coding Agent is well equipped with tools.*
 
 ### Summary
 
