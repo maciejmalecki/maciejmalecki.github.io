@@ -50,11 +50,20 @@ A simple search on GitHub revealed 643 public JavaScript repositories implementi
 
 ### #2 Complexity of the technology
 
-<!-- Context building, prompt engineering -->
-<!-- not corrected -->
+Artificial Neural Networks (ANNs) as a scientific discipline are nearly as old as digital computers, originating in the 1940s. The theory slowly evolved without many real-life applications until the beginning of the 21st century. A few things happened at this time: the internet revolution provided relatively cheap access to large quantities of data and cloud computing started to offer flexible and scalable computing power at a reasonable price. Then, driven by the gaming industry's demand for more relevant technology, highly performant graphics processing units (GPUs) drove computation costs even lower (because vector graphics and neural networks essentially run on the same maths, so these dedicated integrated circuits could easily be reused). Then, with deep learning, machine learning led us to generative models and, finally, [the Transformer][attention]. 
+
+Artifical Intelligence is indeed complex. It's a subject that most of us don't even try to familiarise ourselves with. One might say, 'We don't need to', and this is exactly *the second problem*. Ask yourself: **when filling up your car with fuel, doesn't it really matter whether you pour diesel or petrol?**
+
+The problem is serious because, from the end user's point of view, the technology seems trivial. You mostly interact with a chat interface, or perhaps an AI coding assistant which also offers a chat interface. Code completion is also a well-known feature of IDEs. However, this time, code completion is no longer deterministic.
+
+Given such a simple user interface, it's not surprising that people tend to use it in a naive way. They just type in a short, general statement as a prompt and expect miracles. No miracle occurred? The code doesn't work? Or even worse — MY GOD! IT HALLUCINATES!!!
 
 ![You'are using that wrong](/genai/img/commando-rocket-launcher-instruction-manual.jpg)
 *You're clearly using that wrong!*
+
+<!-- Context building, prompt engineering -->
+<!-- not corrected -->
+
 
 ### #3 Poor usability
 
@@ -80,3 +89,4 @@ A simple search on GitHub revealed 643 public JavaScript repositories implementi
 [arXiv-GH-CoP]: https://arxiv.org/pdf/2302.06590
 [gh-http-cases]: https://github.com/topics/http-server?l=javascript
 [gh-snake-cases]: https://github.com/topics/snake?l=python
+[attention]: https://en.wikipedia.org/wiki/Attention_Is_All_You_Need
