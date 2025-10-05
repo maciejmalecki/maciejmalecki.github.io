@@ -18,11 +18,14 @@ As a big fan of systematic, scientific analysis, I have divided all software eng
 
 ![Types of AI Users](/genai/img/types-of-ai-users.excalidraw.png)
 
-I will give you some time to collect your jaws off the floor — a clear result of this eye-opening drawing — before continuing with the development of this little theory.
+I will give you some time to recover from the jaw-dropping effect of this eye-opening drawing before continuing with the development of this little theory, which is mostly based on my own observations of the environment in which I work and of trends on different social media. Please note that I will only focus on people who can use AI in their work. I am aware that AI tooling is still prohibited for many projects and companies, mostly due to legal, security and data protection concerns.
 
 Let's start with the enthusiasts. I myself am in a group called 'seasoned enthusiasts'. You could call them seniors or whatever. It's a group of people with significant experience in their profession --- software engineering, in this case. These people clearly recognise the potential of large language models. Some of them may be aware that the main driver in the development of this technology is actually their profession — big tech companies have invested billions just to address the problem of a relatively small pool of well-paid specialists. Seasoned enthusiasts have accepted this reality, either seeing it as an opportunity to quickly upskill in the AI coding area or progressing via a 'can't fight it, so join it' strategy (with exactly the same rationale). The real problem is that 'seasoned enthusiasts' are perhaps the smallest group in the population as a whole.
 
 A much bigger group nowadays is the 'junior enthusiast', who has much less experience but is nonetheless trying to use AI in their daily work. If they are lucky, they have a good AI leader around to help them learn how to use the tools properly. If not, they have to experiment and learn through trial and error, which can be difficult (I will explain why below). However, even if they are only using the chat function (or 'ask mode' in some terminology) to ask questions related to problems with their code or technology, this may still be more efficient than searching for answers on Google or reading through Stack Overflow. Or even worse, watching tons of useless tech videos on YouTube.
+Of course, there is a risk that these people will not develop the necessary skills. Even the simplest questions can be answered by AI, so there is no need to search for information, analyse it, synthesise it or apply critical thinking.
+
+Now, let's focus on 'junior sceptics'. Most of them have tried, but after some initial success, they were set back by non-functional software or devastating code reviews performed by fellow engineers. They most likely revert to classical methods, including Stack Overflow, which will most likely become obsolete sooner or later. The existence of this group proves that a competent AI leader is essential for a project, team or company. Unless, of course, some of these people deliberately ignore AI in order to gain practical coding and engineering skills as soon as possible, thereby joining the 'seasoned' group.
 
 <!-- not corrected -->
 
@@ -48,8 +51,14 @@ A much bigger group nowadays is the 'junior enthusiast', who has much less exper
 
 <!-- Agentic AI -->
 
+### Summary
+
+<!-- Recommendations per group -->
+
 ### Disclaimer
 
 All photos used in this article come from the brilliant 'Kommando', a VHS era film which celebrates its 40th anniversary today.
 
 [when-does-ai]: when-does-ai-take-my-job
+[ai-is-not-faster]: https://blog.miguelgrinberg.com/post/why-generative-ai-coding-tools-and-agents-do-not-work-for-me
+[metr]: https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
