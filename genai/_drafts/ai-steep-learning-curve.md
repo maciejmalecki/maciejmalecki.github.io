@@ -2,7 +2,7 @@
 title: AI steep learning curve
 layout: post
 categories: genai
-description: Reflections on the journey of learning and adapting to AI technologies.
+description: Using AI in software engineering is harder than you think, and this is what marketing material are not tellying you.
 pic: /genai/img/arnold-commando-ayn-rand-fasces.jpg
 ---
 
@@ -27,7 +27,13 @@ Of course, there is a risk that these people will not develop the necessary skil
 
 Now, let's focus on 'junior sceptics'. Most of them have tried, but after some initial success, they were set back by non-functional software or devastating code reviews performed by fellow engineers. They most likely revert to classical methods, including Stack Overflow, which will most likely become obsolete sooner or later. The existence of this group proves that a competent AI leader is essential for a project, team or company. Unless, of course, some of these people deliberately ignore AI in order to gain practical coding and engineering skills as soon as possible, thereby joining the 'seasoned' group.
 
-Last but not least, my favourite group is 'seasoned sceptics'. I was perhaps there twice, especially when it came to coding assistants. I started using a leading tool from this group, but then quickly reverted to a plain AI chatbot and the copy-and-paste technique because I noticed the earlier one was random. I had the same experience when I first tried a multi-agent tool and then reverted to a more classical approach. In fact, there are two kinds of people in this group: those with very little knowledge of AI, particularly Generative AI, and those with a good awareness of AI who nevertheless try to turn back the clock by neglecting to use any AI in their work, fearing (and with good reason) that they will be eliminated from the market sooner or later. The people in this group can play two roles. One positive role is that of critic and realist. But there is a negative role as well — that of the defeatist, who can spoil the atmosphere and break up your teams.
+Last but not least, my favourite group is 'seasoned sceptics'. I was perhaps there twice, especially when it came to coding assistants. I started using a leading tool from this group, but then quickly reverted to a plain AI chatbot and the copy-and-paste technique because I noticed the earlier one was random. I had the same experience when I first tried a multi-agent tool and then reverted to a more classical approach. In fact, there are two kinds of people in this group: those with very little knowledge of AI, particularly Generative AI, and those with a good awareness of AI who nevertheless try to turn back the clock by neglecting to use any AI in their work, fearing (and with good reason) that they will be eliminated from the market sooner or later. 
+
+As I said, this scepticism is quite justified, especially when you read the following METR report stating that a select group of experienced developers actually reported a performance degradation when using AI coding assistants. Unfortunately, we don't know if these people knew how to use these tools properly. 
+
+An interesting aspect is covered in [this article][ai-is-not-faster] by Miguel Grinberg. Miguel apparently has little trust in the code being generated, which is fully understandable. By reviewing each part of the generated code, he claims that he is not faster at all. This is a well-known problem with agentic AI, which I will discuss at the end of this article. It can perhaps be mitigated with an appropriate prompting technique, as I recently described in [The Rise of Vibe Coding][the-rise-of-vibe-coding].
+
+The people in this group can play two roles. One positive role is that of critic and realist. But there is a negative role as well — that of the defeatist, who can spoil the atmosphere and break up your teams.
 
 Now that we have sketched out the different actors in this drama, let's elaborate more on the reasons.
 
@@ -85,8 +91,6 @@ Another limitation was that early coding assistants were unable to perform compl
 
 ### The way you were intended to work with early AI tools
 
-<!-- not corrected -->
-
 The only reliable way to use early coding assistants was what I call the 'bottom-up' approach. This means doing the first part of the work manually — selecting the context by opening the relevant files, for example — and splitting the work into smaller steps. This involves creating or editing every single file in your project that needs to be changed, and asking the AI to fulfil only the most basic tasks at the bottom, such as implementing a class or a function, or changing a tiny part of the code. You can also optionally generate a unit test, which worked exceptionally well even with code completion.
 
 With the 'bottom-up' approach, you get down to the function level and literally generate code there, either using code completion (which works surprisingly well here), or by entering prompts into the chat window. Alternatively, you can use the inline chat function, which is also available in tools such as Codeium (now Windsurf) and GitHub Copilot.
@@ -95,19 +99,27 @@ The problem with this usage strategy is that deciding what to include and what t
 
 ### Coding AI agent changes everything
 
-<!-- Agentic AI -->
+Recently, most AI coding assistants have been enriched with something called Agentic AI. I feel this should have been there from the beginning. This is because most software developers dealing with AI have always acted intuitively, as all these tools have always been agentic.
+
+This is because an agent can eventually plan work and split complex, high-level tasks into smaller steps. Agents can also seek context data by traversing the existing code base. These tools do this better or worse, but the difference is huge. Forget about tabs and attachments, at least when it comes to relevant source files. Having an agent in your AI coding assistant enables a 'top-down' approach.
+
+As an added bonus, agents can integrate with tools and offer great flexibility. For example, if you use a build system such as [Gradle][gradle], it can analyse a build file, recognise its capabilities and use them to compile code, run tests, launch various checks, and so on during its run.
 
 ![Tools are getting better](/genai/img/John-Matrix-Commando-Schwarzenegger-e.jpg)
 *The AI Coding Agent is well equipped with tools.*
+
+<!-- not corrected -->
 
 ### Summary
 
 <!-- Recommendations per group -->
 
-![Just bodies](/genai/img/leave-anything-us-just-bodies.jpg)
 
 > **Disclaimer:**
 > All photos used in this article come from the brilliant 'Commando', a VHS era film which celebrates its 40th anniversary today.
+
+![Just bodies](/genai/img/leave-anything-us-just-bodies.jpg)
+*'Just bodies.', John Matrix*
 
 [when-does-ai]: when-does-ai-take-my-job
 [ai-is-not-faster]: https://blog.miguelgrinberg.com/post/why-generative-ai-coding-tools-and-agents-do-not-work-for-me
@@ -121,3 +133,5 @@ The problem with this usage strategy is that deciding what to include and what t
 [attention]: https://en.wikipedia.org/wiki/Attention_Is_All_You_Need
 [lost-in-the-middle]: https://cs.stanford.edu/~nfliu/papers/lost-in-the-middle.arxiv2023.pdf
 [prompt-engineering]: https://en.wikipedia.org/wiki/Prompt_engineering
+[gradle]: https://gradle.org/
+[the-rise-of-vibe-coding]: the-rise-of-vibe-coding
