@@ -1,5 +1,5 @@
 ---
-title: Are you still waiting for the AI bubble to burst? The train has already departed.
+title: Still waiting for the AI bubble to burst? The train has already departed.
 layout: post
 categories: genai
 description: Using AI in software engineering is harder than you think, and this is what marketing material are not tellying you.
@@ -30,6 +30,8 @@ Now, let's focus on 'junior sceptics'. Most of them have tried, but after some i
 
 Last but not least, my favourite group is 'seasoned sceptics'. I was perhaps there twice, especially when it came to coding assistants. I started using a leading tool from this group, but then quickly reverted to a plain AI chatbot and the copy-and-paste technique because I noticed the earlier one was random. I had the same experience when I first tried a multi-agent tool and then reverted to a more classical approach. In fact, there are two kinds of people in this group: those with very little knowledge of AI, particularly Generative AI, and those with a good awareness of AI who nevertheless try to turn back the clock by neglecting to use any AI in their work, fearing (and with good reason) that they will be eliminated from the market sooner or later. 
 
+### Scepticism is something that everybody should expect
+
 As I said, this scepticism is quite justified, especially when you read the following [METR][metr] report stating that a select group of experienced developers actually reported a performance degradation when using AI coding assistants. Unfortunately, we don't know if these people knew how to use these tools properly. 
 
 An interesting aspect is covered in [this article][ai-is-not-faster] by Miguel Grinberg. Miguel apparently has little trust in the code being generated, which is fully understandable. By reviewing each part of the generated code, he claims that he is not faster at all. This is a well-known problem with agentic AI, which I will discuss at the end of this article. It can perhaps be mitigated with an appropriate prompting technique, as I recently described in [The Rise of Vibe Coding][the-rise-of-vibe-coding].
@@ -38,7 +40,7 @@ Scepticism is a good thing as long as it is accompanied by constructive thinking
 
 Now that we have sketched out the different actors in this drama, let's elaborate more on the reasons. There may be more reasons, but based on my experience, I have identified three major factors that can discourage individuals or entire organisations from adopting AI.
 
-### #1 Overselling
+### Reason #1 --- overselling
 
 <!-- rewrite \/ \/ \/ -->
 
@@ -57,7 +59,7 @@ Here's why the marketing behaviour of the leading AI tool providers has become p
 
 A simple search on GitHub revealed 643 public JavaScript repositories implementing an HTTP server (tagged with http-server) and 467 public Python repositories implementing a snake game. This is perhaps enough for Large Language Models to acquire complete knowledge during their training processes, which is why they can implement such typical cases flawlessly. However, this does not work for your project because, sadly, you are not tasked with implementing yet another snake game. The study contains a serious methodological error.
 
-### #2 Complexity of the technology
+### Reason #2 --- inherent complexity of the technology
 
 Artificial Neural Networks (ANNs) as a scientific discipline are nearly as old as digital computers, originating in the 1940s. The theory slowly evolved without many real-life applications until the beginning of the 21st century. A few things happened at this time: the internet revolution provided relatively cheap access to large quantities of data and cloud computing started to offer flexible and scalable computing power at a reasonable price. Then, driven by the gaming industry's demand for more relevant technology, highly performant graphics processing units (GPUs) drove computation costs even lower (because vector graphics and neural networks essentially run on the same maths, so these dedicated integrated circuits could easily be reused). Then, with deep learning, machine learning led us to generative models and, finally, [the Transformer][attention]. 
 
@@ -84,7 +86,7 @@ It turned out that the way you [prompt][prompt-engineering] is even relevant. Th
 
 This is the minimum information you need to know when using this technology. Diesel cannot be used to fuel a petrol engine. If you do, you will need to clean your engine, which will be a messy process. Similarly, if you don't understand how AI works, you will misuse it, produce poor results, and ultimately stop using it completely.
 
-### #3 Poor usability
+### Reason #3 --- initial poor usability
 
 The worst thing a provider of AI coding tools can do is mimic functionality that isn't there. As we know, coding assistants were initially unable to build context automatically. Pushing all sources into the context window would overload it. Automatic context building was initially too difficult to accomplish, especially since coding assistants support a wide range of mainstream programming languages — parsing all 'imports' was not a viable option since the logic of 'importing' varies depending on the language. It would simply be too complex and costly to implement such a feature. The tool would lose its 'language agnostic' feature, and being 'language agnostic' is one of the selling points.
 
