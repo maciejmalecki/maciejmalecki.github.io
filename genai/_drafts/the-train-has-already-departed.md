@@ -18,6 +18,8 @@ The Generative AI era in software engineering highlights that the difference bet
 
 ![Types of AI Users](/genai/img/types-of-ai-users.excalidraw.png)
 
+<!-- rewrite \/ \/ \/ -->
+
 Let's start with the enthusiasts. I myself am in a group called 'seasoned enthusiasts'. You could call them seniors or whatever. It's a group of people with significant experience in their profession --- software engineering, in this case. These people clearly recognise the potential of large language models. Some of them may be aware that the main driver in the development of this technology is actually their profession — big tech companies have invested billions just to address the problem of a relatively small pool of well-paid specialists. Seasoned enthusiasts have accepted this reality, either seeing it as an opportunity to quickly upskill in the AI coding area or progressing via a 'can't fight it, so join it' strategy (with exactly the same rationale). The real problem is that 'seasoned enthusiasts' are perhaps the smallest group in the population as a whole.
 
 A much bigger group nowadays is the 'junior enthusiast', who has much less experience but is nonetheless trying to use AI in their daily work. If they are lucky, they have a good AI leader around to help them learn how to use the tools properly. If not, they have to experiment and learn through trial and error, which can be difficult (I will explain why below). However, even if they are only using the chat function (or 'ask mode' in some terminology) to ask questions related to problems with their code or technology, this may still be more efficient than searching for answers on Google or reading through Stack Overflow. Or even worse, watching tons of useless tech videos on YouTube.
