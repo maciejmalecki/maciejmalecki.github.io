@@ -1,5 +1,5 @@
 ---
-title: AI steep learning curve
+title: Are you still waiting for the AI bubble to burst? The train has already departed.
 layout: post
 categories: genai
 description: Using AI in software engineering is harder than you think, and this is what marketing material are not tellying you.
