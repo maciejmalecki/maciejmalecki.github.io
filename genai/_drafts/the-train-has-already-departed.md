@@ -6,11 +6,11 @@ description: Using AI in software engineering is harder than you think, and this
 pic: /genai/img/arnold-commando-ayn-rand-fasces.jpg
 ---
 
-Nowadays, it is difficult to avoid being a sceptical AI user, especially if you are a software engineer. If you read the news carefully and follow tech-oriented social media accounts, you may notice a big discrepancy between the enthusiastic opinions about how game-changing the new technology is and how much code can now be generated with very little effort, and the pessimistic messages about working with AI being no faster, or even slower, than working without it.
+It is difficult to avoid being a sceptical AI user, especially if you are a software engineer. If you read the news carefully and follow tech-oriented social media accounts, you may notice a big discrepancy between the enthusiastic opinions about how game-changing the new technology is and how much code can now be generated with very little effort, and the pessimistic messages about working with AI being [no faster][ai-is-not-faster], or even [slower][metr], than working without it.
 
 This kind of dissonance is not unprecedented. Scepticism and enthusiasm were also evident at the time of the invention of the steam engine, the bicycle and the car. Nor can I say that I haven't witnessed this myself, because that would be untrue. Consider the invention of the personal computer, the internet and the mobile phone, and finally the smartphone.
 
-The only difference with AI in software engineering is perhaps that I am personally involved. This is because ["AI can take my job"][when-does-ai] and because it is expected to generate unmaintainable code (because humans only develop highly maintainable, clean code, after all). Why are there so many mixed opinions? Let's take a brief look at this problem.
+The AI revolution is happening now at an unprecedented pace. Expectations are enormous, as are the reported disappointments. Can both sides be right?
 
 ### The way we feel about AI
 
@@ -18,7 +18,7 @@ The Generative AI era in software engineering highlights that the difference bet
 
 ![Types of AI Users](/genai/img/types-of-ai-users.excalidraw.png)
 
-Let's start with the enthusiasts. I myself am in a group called 'seasoned enthusiasts'. You could call them seniors or whatever. It's a group of people with significant experience in their profession --- software engineering, in this case. These people clearly recognise the potential of large language models. Some of them may be aware that the main driver in the development of this technology is actually their profession — big tech companies have invested billions just to address the problem of a relatively small pool of well-paid specialists. Seasoned enthusiasts have accepted this reality, either seeing it as an opportunity to quickly upskill in the AI coding area or progressing via a 'if you can't beat them, join them' strategy (with exactly the same rationale).
+Let's start with the enthusiasts. I am in a group called 'seasoned enthusiasts', for example. You could call them seniors, or something similar. It's a group of people with significant experience in software engineering. These people clearly recognise the potential of large language models. Some of them may be aware that their profession is actually the main driver in the development of this technology — big tech companies have invested billions just to address the problem of a relatively small pool of well-paid specialists. Seasoned enthusiasts have accepted this reality; they are aware that there is a risk of being replaced by machines. Some see this as an opportunity to quickly upskill in AI coding, while others are adopting a 'if you can't beat them, join them' strategy (with exactly the same rationale).
 
 Switching to the 'junior enthusiast', who has much less experience but is nonetheless trying to use AI in their daily work. If they are lucky, they have a good AI leader around to help them learn how to use the tools properly. If not, they have to experiment and learn through trial and error, which can be difficult (I will explain why below). However, even if they are only using the chat function (or 'ask mode' in some terminology) to ask questions related to problems with their code or technology, this may still be more efficient than searching for answers on Google or reading through Stack Overflow.
 
@@ -26,13 +26,21 @@ Switching to the 'junior enthusiast', who has much less experience but is noneth
 Of course, there is a risk that these people will not develop the necessary skills. Even the simplest questions can be answered by AI, so there is no need to search for information, analyse it, synthesise it or apply critical thinking.
 -->
 
-Now, let's focus on 'junior sceptics'. Most of them have tried, but after some initial success, they were set back by non-functional software or devastating code reviews performed by fellow engineers. They most likely revert to classical methods, including Stack Overflow, which will most likely become obsolete sooner or later. The existence of this group proves that a competent AI leader is essential for a project, team or company. Unless, of course, some of these people deliberately ignore AI in order to gain practical coding and engineering skills as soon as possible, thereby joining the 'seasoned' group.
+Now, let's focus on 'junior sceptics'. Most of them have tried, but after some initial success, they were set back by non-functional software or devastating code reviews performed by fellow engineers. They most likely revert to classical methods, including Stack Overflow, which will most likely become obsolete sooner or later. 
+
+<!--
+The existence of this group proves that a competent AI leader is essential for a project, team or company. Unless, of course, some of these people deliberately ignore AI in order to gain practical coding and engineering skills as soon as possible, thereby joining the 'seasoned' group.
+-->
 
 Last but not least, my favourite group is 'seasoned sceptics'. I was perhaps there twice, especially when it came to coding assistants. I started using a leading tool from this group, but then quickly reverted to a plain AI chatbot and the copy-and-paste technique because I noticed the earlier one was random. I had the same experience when I first tried a multi-agent tool and then reverted to a more classical approach. In fact, there are two kinds of people in this group: those with very little knowledge of AI, particularly Generative AI, and those with a good awareness of AI who nevertheless try to turn back the clock by neglecting to use any AI in their work, fearing (and with good reason) that they will be eliminated from the market sooner or later. 
 
-### Scepticism is something that everybody should expect
+### Scepticism is not necessarily a bad thing
 
-As I said, this scepticism is quite justified, especially when you read the following [METR][metr] report stating that a select group of experienced developers actually reported a performance degradation when using AI coding assistants. Unfortunately, we don't know if these people knew how to use these tools properly. 
+As I said, this scepticism is quite justified, especially when you read the following [METR][metr] report stating that a select group of experienced developers actually reported a performance degradation when using AI coding assistants.
+
+<!--
+Unfortunately, we don't know if these people knew how to use these tools properly. 
+-->
 
 An interesting aspect is covered in [this article][ai-is-not-faster] by Miguel Grinberg. Miguel apparently has little trust in the code being generated, which is fully understandable. By reviewing each part of the generated code, he claims that he is not faster at all. This is a well-known problem with agentic AI, which I will discuss at the end of this article. It can perhaps be mitigated with an appropriate prompting technique, as I recently described in [The Rise of Vibe Coding][the-rise-of-vibe-coding].
 
@@ -40,37 +48,20 @@ Scepticism is a good thing as long as it is accompanied by constructive thinking
 
 Now that we have sketched out the different actors in this drama, let's elaborate more on the reasons. There may be more reasons, but based on my experience, I have identified three major factors that can discourage individuals or entire organisations from adopting AI.
 
-### Reason #1 --- overselling
-
-<!-- rewrite \/ \/ \/ -->
-
-According to [Wikipedia][gh-wiki], the first version of GitHub Copilot was released as a preview in the form of a Visual Studio Code plugin in late June 2021. Powered by the [OpenAI Codex][openai-codex] model --- a fine-tuned version of GPT-3 --- GitHub Copilot was capable of completing a programmer's thoughts as they typed code into the IDE. I am personally a big fan of AI-assisted code completion. The only problem with this mode of working is the very limited set of capabilities you can use to build context, and it is not as straightforward to phrase your intent --- you either have to name your identifiers very precisely or add additional 'prompts' as code comments.
-
-Early versions of GitHub Copilot went largely unnoticed until [ChatGPT][chatgpt] was released at the end of 2022, using much the same underlying technology as Copilot. With GPT-3.5 and the subsequent GPT-4 capable of generating substantial and intricate pieces of code based on simple English (or even Polish) prompts, the potential of AI-assisted coding has become widely recognised. Coding assistants like GitHub Copilot were immediately revealed and remarketed. The only problem is that, once users of ChatGPT started using Copilot, they were totally puzzled because the only way to use it is still to prompt via 'source code' in the editor window of your IDE. Users noticed that the code completions were more or less randomly accurate and sometimes completely inaccurate. Nobody read the manual to learn that you need to build context. How? By opening the editor's tabs! How obvious...
-
-The problem arose because some people were able to deliver impressive work, such as implementing a video game from scratch. This was then applied to all software engineering tasks, including development on existing code bases, some of which were legacy systems with significant technical debt. 
-
-Tool providers started to claim that their tools could significantly speed up development, and the numbers were astonishing. In early 2023, a [paper][Arxiv-GH-CoP] was published claiming evidence that using an AI coding assistant speeds up task completion by an incredible 55.8%. The evaluators received a basic introduction to how to properly use the tool (GitHub Copilot). They were tasked with developing a HTTP server in JavaScript. From scratch, of course.
-
-![You can do big things with little effort](/genai/img/arnold-commando-ayn-rand-fasces.jpg)
-*'You can do big things with little effort' --- they said (the log is fake).*
-
-Here's why the marketing behaviour of the leading AI tool providers has become problematic. It's because the 'evidence' includes the most typical and common programming tasks, which are represented in open-source repositories with tons of examples. It doesn't matter if it's a snake game in Python, a Tetris game in JavaScript, or an HTTP server implemented in any mainstream programming language. The aforementioned study describes the problem of writing an HTTP server from scratch, which is the easiest case for AI because you don't have to deal with an existing codebase to establish the context for a conversation. We usually work with an existing codebase rather than a new one, in about 95% of cases, if not more.
-
-A simple search on GitHub revealed 643 public JavaScript repositories implementing an HTTP server (tagged with http-server) and 467 public Python repositories implementing a snake game. This is perhaps enough for Large Language Models to acquire complete knowledge during their training processes, which is why they can implement such typical cases flawlessly. However, this does not work for your project because, sadly, you are not tasked with implementing yet another snake game. The study contains a serious methodological error.
-
-### Reason #2 --- inherent complexity of the technology
+### Reason #1 --- inherent complexity of the technology
 
 Artificial Neural Networks (ANNs) as a scientific discipline are nearly as old as digital computers, originating in the 1940s. The theory slowly evolved without many real-life applications until the beginning of the 21st century. A few things happened at this time: the internet revolution provided relatively cheap access to large quantities of data and cloud computing started to offer flexible and scalable computing power at a reasonable price. Then, driven by the gaming industry's demand for more relevant technology, highly performant graphics processing units (GPUs) drove computation costs even lower (because vector graphics and neural networks essentially run on the same maths, so these dedicated integrated circuits could easily be reused). Then, with deep learning, machine learning led us to generative models and, finally, [the Transformer][attention]. 
 
-Artifical Intelligence is indeed complex. It's a subject that most of us don't even try to familiarise ourselves with. One might say, 'We don't need to', and this is exactly *the second problem*. Ask yourself: **when filling up your car with fuel, doesn't it really matter whether you pour diesel or petrol?**
+<!--
+One might say, 'We don't need to', and this is exactly *the second problem*. Ask yourself: **when filling up your car with fuel, doesn't it really matter whether you pour diesel or petrol?**
+-->
 
-The problem is serious because, from the end user's point of view, the technology seems trivial. You mostly interact with a chat interface, or perhaps an AI coding assistant which also offers a chat interface. Code completion is also a well-known feature of IDEs. However, this time, code completion is no longer deterministic.
-
-Given such a simple user interface, it's not surprising that people tend to use it in a naive way. They just type in a short, general statement as a prompt and expect miracles. No miracle occurred? The code doesn't work? Or even worse — MY GOD! IT HALLUCINATES!!!
+Artificial intelligence is indeed complex. It's a subject that most of us don't even attempt to familiarise ourselves with. The problem is that, from the end user's point of view, the technology seems trivial. Most interaction is with a chat interface, or perhaps an AI coding assistant that also offers a chat interface. Code completion is a well-known feature of IDEs, so nobody feels the need to understand what's going on behind the scenes. However, this time, code completion is no longer deterministic, and an unaware software developer will quickly become confused.
 
 ![You'are using that wrong](/genai/img/commando-rocket-launcher-instruction-manual.jpg)
 *You're clearly using that wrong!*
+
+Given the simplicity of the user interface, it's not surprising that people tend to use it in a naive way. They simply enter a short, general statement as a prompt and expect instant results. But there are no miracles.
 
 To understand the contrast between the simplicity of the user interface and the underlying complexity, take a look at the following picture:
 
@@ -84,9 +75,28 @@ But why can't all source files be provided as context automatically? It's simple
 
 It turned out that the way you [prompt][prompt-engineering] is even relevant. There are plenty of techniques supported by most models, such as in-context learning and chain-of-thought, that can be used to improve model efficiency. However, there is always a trade-off between prompt specificity and length.
 
-This is the minimum information you need to know when using this technology. Diesel cannot be used to fuel a petrol engine. If you do, you will need to clean your engine, which will be a messy process. Similarly, if you don't understand how AI works, you will misuse it, produce poor results, and ultimately stop using it completely.
+This is the minimum information you need to know when using this technology. If you don't understand how AI works, you will misuse it, produce poor results, and ultimately stop using it completely.
+
+### Reason #2 --- marketing
+
+According to [Wikipedia][gh-wiki], the first version of GitHub Copilot was released as a preview in the form of a Visual Studio Code plugin in late June 2021. Powered by the [OpenAI Codex][openai-codex] model --- a fine-tuned version of GPT-3 --- GitHub Copilot was capable of completing a programmer's thoughts as they typed code into the IDE. I am personally a big fan of AI-assisted code completion. The only problem with this mode of working is the very limited set of capabilities you can use to build context, and it is not as straightforward to phrase your intent --- you either have to name your identifiers very precisely or add additional 'prompts' as code comments.
+
+Early versions of GitHub Copilot went largely unnoticed until [ChatGPT][chatgpt] was released at the end of 2022, using much the same underlying technology as Copilot. With GPT-3.5 and the subsequent GPT-4 capable of generating substantial and intricate pieces of code based on simple English (or even Polish) prompts, the potential of AI-assisted coding has become widely recognised. Coding assistants like GitHub Copilot were immediately revealed and remarketed. The only problem is that, once users of ChatGPT started using Copilot, they were totally puzzled because the only way to use it is still to prompt via 'source code' in the editor window of your IDE. Users noticed that the code completions were more or less randomly accurate and sometimes completely inaccurate. Nobody read the manual to learn that you need to build context. How? By opening the editor's tabs! How obvious...
+
+The problem arose because some people were able to deliver impressive work, such as implementing a video game from scratch. This was then applied to all software engineering tasks, including development on existing code bases, some of which were legacy systems with significant technical debt. 
+
+Tool providers started to claim that their tools could significantly speed up development, and the numbers were astonishing. In early 2023, a [paper][Arxiv-GH-CoP] was published claiming evidence that using an AI coding assistant speeds up task completion by an incredible 55.8%. The evaluators received a basic introduction to how to properly use the tool (GitHub Copilot). They were tasked with developing a HTTP server in JavaScript. From scratch, of course.
+
+![You can do big things with little effort](/genai/img/arnold-commando-ayn-rand-fasces.jpg)
+*'You can do big things with little effort' --- they said (the log is fake).*
+
+Here's why the marketing behaviour of the leading AI tool providers has become problematic. The aforementioned study describes the problem of writing an HTTP server from scratch, which is the easiest case for AI because you don't have to deal with an existing codebase to establish the context for a conversation. We usually work with an existing codebase rather than a new one, I would quess --- in majority of the cases.
+
+Another questionable aspect of the study is the selection of the coding problem used for evaluation. A JavaScript HTTP server project is an example of what I call the 'snake game phenomenon'. A simple search on GitHub revealed 643 public JavaScript repositories implementing an HTTP server (tagged with 'http-server') and 467 public Python repositories implementing a snake game. This may be sufficient for Large Language Models to acquire comprehensive knowledge during their training, enabling them to implement such typical cases flawlessly. However, this does not work for your project, as sadly you are not tasked with implementing yet another snake game. Of course, some parts of each custom-developed system represent a common problem, such as CRUDs or API integrations, but these would never constitute a complete application. Thus, we should not expect AI to generate a complete code in 'one shot'.
 
 ### Reason #3 --- initial poor usability
+
+<!-- rewrite \/ \/ \/ -->
 
 The worst thing a provider of AI coding tools can do is mimic functionality that isn't there. As we know, coding assistants were initially unable to build context automatically. Pushing all sources into the context window would overload it. Automatic context building was initially too difficult to accomplish, especially since coding assistants support a wide range of mainstream programming languages — parsing all 'imports' was not a viable option since the logic of 'importing' varies depending on the language. It would simply be too complex and costly to implement such a feature. The tool would lose its 'language agnostic' feature, and being 'language agnostic' is one of the selling points.
 
