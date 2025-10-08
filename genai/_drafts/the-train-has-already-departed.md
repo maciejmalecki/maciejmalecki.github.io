@@ -86,20 +86,17 @@ One might argue that, if the tool is limited in terms of context building and si
 
 Another limitation was that early coding assistants were unable to perform complex tasks when using chat functionality, except perhaps for implementing a snake game. Unfortunately, from a user experience point of view, a chat window essentially invited a top-down approach, meaning 'specify the high-level requirements and the tool will change the necessary files'. However, coding assistants without agent mode were unable to do this!
 
-<!-- rewrite \/ \/ \/ -->
-
-<!-- IDEA: introduce top-down and bottom-up taxonomy -->
-
-
 ### The way you were intended to work with early AI tools
 
-The only reliable way to use early coding assistants was what I call the 'bottom-up' approach. This means doing the first part of the work manually — selecting the context by opening the relevant files, for example — and splitting the work into smaller steps. This involves creating or editing every single file in your project that needs to be changed, and asking the AI to fulfil only the most basic tasks at the bottom, such as implementing a class or a function, or changing a tiny part of the code. You can also optionally generate a unit test, which worked exceptionally well even with code completion.
+Artists who specialise in painting often use a phased approach, especially when using the oil painting technique. Before work begins, sketches are produced, and due to the possibility of using several layers of oil, it is possible to progressively refine the piece by moving from the general to the specific. This is very similar to the top-down approach used in professional software development — after the requirements are detailed and specified, the design is created and the work is carefully planned. By the end of the process, the software engineer has broken the work down into modules, components, classes and functions, and each of these can then be implemented manually. This work does not often need to be formally represented by tangible artefacts, such as design documents. In the era of Agile, slices of functionality (user stories) can be so small that programmers can perform all these steps in their heads and then progress directly to implementation.
 
-With the 'bottom-up' approach, you get down to the function level and literally generate code there, either using code completion (which works surprisingly well here), or by entering prompts into the chat window. Alternatively, you can use the inline chat function, which is also available in tools such as Codeium (now Windsurf) and GitHub Copilot.
+The situation is a bit different when using AI for coding. Early coding assistants were unable to plan, design or split work reliably. One would then have to use a 'bottom-up' approach, which requires all the remaining steps (from the top-down approach) to be executed manually by a human. Generation via chat or code completion worked pretty well at the 'bottom' level, but the manual steps were, in some cases, much more time-consuming.
 
-The problem with this usage strategy is that deciding what to include and what to exclude can be a lot of work. The same applies to planning the work and splitting it into easily digestible chunks for the AI. This is why reported gains from such tools are at most 20–30%, nowhere near the proclaimed 55%.
+A big reason for disappointment with AI tools is the attempt to use them in a 'top-down' manner rather than a 'bottom-up' manner, which completely misuses them by ignoring the basic design principles of AI coding assistants.
 
 ### Coding AI agent changes everything
+
+<!-- rewrite \/ \/ \/ -->
 
 Recently, most AI coding assistants have been enriched with something called Agentic AI. I feel this should have been there from the beginning. This is because most software developers dealing with AI have always acted intuitively, as all these tools have always been agentic.
 
