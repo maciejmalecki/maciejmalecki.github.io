@@ -102,6 +102,9 @@ Recently, most AI coding assistants have been enriched with something called Age
 
 This is because an agent can eventually plan work and split complex, high-level tasks into smaller steps. Agents can also seek context data by traversing the existing code base. These tools do this better or worse, but the difference is huge. Forget about tabs and attachments, at least when it comes to relevant source files. Having an agent in your AI coding assistant enables a 'top-down' approach.
 
+![Coding agent](/genai/img/coding-agent.excalidraw.png)
+*A happy flow of a hypothetical Coding AI Agent.*
+
 As an added bonus, agents can integrate with tools and offer great flexibility. For example, if you use a build system such as [Gradle][gradle], it can analyse a build file, recognise its capabilities and use them to compile code, run tests, launch various checks, and so on during its run.
 
 ![Tools are getting better](/genai/img/John-Matrix-Commando-Schwarzenegger-e.jpg)
