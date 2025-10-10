@@ -94,30 +94,37 @@ The situation is a bit different when using AI for coding. Early coding assistan
 
 A big reason for disappointment with AI tools is the attempt to use them in a 'top-down' manner rather than a 'bottom-up' manner, which completely misuses them by ignoring the basic design principles of AI coding assistants.
 
-### Coding AI agent changes everything
+### Coding with AI Agent changes everything
 
-<!-- rewrite \/ \/ \/ -->
+Some time ago, most AI coding assistants were enriched with Agentic AI. This is something that should have been there from the beginning. This is because software developers working with AI have always acted intuitively, as these tools have always been agentic.
 
-Recently, most AI coding assistants have been enriched with something called Agentic AI. I feel this should have been there from the beginning. This is because most software developers dealing with AI have always acted intuitively, as all these tools have always been agentic.
-
-This is because an agent can eventually plan work and split complex, high-level tasks into smaller steps. Agents can also seek context data by traversing the existing code base. These tools do this better or worse, but the difference is huge. Forget about tabs and attachments, at least when it comes to relevant source files. Having an agent in your AI coding assistant enables a 'top-down' approach.
+Agents can plan work and split complex, high-level tasks into smaller steps. They can also seek context data by traversing the existing code base. These tools perform this task to varying degrees of success, but the difference is significant either way. Forget about tabs and attachments, at least when it comes to relevant source files. Having an agent in your AI coding assistant enables a 'top-down' approach.
 
 ![Coding agent](/genai/img/coding-agent.excalidraw.png)
 *A happy flow of a hypothetical Coding AI Agent.*
 
-As an added bonus, agents can integrate with tools and offer great flexibility. For example, if you use a build system such as [Gradle][gradle], it can analyse a build file, recognise its capabilities and use them to compile code, run tests, launch various checks, and so on during its run.
+We can internally imagine the AI Agent as a dedicated computer program that mimics the way a software engineer works. We all use, or should use, an engineering method to solve problems. We analyse the task by reading and comprehending its description (i.e. the prompt), gathering additional information by traversing the existing codebase and analysing the attached or injected documentation, signalling any uncertainties, preparing a plan, challenging and revising it, and performing this plan step by step by generating or changing artefacts, such as source code. We also frequently use the various tools offered by our development environment to check if our changes are correct by running a compiler, linter or test suite and Sonar checks.
+
+This is how AI agents for the coding process are built. The depicted algorithm is hard-coded into the agent, the LLM acts as the 'brain', and tools are available for the self-validation process. Agents can integrate with these tools, offering great flexibility. For instance, if you use a build system such as [Gradle][gradle], it can analyse a build file, recognise its capabilities, and use them to compile code, run tests, and perform various checks during its execution.
 
 ![Tools are getting better](/genai/img/John-Matrix-Commando-Schwarzenegger-e.jpg)
 *The AI Coding Agent is well equipped with tools.*
 
-The picture below illustrates why Agentic AI is making our lives so much easier. With a 'bottom-up' approach, most of the work is still done manually, unlike with a 'top-down' approach, where, if you're lucky, everything can be done by the agent with just a prompt.
+
+The picture below illustrates how Agentic AI is making our lives easier. With a 'bottom-up' approach, most of the work is still done manually. In contrast, with a 'top-down' approach, if you're lucky, the agent can do everything with just a prompt.
+
+Let's take a look at the next picture. It is clear that the AI Agent for Software Engineering has 'closed the gap'; it now covers the majority of the software engineering process, and can be used intuitively by a larger group of software developers. This is surely not too little, but definitely too late. Many of us, including seasoned sceptics, are deeply disappointed.
 
 ![bottom vs top](/genai/img/bottom-top.excalidraw.png)
 *Two eras of AI assisted software engineering.*
 
-Of course, the advent of agentic AI does not mean that you can now ignore the underlying technology's complexity. Unfortunately, it is still not acceptable. There are many things that can go wrong. For example, context resolution may not be as accurate as it should be, particularly if you do not have good, consistent naming conventions. Tool output may be ignored, or tool launch may be omitted. If your quality assurance is not fully automated, you will still need to perform a lot of manual tests because code can be generated very quickly. If your static code analysis tools are not good enough, you will have extra work on reviewing generated code (a lot of code), in addition to the fact, that you may need to review it anyway (remeber [Miguel][ai-is-not-faster]?)
+Of course, the advent of agentic AI does not mean that you can ignore the complexity of the underlying technology and, even more importantly, the complexity of the system. Unfortunately, this can still be challenging, even for the best models being used in agentic conversations. There are many things that can go wrong. For example, context resolution may not be as accurate as it should be, particularly if you do not have consistent and clear naming conventions. Tool output may be ignored or tool launch omitted. If your quality assurance is not fully automated, you will still need to perform many manual tests because code can be generated very quickly. If your static code analysis tools are inadequate, you will have extra work reviewing the generated code, which may be substantial, in addition to the fact that you may need to review it anyway (remeber [Miguel][ai-is-not-faster]?).
+However, complexity is an issue whether or not we use AI. It is always present and requires attention. By using the divide-and-conquer approach properly, you can have good AI support and perhaps more time to deal with complexity (by reducing it, of course).
 
-### What should I do?
+### Can the mood of scepticism be reversed?
+
+<!-- needs deepl rewrite \/ \/ \/ -->
+<!-- rewrite \/ \/ \/ -->
 
 The answer to this question depends on which group you belong to.
 
