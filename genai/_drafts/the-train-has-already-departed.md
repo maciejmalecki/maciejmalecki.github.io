@@ -123,38 +123,38 @@ However, complexity is an issue whether or not we use AI. It is always present a
 
 ### Can the mood of scepticism be reversed?
 
-<!-- needs deepl rewrite \/ \/ \/ -->
-<!-- rewrite \/ \/ \/ -->
-
 The answer to this question depends on which group you belong to.
 
 If you are a **junior enthusiast**, you are on the right track to becoming a seasoned enthusiast, but remember that you are now very exposed to the 'training on the job' cut-off. In any case, you need expertise in order to work with AI-generated code efficiently. Here's how you can use AI to boost your skills:
 
-Use the 'Ask' function to ask questions and learn from the output (you can double-check on Google if you don't trust the answer).
-Use the 'Ask' function or 'Agent Mode' to troubleshoot and analyse the output. Treat this as an ad hoc generated tutorial and learn from it.
-If you're unsure about the code being generated, generate unit tests for it and analyse the test methods and invariants — it's often easier to analyse the tests than the code itself.
+* Use the 'Ask' function to ask questions and learn from the output (you can double-check on Google if you don't trust the answer).
+* Use the 'Ask' function or 'Agent Mode' to troubleshoot and analyse the output. Treat this as an ad hoc generated tutorial and learn from it.
+* If you're unsure about the code being generated, generate unit tests for it and analyse the test methods and invariants — it's often easier to analyse the tests than the code itself.
+* Leverage AI's analysis capabilities, read the output and apply critical thinking to analyse it. This is your private investment that will pay off quickly.
 
-<!--
-Of course, there is a risk that these people will not develop the necessary skills. Even the simplest questions can be answered by AI, so there is no need to search for information, analyse it, synthesise it or apply critical thinking.
--->
+If you are an **seasoned enthusiast**, why not become a leader for your colleagues? Being a mentor is a great responsibility. However, it's also great fun, as you'll be discovering new methods and strategies for using AI. New language models emerge every month, so there's always something new to discover. Strengthen your position as an AI leader by doing the following:
 
-If you are a **seasoned enthusiast**, become a leader for your colleagues. Becoming a mentor is a great responsibility. However, it is also a lot of fun, as you will be the one discovering new methods and strategies for using AI. New language models pop up every month, so the game will never end.
+* Observe the release notes for your AI agent software, examine and experiment with the new features, adopt them for your project, and educate your team members.
+* Regularly check the performance of existing LLMs and any new ones added to the AI tooling you use. Create and publish benchmarks across your team and organisation.
+* Regularly review your assets (such as prompts, instructions and chat modes) and verify that they are still relevant in light of changes to AI tooling and language models.
 
-If you're a **junior sceptic**, perhaps you gave up too early. Start with simple steps: generate unit tests for code that you have written, for example. Alternatively, you could try a TDD approach: hand-code an interface, then generate tests for it, and then use code completion to generate production code while keeping the interface and tests in context (opened tabs!).
+If you're a **junior sceptic**, perhaps you gave up too early. Start with simple steps: 
 
-<!--
-The existence of this group proves that a competent AI leader is essential for a project, team or company. Unless, of course, some of these people deliberately ignore AI in order to gain practical coding and engineering skills as soon as possible, thereby joining the 'seasoned' group.
--->
+* generate unit tests for the code you have written,
+* Try a TDD approach: hand-code an interface, then generate tests for it. Use code completion to generate production code while keeping the interface and tests in context (opened tabs!).
+* Look around and find your AI leader in your project. If they are not in the same room, on the same floor or in the same location, there must be somebody in your organisation. Don't hesitate to ask someone to become a leader. Raise this necessity with your managers — it's a smart move.
+* Soon, as a *junior enthusiast*, read all the above recommendations carefully.
 
-For **seasoned sceptics**, I would advise taking a professional course in AI-aided software engineering. It may be that your project is especially challenging — the language is not mainstream, or the code base is bloated. My experience shows that Agentic AI can work pretty well with a messy code base and that, for a non-mainstream language, fine-tuning is a good solution. Alternatively, such dedicated language models may already be available. However, if you are considering trying to reverse the clock, I recommend against it. In my humble opinion, this trend cannot be reversed.
+I would advise **seasoned sceptics** to take a professional course in AI-aided software engineering. It may be that your project is especially challenging — perhaps the language is not mainstream or the code base is bloated. It could also be that your system or systems suffer from serious architectural flaws, in which case AI is not the problem, but your whole environment is. From my experience, Agentic AI can work well with messy code bases, and fine-tuning is an effective solution for non-mainstream languages. Alternatively, such dedicated language models may already be available. However, if you are considering trying to turn back time, I would advise against it. In my humble opinion, this trend cannot be reversed. Here is my complete set of advice:
 
-<!--
-Unfortunately, we don't know if these people knew how to use these tools properly. (refer to METR report)
--->
-<!--
-One might say, 'We don't need to', and this is exactly *the second problem*. Ask yourself: **when filling up your car with fuel, doesn't it really matter whether you pour diesel or petrol?**
--->
+* Take an awareness training course on AI and related technologies.
+* Take thorough training on the AI tooling you are about to use.
+* Check all the available models and don't be put off by the most expensive ones — there's a reason for the price; these models (such as Claude Sonnet 4.5) are indeed very good.
+* Be creative and seek techniques and methods suitable for your project. If the scope is wide, try to narrow it down — refactoring can help with this.
+* The divide and conquer technique is key.
+* Domain-Driven Design seems to be the right trend for Agentic AI — familiarise yourself with it and see how you can benefit from it in your environment.
 
+It's good to be sceptical and to challenge things, but don't get carried away. You can wait for the AI bubble to burst — it will surely happen — but the technology is here to stay.
 
 
 > **Disclaimer:**
