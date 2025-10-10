@@ -1,8 +1,8 @@
 ---
-title: "The Second Wave: Why Agentic AI succeeds where first-gen AI tools failed."
+title: "The Second Wave: Why Agentic AI might succeed where first-gen AI tools failed."
 layout: post
 categories: genai
-description: With Agentic AI, we finally have a ready-to-use and intuitive product. This is a subjective story about why early AI coding tools failed to be adopted, and how we can recover..
+description: With Agentic AI, we probably have a ready-to-use and intuitive product. This is a subjective story about why early AI coding tools failed to be adopted, and how we can recover..
 pic: /genai/img/arnold-commando-ayn-rand-fasces.jpg
 ---
 
@@ -42,7 +42,7 @@ Artificial Neural Networks (ANNs) as a scientific discipline are nearly as old a
 
 Artificial intelligence is indeed complex. It's a subject that most of us don't even attempt to familiarise ourselves with. The problem is that, from the end user's point of view, the technology seems trivial. Most interaction is with a chat interface, or perhaps an AI coding assistant that also offers a chat interface. Code completion is a well-known feature of IDEs, so nobody feels the need to understand what's going on behind the scenes. However, this time, code completion is no longer deterministic, and an unaware software developer will quickly become confused.
 
-![You'are using that wrong](/genai/img/commando-rocket-launcher-instruction-manual.jpg)
+![You are using that wrong](/genai/img/commando-rocket-launcher-instruction-manual.jpg)
 *You're clearly using that wrong!*
 
 Given the simplicity of the user interface, it's not surprising that people tend to use it in a naive way. They simply enter a short, general statement as a prompt and expect instant results. But there are no miracles.
@@ -74,7 +74,7 @@ Tool providers started to claim that their tools could significantly speed up de
 ![You can do big things with little effort](/genai/img/arnold-commando-ayn-rand-fasces.jpg)
 *'You can do big things with little effort' --- they said (the log is fake).*
 
-The aforementioned study describes the problem of writing an HTTP server from scratch, which is the easiest case for AI because you don't have to deal with an existing codebase to establish the context for a conversation. We usually work with an existing codebase rather than a new one, I would quess --- in majority of the cases.
+The aforementioned study describes the problem of writing an HTTP server from scratch, which is the easiest case for AI because you don't have to deal with an existing codebase to establish the context for a conversation. We usually work with an existing codebase rather than a new one, I would guess --- in majority of the cases.
 
 Another aspect of the study is the selection of the coding problem used for evaluation. A JavaScript HTTP server project is an example of what I call the 'snake game phenomenon'. A simple search on GitHub revealed 643 public JavaScript repositories implementing an HTTP server (tagged with 'http-server') and 467 public Python repositories implementing a snake game. This may be sufficient for Large Language Models to acquire comprehensive knowledge during their training, enabling them to implement such typical cases flawlessly. However, this does not work for your project, as sadly you are not tasked with implementing yet another snake game. Of course, some parts of each custom-developed system represent a common problem, such as CRUDs or API integrations, but these would never constitute a complete application. Thus, we should not expect AI to generate a complete code in 'one shot'.
 
