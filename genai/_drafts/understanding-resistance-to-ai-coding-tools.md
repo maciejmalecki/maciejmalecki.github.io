@@ -1,5 +1,5 @@
 ---
-title: "The Evolution of AI Coding: Why Agentic Capabilities Address Early Limitations"
+title: "Understanding Developer Resistance to AI Coding Tools—And Why Agentic AI May Change the Game"
 layout: post
 categories: genai
 description: With Agentic AI, we probably have a ready-to-use and intuitive product. This is a subjective story about why early AI coding tools failed to be adopted, and how we can recover.
