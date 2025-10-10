@@ -1,8 +1,8 @@
 ---
-title: "The Second Wave: Why Agentic AI might succeed where first-gen AI tools failed."
+title: "The Evolution of AI Coding: Why Agentic Capabilities Address Early Limitations"
 layout: post
 categories: genai
-description: With Agentic AI, we probably have a ready-to-use and intuitive product. This is a subjective story about why early AI coding tools failed to be adopted, and how we can recover..
+description: With Agentic AI, we probably have a ready-to-use and intuitive product. This is a subjective story about why early AI coding tools failed to be adopted, and how we can recover.
 pic: /genai/img/arnold-commando-ayn-rand-fasces.jpg
 ---
 
@@ -42,9 +42,6 @@ Artificial Neural Networks (ANNs) as a scientific discipline are nearly as old a
 
 Artificial intelligence is indeed complex. It's a subject that most of us don't even attempt to familiarise ourselves with. The problem is that, from the end user's point of view, the technology seems trivial. Most interaction is with a chat interface, or perhaps an AI coding assistant that also offers a chat interface. Code completion is a well-known feature of IDEs, so nobody feels the need to understand what's going on behind the scenes. However, this time, code completion is no longer deterministic, and an unaware software developer will quickly become confused.
 
-![You are using that wrong](/genai/img/commando-rocket-launcher-instruction-manual.jpg)
-*You're clearly using that wrong!*
-
 Given the simplicity of the user interface, it's not surprising that people tend to use it in a naive way. They simply enter a short, general statement as a prompt and expect instant results. But there are no miracles.
 
 To understand the contrast between the simplicity of the user interface and the underlying complexity, take a look at the following picture:
@@ -61,7 +58,7 @@ It turned out that the way you [prompt][prompt-engineering] is even relevant. Th
 
 This is the minimum information you need to know when using this technology. If you don't understand how AI works, you will misuse it, produce poor results, and ultimately stop using it completely.
 
-### Reason #2 --- marketing
+### Reason #2 --- immaturity of tools
 
 According to [Wikipedia][gh-wiki], the first version of GitHub Copilot was released as a preview in the form of a Visual Studio Code plugin in late June 2021. Powered by the [OpenAI Codex][openai-codex] model --- a fine-tuned version of GPT-3 --- GitHub Copilot was capable of completing a programmer's thoughts as they typed code into the IDE. I am personally a big fan of AI-assisted code completion. The only problem with this mode of working is the very limited set of capabilities you can use to build context, and it is not as straightforward to phrase your intent --- you either have to name your identifiers very precisely or add additional 'prompts' as code comments.
 
@@ -96,7 +93,7 @@ The situation is a bit different when using AI for coding. Early coding assistan
 
 A big reason for disappointment with AI tools is the attempt to use them in a 'top-down' manner rather than a 'bottom-up' manner, which completely misuses them by ignoring the basic design principles of AI coding assistants.
 
-### Coding with AI Agent changes everything
+### Coding with AI Agent changes quite a bit
 
 Some time ago, most AI coding assistants were enriched with Agentic AI. This is something that should have been there from the beginning. This is because software developers working with AI have always acted intuitively, as these tools have always been agentic.
 
@@ -109,10 +106,6 @@ We can internally imagine the AI Agent as a dedicated computer program that mimi
 
 This is how AI agents for the coding process are built. The depicted algorithm is hard-coded into the agent, the LLM acts as the 'brain', and tools are available for the self-validation process. Agents can integrate with these tools, offering great flexibility. For instance, if you use a build system such as [Gradle][gradle], it can analyse a build file, recognise its capabilities, and use them to compile code, run tests, and perform various checks during its execution.
 
-![Tools are getting better](/genai/img/John-Matrix-Commando-Schwarzenegger-e.jpg)
-*The AI Coding Agent is well equipped with tools.*
-
-
 The picture below illustrates how Agentic AI is making our lives easier. With a 'bottom-up' approach, most of the work is still done manually. In contrast, with a 'top-down' approach, if you're lucky, the agent can do everything with just a prompt.
 
 Let's take a look at the next picture. It is clear that the AI Agent for Software Engineering has 'closed the gap'; it now covers the majority of the software engineering process, and can be used intuitively by a larger group of software developers. This is surely not too little, but definitely too late. Many of us, including seasoned sceptics, are deeply disappointed.
@@ -121,7 +114,7 @@ Let's take a look at the next picture. It is clear that the AI Agent for Softwar
 *Two eras of AI assisted software engineering.*
 
 Of course, the advent of agentic AI does not mean that you can ignore the complexity of the underlying technology and, even more importantly, the complexity of the system. Unfortunately, this can still be challenging, even for the best models being used in agentic conversations. There are many things that can go wrong. For example, context resolution may not be as accurate as it should be, particularly if you do not have consistent and clear naming conventions. Tool output may be ignored or tool launch omitted. If your quality assurance is not fully automated, you will still need to perform many manual tests because code can be generated very quickly. If your static code analysis tools are inadequate, you will have extra work reviewing the generated code, which may be substantial, in addition to the fact that you may need to review it anyway (remeber [Miguel][ai-is-not-faster]?).
-However, complexity is an issue whether or not we use AI. It is always present and requires attention. By using the divide-and-conquer approach properly, you can have good AI support and perhaps more time to deal with complexity (by reducing it, of course).
+However, complexity is an issue whether or not we use AI. It is always present and requires attention. If you use the divide-and-conquer approach properly, you can benefit from good AI support and perhaps have more time to deal with complexity by reducing it. Rather than a top-down approach, it's now a hybrid one. The heuristic is clear: once you see the AI struggling, divide your problem. With Agentic AI, the threshold for such division is surely much higher.
 
 ### Can the mood of scepticism be reversed?
 
@@ -157,13 +150,6 @@ I would advise **seasoned sceptics** to take a professional course in AI-aided s
 * Domain-Driven Design seems to be the right trend for Agentic AI — familiarise yourself with it and see how you can benefit from it in your environment.
 
 It's good to be sceptical and to challenge things, but don't get carried away. You can wait for the AI bubble to burst — it will surely happen — but the technology is here to stay.
-
-
-> **Disclaimer:**
-> All photos used in this article come from the brilliant 'Commando', a VHS era film which celebrates its 40th anniversary today.
-
-![Just bodies](/genai/img/leave-anything-us-just-bodies.jpg)
-*'Just bodies.', John Matrix*
 
 [when-does-ai]: when-does-ai-take-my-job
 [ai-is-not-faster]: https://blog.miguelgrinberg.com/post/why-generative-ai-coding-tools-and-agents-do-not-work-for-me
