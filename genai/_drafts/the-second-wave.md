@@ -1,8 +1,8 @@
 ---
-title: Still waiting for the AI bubble to burst? The train has already departed.
+title: "The Second Wave: Why Agentic AI succeeds where first-gen AI tools failed."
 layout: post
 categories: genai
-description: Using AI in software engineering is harder than you think, and this is what marketing material are not tellying you.
+description: With Agentic AI, we finally have a ready-to-use and intuitive product. This is a subjective story about why early AI coding tools failed to be adopted, and how we can recover..
 pic: /genai/img/arnold-commando-ayn-rand-fasces.jpg
 ---
 
@@ -10,7 +10,7 @@ It is difficult to avoid being a sceptical AI user, especially if you are a soft
 
 This kind of dissonance is not unprecedented. Scepticism and enthusiasm were also evident at the time of the invention of the steam engine, the bicycle and the car. Nor can I say that I haven't witnessed this myself, because that would be untrue. Consider the invention of the personal computer, the internet and the mobile phone, and finally the smartphone.
 
-The AI revolution is happening now at an unprecedented pace. Expectations are enormous, as are the reported disappointments. Can both sides be right?
+The AI revolution is happening at an unprecedented pace right now. Expectations are enormous, as are the reported disappointments. Can both sides be right? I will elaborate more on Agentic AI later in this article, which should make it easier to answer this question. But first, let's take a quick look at what has happened so far.
 
 ### The way we feel about AI
 
@@ -69,14 +69,16 @@ Early versions of GitHub Copilot went largely unnoticed until [ChatGPT][chatgpt]
 
 The problem arose because some people were able to deliver impressive work, such as implementing a video game from scratch. This was then applied to all software engineering tasks, including development on existing code bases, some of which were legacy systems with significant technical debt. 
 
-Tool providers started to claim that their tools could significantly speed up development, and the numbers were astonishing. In early 2023, a [paper][Arxiv-GH-CoP] was published claiming evidence that using an AI coding assistant speeds up task completion by an incredible 55.8%. The evaluators received a basic introduction to how to properly use the tool (GitHub Copilot). They were tasked with developing a HTTP server in JavaScript. From scratch, of course.
+Tool providers started to claim that their tools could significantly speed up development, and the numbers were astonishing. In early 2023, a [paper][Arxiv-GH-CoP] was published noting that using an AI coding assistant speeds up task completion by an incredible 55.8%. The evaluators received a basic introduction to how to properly use the tool (GitHub Copilot). They were tasked with developing a HTTP server in JavaScript. From scratch, of course.
 
 ![You can do big things with little effort](/genai/img/arnold-commando-ayn-rand-fasces.jpg)
 *'You can do big things with little effort' --- they said (the log is fake).*
 
-Here's why the marketing behaviour of the leading AI tool providers has become problematic. The aforementioned study describes the problem of writing an HTTP server from scratch, which is the easiest case for AI because you don't have to deal with an existing codebase to establish the context for a conversation. We usually work with an existing codebase rather than a new one, I would quess --- in majority of the cases.
+The aforementioned study describes the problem of writing an HTTP server from scratch, which is the easiest case for AI because you don't have to deal with an existing codebase to establish the context for a conversation. We usually work with an existing codebase rather than a new one, I would quess --- in majority of the cases.
 
-Another questionable aspect of the study is the selection of the coding problem used for evaluation. A JavaScript HTTP server project is an example of what I call the 'snake game phenomenon'. A simple search on GitHub revealed 643 public JavaScript repositories implementing an HTTP server (tagged with 'http-server') and 467 public Python repositories implementing a snake game. This may be sufficient for Large Language Models to acquire comprehensive knowledge during their training, enabling them to implement such typical cases flawlessly. However, this does not work for your project, as sadly you are not tasked with implementing yet another snake game. Of course, some parts of each custom-developed system represent a common problem, such as CRUDs or API integrations, but these would never constitute a complete application. Thus, we should not expect AI to generate a complete code in 'one shot'.
+Another aspect of the study is the selection of the coding problem used for evaluation. A JavaScript HTTP server project is an example of what I call the 'snake game phenomenon'. A simple search on GitHub revealed 643 public JavaScript repositories implementing an HTTP server (tagged with 'http-server') and 467 public Python repositories implementing a snake game. This may be sufficient for Large Language Models to acquire comprehensive knowledge during their training, enabling them to implement such typical cases flawlessly. However, this does not work for your project, as sadly you are not tasked with implementing yet another snake game. Of course, some parts of each custom-developed system represent a common problem, such as CRUDs or API integrations, but these would never constitute a complete application. Thus, we should not expect AI to generate a complete code in 'one shot'.
+
+The study revealed the truth, which, sadly, could not be generalised to all existing code bases. The technology wasn't ready for that yet.
 
 ### Reason #3 --- initial poor usability
 
