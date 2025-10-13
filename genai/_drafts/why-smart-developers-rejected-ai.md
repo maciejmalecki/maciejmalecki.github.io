@@ -58,7 +58,7 @@ The major expectation was always planning capability, which early AI tools lacke
 
 When the bottom-up method is executed properly, it is found that even AI-assisted code completion is sufficient for the majority of low-level coding tasks, such as implementing functions or classes based on a contract-driven prompt or rapidly generating unit tests. However, it took a long time to reach this point, with very little AI assistance initially available.
 
-**The knowledge gap** was then the missing link; the technology itself was complex, only masked by the apparent simplicity of the AI tooling. The following simple diagram usually immediately raises questions about how AI is fed all this missing data from your project artefacts.
+**The knowledge gap** was then the missing link; the technology itself was complex, only masked by the apparent simplicity of the AI tooling. The following simple diagram usually immediately raises questions about how AI is fed all this missing data from your project artefacts. But without adequate training or at least reading a few articles on the subject, there is no way you could know that.
 
 ![LLM in a nutshell](/genai/img/coding-assistant.excalidraw.png)
 
