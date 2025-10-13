@@ -52,3 +52,5 @@ Another limitation was that early coding assistants were unable to perform compl
 
 [lost-in-the-middle]: https://cs.stanford.edu/~nfliu/papers/
 [prompt-engineering]: https://en.wikipedia.org/wiki/Prompt_engineering
+[ai-is-not-faster]: https://blog.miguelgrinberg.com/post/why-generative-ai-coding-tools-and-agents-do-not-work-for-me
+[metr]: https://metr.org/blog/
