@@ -31,33 +31,44 @@ Expectation misalignment (top-down vs. bottom-up)
 Knowledge gaps (how to use effectively)
 -->
 
-**Technical limitations** of early coding assistants were significant. Early Large Language Models were very limited when it comes to their context window size. This of course made working with them challenging: even a medium sized project means a lot of context data: domain description, auxiliary documentation and most prominently the code base. 
+**The technical limitations** of the early coding assistants were significant. Early large language models had a very limited context window size. This, of course, made working with them challenging, as even a medium-sized project requires a lot of context data, such as the domain description, auxiliary documentation, and, most prominently, the code base. 
 
-Makers of such tool didn't even attempted to fool us, but just declared: we cannot consume all your context, so we give you a freedom (and necessity) to build one each time you need to perform a task. 
+The creators of these tools didn't attempt to deceive us; they simply declared that they could not consume all our context, so they gave us the freedom (and necessity) to build one each time we needed to perform a task. Context building is still a live issue. Even with current LLMs accompanied by large context window sizes, processing everything does not work because recent models suffer from the [lost in the middle][lost-in-the-middle] phenomenon.
 
-Building up a context with opened tabs, and later -- once Chat function was introduced to the coding assistants -- as an attachement to the conversation was a tedious and error prone work. And even this wasn't really used properly, if at all. Shall we blame developers? I don't think it is fair -- it is an unusual and surprising way to use their favourite IDE.
+Building up a context with open tabs and, later, with the introduction of the chat function to coding assistants, attaching it to the conversation was tedious and error-prone. Even then, it wasn't really used properly, if at all. Should we blame the developers? I don't think so — it's an unusual and surprising way to use their favourite IDE.
 
-Before a thinking models were populatized, there was another limitation, perhaps even more annoying. Tools had very limited planning capabilities, if any. In reality, all planning and more complex design work was intended to be -- again -- done by humans. This means that with exception of very special cases, such as implementing a simple but common video game, it wasn't really possible to prompt coding assistant with high-level requirement description and expecting a working result (even if context were properly built).
+Before thinking models were popularised, there was another limitation that was perhaps even more annoying. Tools had very limited planning capabilities, if any. In reality, all planning and more complex design work was intended to be done by humans. This meant that, except in very special cases such as implementing a simple video game, it wasn't really possible to prompt a coding assistant with a high-level requirement description and expect a working result (even if the context was properly established).
 
-Of course, for typical, professional work, a planning and design can easily be the most difficult, and sometimes the most time consuming part of the developer's job. While coding assistants can somehow assist here, they were unable to join this kind of work with exact implementation tasks -- surely not on the single run.
+Of course, for typical professional work, planning and design can easily be the most difficult and time-consuming part of a developer's job. While coding assistants can assist to some extent, they are unable to combine this kind of work with exact implementation tasks — certainly not in one go.
 
-**Expectation misalignment** was hugely introduced by enthusiasts, usually when somebody was lucky in implementing tasks that were simple enough for AI at the time.
-
+**Expectation misalignment** was largely introduced by enthusiasts when someone was fortunate enough to implement simple tasks for AI at the time. Together with bold claims regarding the 'end of the coding era', this popularised the idea that 'the new programming language is English'.
 
 > **Snake Game phenonemon**
 >
-> There is a plenty of working examples that people were able to implement a snake game from scratch, just by using ChatGPT. This made an impression, that we're very close to the moment, where there is literally no need to have any programming skills and still be able to generate working software. A few examples can be watched on YouTube.
+> There are plenty of examples of people implementing a snake game from scratch using ChatGPT alone. This suggests that we are very close to a time when it will literally be possible to generate working software without any programming skills. You can watch a few examples on YouTube.
 >
-> Driven by this example many tried to replicate the same approach on their project and failed. A little light on that can be shed with quick peek into the one of the biggest open-source repository collection: GitHub. A simple search reveals that there is over [450 public Python source code repositories][gh-snake-cases] available with some form of snake game. So maybe this (plus many more in other places) was a portion of huge training data set used to train language models used by chatbots and coding assistants?
+> Driven by this example, many have tried to replicate the same approach in their own projects, but have failed. Some insight into this can be gained by taking a quick look at one of the largest collections of open-source repositories: GitHub. A simple search reveals that there are over [450 public Python source code repositories][gh-snake-cases] available containing some form of snake game. So perhaps this, plus many more examples from other sources, formed part of the huge training dataset used to develop the language models employed by chatbots and coding assistants?
+
+This approach worked for simple, common coding tasks, such as implementing a basic video game. However, it is not necessarily applicable to our daily work as developers implementing complex business systems. This is because such systems are a mixture of common parts, such as never-ending screen-to-DB modules (also known as CRUDs), and unique, mission-critical parts that are usually implemented only once for a given client. Therefore, it is highly unlikely that a simple, naive prompt could easily evolve into complex, functioning software that works exceptionally well for a specific business.
+
+The major expectation was always planning capability, which early AI tools lacked. Users expected a top-down approach, but a more rudimentary bottom-up approach was all that was available.
+
+![Bottom up AI assisted method](/genai/img/bottom-up.excalidraw.png)
+*Bottom-up, AI assisted software development method.*
+
+When the bottom-up method is executed properly, it is found that even AI-assisted code completion is sufficient for the majority of low-level coding tasks, such as implementing functions or classes based on a contract-driven prompt or rapidly generating unit tests. However, it took a long time to reach this point, with very little AI assistance initially available.
+
+<!-- to be spell checked -->
+**Knowledge gap**
 
 
+
+<!-- to be revised -->
 **Complexity without transparency:** Artificial intelligence is indeed complex. It's a subject that most of us don't even attempt to familiarise ourselves with. The problem is that, from the end user's point of view, the technology seems trivial. Most interaction is with a chat interface, or perhaps an AI coding assistant that also offers a chat interface. Code completion is a well-known feature of IDEs, so nobody feels the need to understand what's going on behind the scenes. However, this time, code completion is no longer deterministic, and an unaware software developer will quickly become confused.
 
 Given the simplicity of the user interface, it's not surprising that people tend to use it in a naive way. They simply enter a short, general statement as a prompt and expect instant results. But there are no miracles. 
 
 In order for an LLM to work reliably, you must provide context, i.e. all the information necessary to accomplish the task. In the case of coding assistants, this means providing all the source files necessary to generate new code or modify existing code. This includes all declarations, custom data types, classes, functions, etc. If you ignore this, don't be surprised if you get a random or erratic answer. At the beginning of the GenAI revolution, this context could only be built manually. If you used an IDE, you just had to open additional files as tabs in the editor. This approach was never intuitive; it was based on statistical analysis and the assumption that most of the required files had been opened recently and were still open as tabs. 
-
-But why can't all source files be provided as context automatically? It's simple: initially, it was simply too much because each LLM is characterised by something like a context window size. This applies to everything: context data, conversation history (when using the chat function), and of course the prompt itself. Even with LLMs accompanied by large context window sizes, processing everything does not work because recent models suffer from the [lost in the middle][lost-in-the-middle] phenomenon.
 
 It turned out that the way you [prompt][prompt-engineering] is even relevant. There are plenty of techniques supported by most models, such as in-context learning and chain-of-thought, that can be used to improve model efficiency. However, there is always a trade-off between prompt specificity and length.
 
