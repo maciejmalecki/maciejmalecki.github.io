@@ -58,10 +58,13 @@ The major expectation was always planning capability, which early AI tools lacke
 
 When the bottom-up method is executed properly, it is found that even AI-assisted code completion is sufficient for the majority of low-level coding tasks, such as implementing functions or classes based on a contract-driven prompt or rapidly generating unit tests. However, it took a long time to reach this point, with very little AI assistance initially available.
 
+**The knowledge gap** was then the missing link; the technology itself was complex, only masked by the apparent simplicity of the AI tooling. The following simple diagram usually immediately raises questions about how AI is fed all this missing data from your project artefacts.
+
+![LLM in a nutshell](/genai/img/coding-assistant.excalidraw.png)
+
+It turned out that the way you [prompt][prompt-engineering] is even relevant. There are plenty of techniques supported by most models, such as in-context learning and chain-of-thought, that can be used to improve model efficiency. However, to master these techniques — or even be aware of their existence — you need proper training. Because AI technology evolves very quickly, a single training session may not be sufficient.
+
 <!-- to be spell checked -->
-**Knowledge gap**
-
-
 
 <!-- to be revised -->
 **Complexity without transparency:** Artificial intelligence is indeed complex. It's a subject that most of us don't even attempt to familiarise ourselves with. The problem is that, from the end user's point of view, the technology seems trivial. Most interaction is with a chat interface, or perhaps an AI coding assistant that also offers a chat interface. Code completion is a well-known feature of IDEs, so nobody feels the need to understand what's going on behind the scenes. However, this time, code completion is no longer deterministic, and an unaware software developer will quickly become confused.
