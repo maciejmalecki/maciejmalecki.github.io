@@ -1,5 +1,5 @@
 ---
-title: "Why Smart Developers Rejected AI Coding Tools (And They Were Right)"
+title: "Why Smart Developers Rejected AI Coding Tools?"
 layout: post
 categories: genai
 description:
@@ -73,8 +73,6 @@ The missing piece is what everyone expected from AI: the ability to understand a
 Designing and planning work for a new feature is undoubtedly the most demanding part of a programmer's job. You either do a big up-front design or progress through trial and error, perhaps supported by experience and intuition. The formal design phase has almost become extinct because it does not fit the 'agile way of working'. This process takes time, can only be carried out by a limited number of people (designers and architects), and significantly slows down 'time to market'. If this process could be automated, the design phase could be speeded up and become a more common practice in IT.
 
 We can see that early AI coding assistants can be very effective in performing bottom-layer tasks, such as the implementation of classes, interfaces and functions, and the mass generation of unit tests. These are all areas in which GenAI has always excelled. Without support for thinking, planning and building context, early coding tools were limited to 'bottom-up', and this was the only context in which they could be used effectively.
-
-<!-- to be spell checked -->
 
 But something fundamental has changed: the realisation that adding a thinking process and seeking context was only a matter of time. No matter what we call it: Agentic AI, Coding Agent or Agent Mode — it's already here. Is that enough for a 'top-down' approach? We will soon find out. The capabilities are promising, as I mentioned in one of my previous [posts](the-rise-of-vibe-coding). In my next article, I will take a closer look at the agentic way of working.
 
