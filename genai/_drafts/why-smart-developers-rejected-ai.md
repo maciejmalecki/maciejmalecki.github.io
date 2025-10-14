@@ -25,12 +25,6 @@ Last but not least, my favourite group is 'seasoned sceptics'. I was perhaps the
 
 ## Main reasons of rejection
 
-<!--
-Technical limitations (context, planning capabilities)
-Expectation misalignment (top-down vs. bottom-up)
-Knowledge gaps (how to use effectively)
--->
-
 **The technical limitations** of the early coding assistants were significant. Early large language models had a very limited context window size. This, of course, made working with them challenging, as even a medium-sized project requires a lot of context data, such as the domain description, auxiliary documentation, and, most prominently, the code base. 
 
 The creators of these tools didn't attempt to deceive us; they simply declared that they could not consume all our context, so they gave us the freedom (and necessity) to build one each time we needed to perform a task. Context building is still a live issue. Even with current LLMs accompanied by large context window sizes, processing everything does not work because recent models suffer from the [lost in the middle][lost-in-the-middle] phenomenon.
@@ -64,29 +58,28 @@ When the bottom-up method is executed properly, it is found that even AI-assiste
 
 It turned out that the way you [prompt][prompt-engineering] is even relevant. There are plenty of techniques supported by most models, such as in-context learning and chain-of-thought, that can be used to improve model efficiency. However, to master these techniques — or even be aware of their existence — you need proper training. Because AI technology evolves very quickly, a single training session may not be sufficient.
 
+There is no excuse for not understanding how the underlying mechanism works just because you are a user. It helps to know that there is no magic involved and that models simply process natural language. You need to provide context in order to have anything to process. Once you understand this, you will know what needs to be done to avoid hallucinations. In other words, provide enough information and be precise to get meaningful results.
+
+An interesting report was recently published by [METR][metr] stating that, contrary to popular belief, seasoned OSS developers actually performed more slowly with AI than without it. I strongly believe this will be explained sooner or later, but some suspect the cause may be a lack of experience with the selected AI tools and a lack of in-depth AI knowledge among the evaluation group. 
+
+Although Miguel Grinberg does not lack knowledge, as he stated in his blog [post][ai-is-not-faster], it could be a lack of trust in the technology driven by previous failures and misuse. Who knows?
+
+## You need more of Top-Down approach
+
+The missing piece is what everyone expected from AI: the ability to understand and implement high-level business requirements. The more AI is able to work, the greater the potential speed increase. If AI could seek context itself, plan, provide a design and cut the workload into smaller pieces to be executed step by step with only limited human input, it could become truly autonomous.
+
+![Top-down VS Bottom-up](/genai/img/bottom-top-plain.excalidraw.png)
+
+Designing and planning work for a new feature is undoubtedly the most demanding part of a programmer's job. You either do a big up-front design or progress through trial and error, perhaps supported by experience and intuition. The formal design phase has almost become extinct because it does not fit the 'agile way of working'. This process takes time, can only be carried out by a limited number of people (designers and architects), and significantly slows down 'time to market'. If this process could be automated, the design phase could be speeded up and become a more common practice in IT.
+
+We can see that early AI coding assistants can be very effective in performing bottom-layer tasks, such as the implementation of classes, interfaces and functions, and the mass generation of unit tests. These are all areas in which GenAI has always excelled. Without support for thinking, planning and building context, early coding tools were limited to 'bottom-up', and this was the only context in which they could be used effectively.
+
 <!-- to be spell checked -->
 
-<!-- to be revised -->
-**Complexity without transparency:** Artificial intelligence is indeed complex. It's a subject that most of us don't even attempt to familiarise ourselves with. The problem is that, from the end user's point of view, the technology seems trivial. Most interaction is with a chat interface, or perhaps an AI coding assistant that also offers a chat interface. Code completion is a well-known feature of IDEs, so nobody feels the need to understand what's going on behind the scenes. However, this time, code completion is no longer deterministic, and an unaware software developer will quickly become confused.
-
-Given the simplicity of the user interface, it's not surprising that people tend to use it in a naive way. They simply enter a short, general statement as a prompt and expect instant results. But there are no miracles. 
-
-In order for an LLM to work reliably, you must provide context, i.e. all the information necessary to accomplish the task. In the case of coding assistants, this means providing all the source files necessary to generate new code or modify existing code. This includes all declarations, custom data types, classes, functions, etc. If you ignore this, don't be surprised if you get a random or erratic answer. At the beginning of the GenAI revolution, this context could only be built manually. If you used an IDE, you just had to open additional files as tabs in the editor. This approach was never intuitive; it was based on statistical analysis and the assumption that most of the required files had been opened recently and were still open as tabs. 
-
-It turned out that the way you [prompt][prompt-engineering] is even relevant. There are plenty of techniques supported by most models, such as in-context learning and chain-of-thought, that can be used to improve model efficiency. However, there is always a trade-off between prompt specificity and length.
-
-This is the minimum information you need to know when using this technology. If you don't understand how AI works, you will misuse it, produce poor results, and ultimately stop using it completely.
-
-
-**UX that promised more than it delivered:** The worst thing a provider of AI coding tools can do is mimic functionality that isn't there. As we know, coding assistants were initially unable to build context automatically. Pushing all sources into the context window would overload it. Automatic context building was initially too difficult to accomplish, especially since coding assistants support a wide range of mainstream programming languages — parsing all 'imports' was not a viable option since the logic of 'importing' varies depending on the language. It would simply be too complex and costly to implement such a feature. The tool would lose its 'language agnostic' feature, and being 'language agnostic' is one of the selling points.
-
-One might argue that, if the tool is limited in terms of context building and size, it would be better to make context management more explicit, offering the option to mark and unmark files as being included or excluded. The only way to manage context for code completion was to keep relevant tabs open. However, one of the market-leading tools retains recently closed files in the context. The only way to remove a file was to restart the tool. The worst thing about this is that inexperienced users might conclude that managing tabs — thus building the context — is no longer necessary, so they will skip doing this. I have witnessed this happening.
-
-Another limitation was that early coding assistants were unable to perform complex tasks when using chat functionality, except perhaps for implementing a snake game. Unfortunately, from a user experience point of view, a chat window essentially invited a top-down approach, meaning 'specify the high-level requirements and the tool will change the necessary files'. However, coding assistants without agent mode were unable to do this!
-
+But something fundamental has changed: the realisation that adding a thinking process and seeking context was only a matter of time. No matter what we call it: Agentic AI, Coding Agent or Agent Mode — it's already here. Is that enough for a 'top-down' approach? We will soon find out. The capabilities are promising, as I mentioned in one of my previous [posts](the-rise-of-vibe-coding). In my next article, I will take a closer look at the agentic way of working.
 
 [lost-in-the-middle]: https://cs.stanford.edu/~nfliu/papers/
 [prompt-engineering]: https://en.wikipedia.org/wiki/Prompt_engineering
 [ai-is-not-faster]: https://blog.miguelgrinberg.com/post/why-generative-ai-coding-tools-and-agents-do-not-work-for-me
-[metr]: https://metr.org/blog/
+[metr]: https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
 [gh-snake-cases]: https://github.com/topics/snake?l=python
