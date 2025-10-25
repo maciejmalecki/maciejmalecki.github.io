@@ -4,12 +4,22 @@
  <title>()=>{} | Void's blog</title>
  <link href="https://maciejmalecki.github.io//atom.xml" rel="self"/>
  <id>https://maciejmalecki.github.io/</id>
- <updated>2025-10-04T15:36:50+00:00</updated>
+ <updated>2025-10-25T20:59:33+00:00</updated>
  <author>
    <name></name>
    <uri></uri>
    <email></email>
  </author>
+
+ 
+
+ <entry>
+   <title>Why don't I feel emotional about the code I used to write?</title>
+   <link href="https://maciejmalecki.github.io//why-dont-i-feel-emotional"/>
+   <id>https://maciejmalecki.github.io//why-dont-i-feel-emotional</id>
+   <updated>2025-10-25T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;A few days ago, my colleague Adam Witkowski published an &lt;a href=&quot;https://www.linkedin.com/pulse/digital-orphans-adam-witkowski-r17ef/?trackingId=4OfhmobARbyeKlfo9Y6qQQ%3D%3D&quot;&gt;interesting article&lt;/a&gt; titled ‘Digital Orphans’. In it, he compares two approaches to authoring code: The ‘classic’ approach, where code is crafted by hand, and the ‘vibe coding’ approach, where a human simply instructs an AI agent to generate code...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://maciejmalecki.github.io//macro-hosted-subroutines</id>
    <updated>2018-08-02T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;Subroutine is an essential concept in programming. Advantages of using subroutines are quite clear - instead of doing a repetitive work, we define chunk of code once and “jump” to it any time we need it. It is a part of DRY principle (do not repeat yourself), which allows to...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Writing and using libraries in KickAssembler</title>
-   <link href="https://maciejmalecki.github.io//assembler-libraries"/>
-   <id>https://maciejmalecki.github.io//assembler-libraries</id>
-   <updated>2018-04-26T00:00:00+00:00</updated>
-   <content type="html">&lt;p&gt;It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</content>
  </entry>
 
  
