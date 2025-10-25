@@ -2,7 +2,7 @@
 title: "Why don't I feel emotional about the code I used to write?"
 layout: post
 categories: genai architecture
-description: With Agentic AI, we probably have a ready-to-use and intuitive product. This is a subjective story about why early AI coding tools failed to be adopted, and how we can recover.
+description: Vibe coding with AI requires expertise to work effectively. You can't just let agents run wild—you must narrow the corridor with proper constraints, architecture, and automation.
 pic: /genai/img/floppy.jpg
 ---
 
