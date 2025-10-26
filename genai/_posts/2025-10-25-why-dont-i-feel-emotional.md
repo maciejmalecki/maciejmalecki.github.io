@@ -78,7 +78,7 @@ Can agents create and manage architectures? Of course they can. However, specify
 3. A properly constrained agent can work no worse than humans.
 4. We — humans — can now focus on more interesting aspects, such as the structure of our projects and their architecture, while letting the agent implement loops, ifs, getters and setters.
 5. Even with AI agents, writing code will remain expensive, but perhaps two or three times cheaper than it is now.
-6. You will still need skills to work with AI agents.
+6. We still need engineering and programming skills to work with AI agents.
 
 [adam]: https://www.linkedin.com/pulse/digital-orphans-adam-witkowski-r17ef/?trackingId=4OfhmobARbyeKlfo9Y6qQQ%3D%3D
 [the-rise]: the-rise-of-vibe-coding
