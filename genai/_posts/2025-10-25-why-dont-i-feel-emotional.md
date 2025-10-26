@@ -71,6 +71,15 @@ I said that I don't enjoy coding any more. That's not entirely true. I don't thi
 
 Can agents create and manage architectures? Of course they can. However, specifying the prompt to do so may reveal the architecture itself, meaning AI could simply confirm our choices. We will still do most of the work ourselves. I am a bit more optimistic about this.
 
+### Conclusions
+
+1. If we interpret 'Vibe Coding' as a way of giving the AI agent some level of trust, we can work with natural language in almost all cases.
+2. We can gain insight into the way the agent behaves through proper customisation and tool usage.
+3. A properly constrained agent can work no worse than humans.
+4. We — humans — can now focus on more interesting aspects, such as the structure of our projects and their architecture, while letting the agent implement loops, ifs, getters and setters.
+5. Even with AI agents, writing code will remain expensive, but perhaps two or three times cheaper than it is now.
+6. You will still need skills to work with AI agents.
+
 [adam]: https://www.linkedin.com/pulse/digital-orphans-adam-witkowski-r17ef/?trackingId=4OfhmobARbyeKlfo9Y6qQQ%3D%3D
 [the-rise]: the-rise-of-vibe-coding
 [karpathy]: https://x.com/karpathy/status/1886192184808149383?t=7EBkBxJuW-5De2hqxso_jA&s=03
