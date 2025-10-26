@@ -67,7 +67,7 @@ Can an AI agent generate legacy code from scratch? Oh boy! Existing legacy code 
 
 ### I am still the father of my architecture.
 
-I said that I don't enjoy coding any more. That's not entirely true. I don't think low-level coding makes sense. At least 10 years ago, though, I discovered something more exciting. Applications have architectures. Applications can be modularised. We can manage dependencies between modules and the granularity of the modules. Architecture exists on micro and macro levels. We have large, interconnected systems of applications. We have microservices. We can design the architecture to ensure the software remains maintainable in the long term. You know what? Architecture is still relevant, even more so when using Agentic AI for coding.
+I said that I don't enjoy coding any more. That's not entirely true. I don't think low-level coding makes sense. At least 10 years ago, though, I discovered something more exciting. Applications have architectures. Applications can be modularised. We can manage dependencies between modules and the granularity of the modules. Architecture exists on micro and macro levels. We have large, interconnected systems of applications. We have microservices. We can design the architecture to ensure the software remains maintainable in the long term. You know what? Architecture is [still relevant](significance-of-architecture), even more so when using Agentic AI for coding.
 
 Can agents create and manage architectures? Of course they can. However, specifying the prompt to do so may reveal the architecture itself, meaning AI could simply confirm our choices. We will still do most of the work ourselves. I am a bit more optimistic about this.
 
