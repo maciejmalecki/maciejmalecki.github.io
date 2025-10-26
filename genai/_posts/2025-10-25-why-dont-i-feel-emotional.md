@@ -47,7 +47,7 @@ So, you still need to know how to use and combine these tools effectively. You h
 
 Someone without a programming or engineering background could never do this.
 
-### I am not the father of my code.
+### I am not the father of my code
 
 The conclusion I have come to in this rant is actually quite sad. I have realised that I don't feel any emotion towards the code I write for a living. Well, maybe two or three times, I was exceptionally proud of something I had hand-coded at a very low level. In my whole career. This is not what I expected when I decided to become a programmer in 1990. At that time, I wrote code for fun for the next 10 years. Mostly video games or graphical programs (yes, I loved creating UIs).
 
@@ -65,7 +65,7 @@ Can an AI agent generate insecure code? Sure! But the same applies to humans.
 
 Can an AI agent generate legacy code from scratch? Oh boy! But existing legacy code has been created by humans! In my whole career, I've met at least a few programmers who were writing pure legacy code from day one. Nobody's perfect.
 
-### I am still the father of my architecture.
+### I am still the father of my architecture
 
 I said that I don't enjoy coding any more. That's not entirely true. I don't think low-level coding is a wonderful challenge nowadays. However, at least 10 years ago, though, I discovered something more exciting. Applications have architectures. Applications can be modularised. We can manage dependencies between modules and the granularity of the modules. Architecture exists on micro and macro levels. We have large, interconnected systems of applications. We have microservices. We can design the architecture to ensure the software remains maintainable in the long term. You know what? Architecture is [still relevant](significance-of-architecture), even more so when using Agentic AI for coding.
 
