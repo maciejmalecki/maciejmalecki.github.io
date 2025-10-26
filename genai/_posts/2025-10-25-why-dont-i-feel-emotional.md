@@ -1,5 +1,5 @@
 ---
-title: "Why don't I feel emotional about the code I used to write?"
+title: "Why don't I feel emotional about most of the code I write today?"
 layout: post
 categories: genai arch
 description: Vibe coding with AI requires expertise to work effectively. You can't just let agents run wild—you must narrow the corridor with proper constraints, architecture, and automation.
