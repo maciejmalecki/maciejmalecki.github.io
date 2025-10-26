@@ -61,13 +61,13 @@ The first one contains a [BASIC][basic] program that I wrote in 1993 — the onl
 
 I don't know anyone who loves coding endless CRUDs, tables and forms. I don't think anyone cares about code like that (even handwritten) any more than is enforced by CI/CD pipelines. The tools. These are the same tools that AI must use to obey and tackle feedback, correcting itself.
 
-Can an AI agent generate insecure code? The same applies to humans.
+Can an AI agent generate insecure code? Sure! But the same applies to humans.
 
-Can an AI agent generate legacy code from scratch? Oh boy! Existing legacy code has been created by humans! In my whole career, I've met at least a few programmers who were writing pure legacy code from day one. Nobody's perfect.
+Can an AI agent generate legacy code from scratch? Oh boy! But existing legacy code has been created by humans! In my whole career, I've met at least a few programmers who were writing pure legacy code from day one. Nobody's perfect.
 
 ### I am still the father of my architecture.
 
-I said that I don't enjoy coding any more. That's not entirely true. I don't think low-level coding makes sense. At least 10 years ago, though, I discovered something more exciting. Applications have architectures. Applications can be modularised. We can manage dependencies between modules and the granularity of the modules. Architecture exists on micro and macro levels. We have large, interconnected systems of applications. We have microservices. We can design the architecture to ensure the software remains maintainable in the long term. You know what? Architecture is [still relevant](significance-of-architecture), even more so when using Agentic AI for coding.
+I said that I don't enjoy coding any more. That's not entirely true. I don't think low-level coding is a wonderful challenge nowadays. However, at least 10 years ago, though, I discovered something more exciting. Applications have architectures. Applications can be modularised. We can manage dependencies between modules and the granularity of the modules. Architecture exists on micro and macro levels. We have large, interconnected systems of applications. We have microservices. We can design the architecture to ensure the software remains maintainable in the long term. You know what? Architecture is [still relevant](significance-of-architecture), even more so when using Agentic AI for coding.
 
 Can agents create and manage architectures? Of course they can. However, specifying the prompt to do so may reveal the architecture itself, meaning AI could simply confirm our choices. We will still do most of the work ourselves. I am a bit more optimistic about this.
 
