@@ -25,7 +25,7 @@ Here's a mandatory bunch of links that one may find interesting:
 * [Komoda & Amiga plus][kaplus], a retrogaming magazine I publish in.
 
 ![Wrocław](/img/wroclaw.jpg)
-*Wrocław, from above.*
+*Wrocław, from above. Source: [Dzieciaki Na pokład][dzieciaki].*
 
 [c64]: https://en.wikipedia.org/wiki/Commodore_64
 [linkedin]: https://www.linkedin.com/in/maciejmalecki/
@@ -33,3 +33,4 @@ Here's a mandatory bunch of links that one may find interesting:
 [itch]: https://maciejmalecki.itch.io/
 [rbt]: https://c64lib.github.io/gradle-retro-assembler-plugin/
 [kaplus]: https://ka-plus.pl/en/
+[dzieciaki]: https://dzieciakinapoklad.pl/
