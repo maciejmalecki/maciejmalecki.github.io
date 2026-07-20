@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8E02V5EDF9"></script>
+	<script>
+		var useCookies = (localStorage.getItem('useCookies') === 'true');
+		if (useCookies) {
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-8E02V5EDF9', { 'anonymize_ip': true });
+		}
+	</script>
+	
+
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>How to organise and share your prompts in Agentic AI</title>
+  <meta name="description" content="The purpose for which AI agents can be used depends on the prompt used.">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+</head>
+
+
+<body>
+	<div id="wrap">
+
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	      <a href="/about" title="About">About</a>
+	    
+	  
+	    
+	      <a href="/architecture" title="Architecture">Architecture</a>
+	    
+	  
+	    
+	      <a href="/asm" title="Assembly language">Assembly language</a>
+	    
+	  
+	    
+	  
+	    
+	      <a href="/cbm" title="8bits">8bits</a>
+	    
+	  
+	    
+	  
+	    
+	      <a href="/genai" title="GenAI">GenAI</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	      <a href="/privacy" title="Privacy">Privacy</a>
+	    
+	  
+	    
+	      <a href="/sh" title="IoT">IoT</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://github.com/maciejmalecki">Github</a>
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/">
+          <h1><code>()=>{}</code></h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="/about" title="About">About</a>
+      
+      
+        
+          <a href="/architecture" title="Architecture">Architecture</a>
+      
+      
+        
+      
+        
+          <a href="/genai" title="GenAI">GenAI</a>
+      
+      
+        
+          <a href="/cbm" title="8bits">8bits</a>
+      
+      
+        
+          <a href="/sh" title="IoT">IoT</a>
+      
+      
+        
+          <a href="/privacy" title="Privacy">Privacy</a>
+      
+      
+      
+      <!-- Nav links -->
+      <a href="https://github.com/maciejmalecki">Github</a>
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+
+		<main>
+
+			<article id="post-page">
+	<h2>How to organise and share your prompts in Agentic AI</h2>		
+	<time datetime="2025-09-14T00:00:00+00:00" class="by-line">14 Sep 2025</time>
+	<div class="disclaimer">
+		The views and opinions expressed in this blog are solely my own and do not reflect the views, policies, or positions of my employer or any professional organization with which I am affiliated.
+	</div>
+	<div class="content">
+
+		<p><a href="the-rise-of-vibe-coding">Last time</a>, I demonstrated how to use an AI agent for complex coding tasks. I opted for GitHub Copilot Agent Mode, but I could also have used Windsurf’s Cascade, Claude Code, or any other mature Agentic Coding tool. I tried to follow the approach outlined by Andrej Karpathy, who refers to it as <a href="https://x.com/karpathy/status/1886192184808149383?t=7EBkBxJuW-5De2hqxso_jA&amp;s=03">Vibe Coding</a>.</p>
+
+<p>Initially sceptical, I used a special prompting technique called ‘Plan and Execute’, which I had learnt about elsewhere (refer <a href="https://www.promptlayer.com/glossary/plan-and-execute-agents#:~:text=Plan%20and%20execute%20agents%20are%20a%20type,necessarily%20consulting%20the%20LLM%20for%20every%20action.">this source</a> to learn more about “Plan and Execute” agent architecture), to try to control what the AI agent was doing to some extent. As a result, I vastly improved the agent’s efficiency and accuracy by creating a detailed plan and letting the agent execute it precisely. This made me wonder if there are other prompts and techniques that could be used with the same AI agent to perform different tasks to a similarly high standard. If so, perhaps we don’t need any other agents besides the one we already have, at least for the very limited scope of software engineering and the specific coding tasks we perform daily.</p>
+
+<h3 id="be-careful-with-instructions-file">Be careful with instructions file</h3>
+
+<p>The Plan and Execute technique requires a complex planning prompt to analyse the task properly and create a detailed action plan. The plan document must be self-contained because it is used as an attachment to subsequent prompts asking for execution. Sometimes, we have to restart a new agent conversation as the token window tends to expire sooner or later.</p>
+
+<p>Instead of keeping this complex prompt in a notepad and manually pasting and parametrising it when needed, I crafted my <code class="language-plaintext highlighter-rouge">copilot-instructions.md</code> file and ordered my AI agent to work this way each time a user wants to create a new plan. I have even included a section on how to execute the plan (and update it accordingly) when the user requests execution. This actually works, at least in IntelliJ, where the instructions file was the only way to customise Copilot at the time.</p>
+
+<p>The only problem with my particular solution is that Copilot always reads the entire content of the <code class="language-plaintext highlighter-rouge">copilot-instructions.md</code> file. This happens no matter whether we use “Ask”, “Edit” or “Agent” mode and no matter what the purpose is. So, even though the self-contained plan document is already generated and attached to the conversation, the plan creation instructions are still there. Not only may they confuse the agent, but they also consume precious tokens each time we prompt.</p>
+
+<p><img src="/genai/img/kramer.jpg" alt="Cosmo Kramer" />
+<em>Agents tends to panic while overloaded with instructions. Cosmo Kramer.</em></p>
+
+<p>Perhaps the instructions should be specific to each purpose and only provide the relevant information each time the agent is used? So, let’s do what we never do and read <a href="https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions#writing-effective-repository-custom-instructions">the manual</a>. Here’s what we find (as of September 2025):</p>
+
+<blockquote>
+  <p>The instructions you add to your custom instruction file(s) should be short, self-contained statements that provide Copilot with relevant information to help it work in this repository. Because the instructions are sent with every chat message, <strong>they should be broadly applicable to most requests you will make in the context of the repository</strong>.</p>
+</blockquote>
+
+<p>Yes, they did write it.</p>
+
+<p>Next, we find a useful recommendation for the structure of the <code class="language-plaintext highlighter-rouge">copilot-instructions.md</code> file.</p>
+
+<blockquote>
+  <p>The exact structure you utilize for your instructions file(s) will vary by project and need, but the following guidelines provide a good starting point:</p>
+
+  <ul>
+    <li>Provide an overview of the project you’re working on, including its purpose, goals, and any relevant background information.</li>
+    <li>Include the folder structure of the repository, including any important directories or files that are relevant to the project.</li>
+    <li>Specify the coding standards and conventions that should be followed, such as naming conventions, formatting rules, and best practices.</li>
+    <li>Include any specific tools, libraries, or frameworks that are used in the project, along with any relevant version numbers or configurations.</li>
+  </ul>
+</blockquote>
+
+<p>There’s nothing about prompts or how to react to certain requests from users. This is certainly the wrong place.</p>
+
+<h3 id="prompts-are-a-different-kind-of-beast">Prompts are a different kind of beast</h3>
+
+<p>When prompting, we are asking the AI agent to perform a specific task; it is an instruction, not a suggestion or neutral information. If you have already undertaken any prompt engineering training, you will be aware that there are usually some specifics that should be used when prompting. A well-crafted prompt should be properly structured and contain enough contextual information and a precise task definition, as well as utilising a few prompting techniques, such as role-playing, few-shot learning and structured output formatting. This is a lot of information to send to the agent, and we would prefer not to do it all the time, only when needed. Certainly, we require a certain type of information structure, and Copilot (and other tools such as Windsurf) provide this.</p>
+
+<p><img src="/genai/img/copilot-prompt-architecture.excalidraw.png" alt="Copilot architecture" />
+<em>How you should use GitHub Copilot to build the prompt for the AI Agent.</em></p>
+
+<p>Indeed, whenever you wish to use an AI agent to perform a complex task, you should select a prompt template from your scratchpad, notepad or whatever you use to store text. Fill it with your desired prompt and then paste it into the agent mode chat window. Remember to select an appropriate language model (see the ‘Rant on Models’ section in the <a href="the-rise-of-vibe-coding">aforementioned article</a>).</p>
+
+<h3 id="a-prompt-library-provides-the-answer">A prompt library provides the answer</h3>
+
+<p>GitHub Copilot supports so-called prompt files. This is a relatively new feature, introduced in September 2025, but it has been available in Visual Studio Code for some time. I had an epiphany when a colleague shared a <a href="https://github.com/github/awesome-copilot/">link</a> containing a Git repository with lots of custom instructions and prompt files. So why shouldn’t I organise my repository in exactly the same way? Meanwhile, I discovered that prompt files had been added to the IntelliJ plugin without my noticing (perhaps I didn’t read the release notes).</p>
+
+<p>I have decided to reorganise my ‘.github’ folder slightly. I have removed all “Plan and Execute” related items from my <code class="language-plaintext highlighter-rouge">copilot-instructions.md</code>, and created two separate prompt files:</p>
+
+<ul>
+  <li><a href="https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.github/prompts/plan.prompt.md">plan.prompt.md</a> contains now all information needed to create a new plan.</li>
+  <li><a href="https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.github/prompts/exec.prompt.md">exec.prompt.md</a> contains now all information needed to execute plan.</li>
+</ul>
+
+<p>Now let’s take a look at the second one.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">mode</span><span class="pi">:</span> <span class="s1">'</span><span class="s">agent'</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Execute</span><span class="nv"> </span><span class="s">step</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">multiple</span><span class="nv"> </span><span class="s">steps</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attached</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">plan</span><span class="nv"> </span><span class="s">md</span><span class="nv"> </span><span class="s">file.'</span>
+<span class="na">tools</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">read_file'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">edit_file'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">codebase'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">search'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">searchResults'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">changes'</span><span class="pi">,</span>
+<span class="s1">'</span><span class="s">editFiles'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">run_in_terminal'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">runCommands'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">runTests'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">findTestFiles'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">testFailure'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">git'</span><span class="pi">]</span>
+<span class="nn">---</span>
+You are an experienced software developer tasked with executing an attached action plan md 
+file to implemented an issue.
+
+You should focus only on executing following steps, identified by their numbers, 
+as specified in the action plan:
+
+<span class="nt">&lt;steps_to_execute&gt;</span>
+
+${input:steps}
+
+<span class="nt">&lt;/steps_to_execute&gt;</span><span class="sb">
+
+
+</span>Follow the following rules during plan execution.
+<span class="p">
+1.</span> When developer asks for executing plan step, it is always meant to be a step 
+from the <span class="ge">*next steps*</span> section of the action plan.
+<span class="p">2.</span> When developer asks for complete plan execution, execute the plan step by step 
+but stop and ask for confirmation before executing each step
+<span class="p">3.</span> When developer asks for single step execution, execute only that step
+<span class="p">4.</span> When developer asks additionally for some changes, update existing plan with 
+the changes being made
+<span class="p">5.</span> Once finishing executing of the step, always mark the step as completed in 
+the action plan by adding a ✅ right before step name.
+<span class="p">6.</span> Once finishing executing the whole phase, always mark the phase as completed 
+in the action plan by adding a ✅ right before phase name.
+<span class="p">7.</span> If by any reason the step is skipped, it should be marked as skipped in the 
+action plan by adding a ⏭️ right before step name. It should be clearly stated why 
+it was skipped.
+</code></pre></div></div>
+
+<p>It is also noteworthy that this prompt uses a role-playing technique at the top, but the task is defined differently (i.e. to execute the plan). The steps to be executed are now explicitly defined in the next paragraph (it accepts ‘Step 1’, ‘Steps 1, 2’, or even ‘all steps’). I will not repeat a description of the plan and its structure here, since the document generated using the ‘Plan’ prompt is self-contained and self-explanatory.</p>
+
+<p>When this file is stored in the <code class="language-plaintext highlighter-rouge">.github/prompts</code> folder of your repository and its suffix conforms to <code class="language-plaintext highlighter-rouge">*.prompt.md</code>, it is automatically made available in your chat window when you type the ‘/’ character.</p>
+
+<p><img src="/genai/img/launch-prompt.png" alt="launch prompt" /></p>
+
+<p>From my observations, anything you type after the prompt template name is automatically passed to the prompt template and whatever you place a <code class="language-plaintext highlighter-rouge">${input:value}</code> placeholder is pasted. According to the <a href="https://code.visualstudio.com/docs/copilot/customization/prompt-files">documentation</a>, you can specify multiple placeholders and pass multiple distinct values using key/value notation, for example, <code class="language-plaintext highlighter-rouge">/plan: task=..., issue=1234, name=implement abc</code>, but this does not seem to work properly with IntelliJ yet.</p>
+
+<p>However, passing a single value is sufficient for now, so we can carefully pass steps to the ‘exec’ prompt and place them in the correct location in our prompt template.</p>
+
+<p>As you can see, with the prompt template, we can leverage a wide range of different prompting techniques. This allows us to properly define a role (‘You are an experienced software developer…’) and concrete rules that should be obeyed by the agent. There is also a special header that uses a syntax called ‘front matter’, where you can specify a set of metadata that characterises this prompt. You can limit the prompt to a specific Copilot mode (here, we only use the “agent” mode), limit the set of tools the agent can use to execute this prompt and specify the language model to be used with this prompt. If unspecified, the agent will always use the model selected by the user.</p>
+
+<p>Using this newly discovered capability, I quickly developed another prompt template, <a href="https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.github/prompts/plan-update.prompt.md">plan-update</a>, which I use to supplement an existing plan with additional information. Let’s take a look:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">mode</span><span class="pi">:</span> <span class="s1">'</span><span class="s">agent'</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Update</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">plan</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">issue</span><span class="nv"> </span><span class="s">details,</span><span class="nv"> </span><span class="s">marks</span><span class="nv"> </span><span class="s">resolved</span><span class="nv"> </span><span class="s">questions</span> 
+<span class="s">and</span><span class="nv"> </span><span class="s">updates</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">plan</span><span class="nv"> </span><span class="s">steps</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">needed.'</span>
+<span class="na">tools</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">read_file'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">edit_file'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">codebase'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">search'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">searchResults'</span><span class="pi">,</span> 
+<span class="s1">'</span><span class="s">changes'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">findTestFiles'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">git'</span><span class="pi">]</span>
+<span class="nn">---</span>
+You are an experienced software developer tasked with creating an action plan 
+to address an issue. Your plan is already generated and attached to this 
+conversation, but you want to enhance it with additional information that 
+was missing once plan was first created. Your goal is to produce a comprehensive, 
+step-by-step plan that will guide the resolution of this issue.
+
+First, review the following information:
+
+<span class="nt">&lt;issue_update&gt;</span>
+
+${input:update}
+
+<span class="nt">&lt;/issue_update&gt;</span>
+
+With information provided above, perform the following steps:
+<span class="p">
+1.</span> Incorporate information provided as issue_update to the action plan; 
+crosscheck the plan to see if it requires an update having in mind issue_update 
+information.
+<span class="p">2.</span> Check if any of the questions for others hasn't been answered by acceptance 
+criteria and mark it accordingly if so.
+<span class="p">3.</span> If any new questions for others arise from the issue_update information, add 
+them to the list of questions for others.
+<span class="p">4.</span> If at any point you see that relevant code parts section needs to be updated, 
+update it accordingly.
+</code></pre></div></div>
+
+<p>As before, I set up the agent’s role from scratch, this time as someone tasked with updating an existing document. This time, I have not included any information on how the plan is constructed because the existing plan should be provided as an input file (attachment) to the agent conversation. Now, I focus on instructing the agent which parts of the plan need to be updated. Note that this involves not only explicit updates (e.g. adding a next step to the action plan), but also asking the agent to revise existing questions and relevant code bases in the context of the newly provided information (as a parameter to this prompt) and update them. With this plan, I can provide additional ‘acceptance criteria’ or ‘change requests’, or answer the ‘Questions for others’ section.</p>
+
+<p>Now we can really see the power of the prompt library and the ability to put these prompts into separate files. I doubt role-playing and other techniques would ever work if all these behaviours were coded directly into the copilot instructions file. I would expect chaos and completely erratic behaviour from an agent orchestrated in this way.</p>
+
+<p>As an added bonus, I have noticed that the AI agent performs slightly better when I use dedicated prompt templates instead of a single, large instructions file. Perhaps this is because the agent is now more focused, or maybe it’s because this approach allows me to apply more of the recommended prompting techniques. Either way, I have a subjective feeling that the agent makes fewer mistakes and chooses paths much more cleverly. However, this could also be the result of a plugin update that occurred in the meantime, so I need to conduct more experiments in this area.</p>
+
+<h3 id="summary">Summary</h3>
+
+<p>We can already see the clear direction in which all AI-aided coding tools are heading. Thinking processes (also known as agentic modes) and automatic context building are essential. However, it is almost equally important to be able to orchestrate an AI agent so that it fits perfectly into the project and codebase it is working on. There are two cornerstones to this orchestration: project knowledgebases (such as Copilot instructions) and a prompt library. The latter defines a set of predefined behaviours that the agent can follow to achieve specific outcomes.</p>
+
+<p>With a well-crafted set of prompt templates, we can effectively get a set of specialised agents that serve different purposes. My three prompts give me a specialised set of agents: a tech lead agent that performs software design and feature breakdowns using the <a href="https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.github/prompts/plan.prompt.md">‘plan’</a> and <a href="https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.github/prompts/plan-update.prompt.md">‘update-plan’</a> prompts, and a software engineer that implements according to the plan using the <a href="https://github.com/c64lib/gradle-retro-assembler-plugin/blob/develop/.github/prompts/exec.prompt.md">‘exec’</a> prompt. The list of roles that can be orchestrated in this way is open.</p>
+
+<p>The beauty of the design is that all of these files are Markdown text documents that are easy to write and have a relatively flexible structure. This means that each tech lead can now customise the AI agent to maximise benefits. Most importantly, these files can easily be shared amongst all team members via a Git repository. This achieves a higher level of standardisation, which can actually be beneficial for a large proportion of IT projects. We don’t always need to start coding our own AI agent from scratch — we can see what’s already available and orchestrate it using simple Markdown! Don’t forget to review <a href="https://github.com/github/awesome-copilot/">Awesome Copilot</a> for inspiration!</p>
+
+<p>Of course, there are certain risks associated with growing your own prompt library.</p>
+
+<ul>
+  <li>Firstly, you become heavily dependent on a certain technology, as prompt files are not standardised across different vendors. This means your team has to use the same tools, and as the library grows, porting it to another agent technology could require substantial effort.</li>
+  <li>Secondly, you develop a new layer of code that is essentially semi-structured English text. We don’t yet have tools that can check the consistency of all these files together at the level that we have for classical programming languages as part of our IDEs. There is nothing worse than one of your instruction files contradicting one of your prompts.</li>
+</ul>
+
+<p>Bearing this in mind, I would suggest keeping this ‘orchestration code’ minimal, at least for now.</p>
+
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+
+		  <!-- Pagination links -->
+      
+
+	  </div>
+
+	    <!-- Footer -->
+	    <footer><span>&#169; 2018-2026 Maciej Małecki &#10540; last update: 2026-07-20 20:02</span></footer>
+
+
+      <div id="gdpr" style="display: none;">
+        <p>
+          This web page uses cookies to track anonymous user activities. By continuing using this site
+          or by closing this banner you indicate your consent to use these cookies.
+          You can change settings, i.e. disable user tracking on <a href="privacy.html">privacy</a> page.
+        </p>
+        <button id="gdprClose">Close</button>
+      </div>
+
+	    <!-- Script -->
+      <script src="/js/main.js"></script>	
+
+
+	</div>
+
+</body>
+</html>

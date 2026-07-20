@@ -1,0 +1,19 @@
+<h2 id="summary">Summary</h2>
+
+<p>Added the <code class="language-plaintext highlighter-rouge">gh-utils</code> skill that wraps the gh CLI to standardise GitHub operations — headlined by creating a pull request from a <code class="language-plaintext highlighter-rouge">$type/$slug</code> branch into <code class="language-plaintext highlighter-rouge">main</code> — delegating command execution to a spawned Haiku subagent.</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>Give GitHub-side operations the same standardised, low-friction treatment as local git, mirroring <code class="language-plaintext highlighter-rouge">git-utils</code>. The main agent decides the operation and drafts PR content; a Haiku subagent runs the <code class="language-plaintext highlighter-rouge">gh</code> commands. Headline operation is <code class="language-plaintext highlighter-rouge">gh pr create</code> into <code class="language-plaintext highlighter-rouge">main</code> (assuming the branch is pushed — handed off to <code class="language-plaintext highlighter-rouge">git-utils</code> otherwise), plus a documented menu of common operations (view/list PRs, checks, status, diff, repo/issue view). Guardrails forbid unprompted merge/close, require base <code class="language-plaintext highlighter-rouge">main</code>, and prevent duplicate PRs or PRs from <code class="language-plaintext highlighter-rouge">main</code>. States the <code class="language-plaintext highlighter-rouge">git-utils</code>↔<code class="language-plaintext highlighter-rouge">gh-utils</code> boundary. Executed as Step 6 of plan-002.</p>
+
+<h2 id="affected-files">Affected Files</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/gh-utils/SKILL.md</code> (new)</li>
+</ul>
+
+<h2 id="original-prompt">Original Prompt</h2>
+
+<blockquote>
+  <p>execute plan 2</p>
+</blockquote>

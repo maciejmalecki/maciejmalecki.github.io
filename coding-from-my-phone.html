@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8E02V5EDF9"></script>
+	<script>
+		var useCookies = (localStorage.getItem('useCookies') === 'true');
+		if (useCookies) {
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-8E02V5EDF9', { 'anonymize_ip': true });
+		}
+	</script>
+	
+
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Coding from my phone: a remote agentic setup</title>
+  <meta name="description" content="Driving a mini PC 1500 km away from an Android phone, and the full automation a remote-only agentic coding setup demands.">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+</head>
+
+
+<body>
+	<div id="wrap">
+
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	      <a href="/about" title="About">About</a>
+	    
+	  
+	    
+	      <a href="/architecture" title="Architecture">Architecture</a>
+	    
+	  
+	    
+	      <a href="/asm" title="Assembly language">Assembly language</a>
+	    
+	  
+	    
+	  
+	    
+	      <a href="/cbm" title="8bits">8bits</a>
+	    
+	  
+	    
+	  
+	    
+	      <a href="/genai" title="GenAI">GenAI</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	      <a href="/privacy" title="Privacy">Privacy</a>
+	    
+	  
+	    
+	      <a href="/sh" title="IoT">IoT</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://github.com/maciejmalecki">Github</a>
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/">
+          <h1><code>()=>{}</code></h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="/about" title="About">About</a>
+      
+      
+        
+          <a href="/architecture" title="Architecture">Architecture</a>
+      
+      
+        
+      
+        
+          <a href="/genai" title="GenAI">GenAI</a>
+      
+      
+        
+          <a href="/cbm" title="8bits">8bits</a>
+      
+      
+        
+          <a href="/sh" title="IoT">IoT</a>
+      
+      
+        
+          <a href="/privacy" title="Privacy">Privacy</a>
+      
+      
+      
+      <!-- Nav links -->
+      <a href="https://github.com/maciejmalecki">Github</a>
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+
+		<main>
+
+			<article id="post-page">
+	<h2>Coding from my phone: a remote agentic setup</h2>		
+	<time datetime="2026-07-20T00:00:00+00:00" class="by-line">20 Jul 2026</time>
+	<div class="disclaimer">
+		The views and opinions expressed in this blog are solely my own and do not reflect the views, policies, or positions of my employer or any professional organization with which I am affiliated.
+	</div>
+	<div class="content">
+
+		<p>A year ago, on my laptop, I started to use the newly introduced — and still very imperfect — agent mode of GitHub Copilot to push forward my private project, the <a href="https://c64lib.github.io/gradle-retro-assembler-plugin/">Retro Build Tool</a> (RBT).
+The project had stagnated for a long time, and it was AI that finally brought it back to life.
+Today I use just my Android phone and Claude Code with remote control, which talks to a mini PC that runs around the clock at my house.
+When I write it down like that, it sounds like a decade of progress, but it has been just twelve months.</p>
+
+<p>A typical ‘coding session’ now looks like this: I pull the phone out of my pocket, I read what the agent has done since I last checked, and I send the next instruction — accept a plan, order a challenge against it, or tell it to execute the next step.
+Somewhere at my house, a mini PC checks out branches, compiles, runs the tests and commits, and then it waits for the next message — no laptop gets opened at any point.
+This post is about that setup: the box, the phone, and the full automation that has to sit underneath before you can drive real work from a screen in your pocket.
+<!-- Uncomment once 'One year with agentic AI' is published.
+(The wider story of how my whole way of working changed over the year is a separate one, which I tell in ['One year with agentic AI'][one-year].)
+--></p>
+
+<h3 id="the-box-and-the-phone">The box and the phone</h3>
+
+<p>Somewhere along the way I realised that nothing in my workflow needed the laptop any more.
+The plans were files in a repository, the skills were procedures the agent followed on its own, and even the end-to-end test runs of the Gradle plugin were easily automated, so my part had shrunk to reading and deciding — and a phone screen handles both perfectly well.
+The software side of the story had settled, so the hardware was the last thing to catch up, and eventually it did.</p>
+
+<p>The centre of my current setup is nothing special: a no-name mini PC bought in September 2025 for roughly 600 euro — a small black box with an AMD Ryzen 9 7940HS, 32 GB of DDR5 RAM and a 1 TB NVMe drive, running Windows 11 Pro.
+It sits at my house and runs around the clock.
+There is a monitor attached, but I sit at it only occasionally and for other purposes — when I am coding, the screen stays dark.</p>
+
+<p>What it does have is Claude Code.
+The agent runs there, among my checked-out repositories, and I connect to it from my Android phone using remote control.
+The phone is the only ‘terminal’ I use: I read what the agent has done, I send the next instruction and I put the phone back in my pocket.
+Sessions happen wherever I am — commuting, on the train, on the sofa.
+In fact, the honest trigger for a session is not a place at all: it is noticing that my token quota has renewed.
+That is what a ‘development environment’ has shrunk to in a year — a phone, a quota, and a box at home doing the actual work.</p>
+
+<h3 id="robustness-is-the-whole-game">Robustness is the whole game</h3>
+
+<p>There is a less exciting side to this arrangement: robustness.
+A remote-only setup is exactly as good as the box staying up and the session staying alive.
+As I write this, the box is about 1500 kilometres away from me, and the phone is the only way I can reach it, so at that distance every reboot, network problem or dropped session is not an annoyance — it is a full stop.</p>
+
+<p>In practice, three things have caused me trouble.
+The first was the operating system’s good intentions: a consumer mini PC is tuned to save energy, so left alone it will happily drift into sleep or a low-power mode — and for a box whose whole job is to be there when I reach for my phone, this is a fatal habit that had to be configured away.
+The second is electricity itself: I live in a village where power cuts are not rare, and no software makes up for a dead socket.
+The third was the remote control feature of Claude Code, which in its early days was not particularly stable — though it has improved a lot in recent months.</p>
+
+<p>The countermeasures are simple.
+Sleep is turned off entirely, the BIOS is set to power the machine back on the moment electricity returns, and the Claude consoles start automatically on login.
+For emergencies there is Remote Desktop — not for working, only for logging in after a power loss, so that the autostart can do its job and I can put the phone back in charge.
+Remote Desktop is also my remedy when the remote control itself misbehaves, though that has grown much rarer in recent months.</p>
+
+<h3 id="remote-means-fully-automated">Remote means fully automated</h3>
+
+<p>There is a precondition to this phone-only workflow that is easy to miss: full automation.
+Let me be precise about what that means, because it does not mean an agent running unattended.
+The questions the agent can raise are of two kinds: mechanical ones that can safely be pre-approved, and decisions that must always come back to a human — and the two must not be allowed to blur into each other.
+The acceptance phase is still there, and it is needed more than ever — Claude Code can potentially access every file on my PC, so I very much want to know what it intends to do before it does it.
+Full automation means something narrower: I never code manually, I never create or delete a file by hand, the interfacing with the git repository and with the coding platform (<code class="language-plaintext highlighter-rouge">gh</code>) is automated, and the quality gates and the review process are handled by skills.
+Everything <em>mechanical</em> is decided in advance and lives in the repository itself, and what remains for me is to accept or refuse.
+To be fair, when the agent stops mid-task to ask whether it may run <code class="language-plaintext highlighter-rouge">git push</code>, the session does not die — remote control simply pauses and waits for a decision, and the question pops up even on my watch.
+That is exactly why the mechanics must be pre-approved: a wrist that buzzes for every <code class="language-plaintext highlighter-rouge">git push</code> quickly teaches you to tap ‘yes’ without reading, and then the acceptance phase — the one part that must not be automated — turns into a reflex.
+The questions that reach me should be the ones that really deserve my attention.</p>
+
+<p>RBT is a good example of what that looks like after a year of growth.
+Its <code class="language-plaintext highlighter-rouge">CLAUDE.md</code> is a small constitution: the build commands, the hexagonal architecture rules the generated code must obey, commit-message conventions, and coverage targets.
+Around it sits a set of skills — prompt packages, really — that wrap the whole development lifecycle: a <code class="language-plaintext highlighter-rouge">plan</code> skill that turns a feature into a structured action plan, an <code class="language-plaintext highlighter-rouge">execute</code> skill that implements it step by step and keeps an execution log, a <code class="language-plaintext highlighter-rouge">challenge</code> skill that red-teams the plan before any code is written, and a <code class="language-plaintext highlighter-rouge">fixme</code> command that feeds errors back into the plan when something goes wrong.
+The plans are synced with GitHub issues, and the pull requests are opened by a skill too.</p>
+
+<p>Verification is where ‘narrowing the corridor’ — my old answer to ‘can we trust the generated code?’ — stopped being just a nice phrase and became actual configuration.
+The agent has skills to build, run static analysis (Spotless, Detekt), execute the full test suite with coverage thresholds, and finally run an end-to-end test: publish the freshly built plugin locally and build a real Commodore 64 game with it, checking that the expected artefacts come out.
+The agent does not ask me whether the change works, because it is equipped to find out.</p>
+
+<p>Two more details complete the picture.
+First, the mechanical work — running Gradle, git, <code class="language-plaintext highlighter-rouge">gh</code> — is delegated to subagents on a cheaper model, so the expensive tokens are spent on reasoning rather than on watching a compiler scroll by.
+Second, there is a permission allowlist in the repo’s settings: some thirty pre-approved commands and skills, collected one confirmation at a time, and this is precisely the list of questions the agent no longer needs to ask me.
+That list, more than any model release, is what freed me from the keyboard.</p>
+
+<p>None of this orchestration is carved in stone, by the way.
+The constitution, the skills, the allowlist — they evolve as the work demands, and they evolve the same way everything else does now: I prompt for it.
+When a convention starts to annoy me, or a new routine repeats itself often enough to deserve a name, I tell the agent to rewrite its own instructions — remotely, from the same phone.
+The harness is just another codebase, and the agent maintains that one too.</p>
+
+<h3 id="conclusions">Conclusions</h3>
+
+<ol>
+  <li>In twelve months, my development environment shrank to a phone, a token quota and a cheap box at home. The laptop did not survive the year.</li>
+  <li>A remote-only setup lives or dies on robustness: kill sleep, auto-recover after power loss, autostart the agent, and keep a bare-minimum way in for emergencies.</li>
+  <li>Remote agentic coding requires full automation of the mechanics: a narrowed corridor, automated verification and pre-approved permissions. Every <em>mechanical</em> question that still reaches you is noise that trains you to stop reading — keep only the acceptance decisions.</li>
+  <li>The one part that must never be automated is acceptance — reading and reviewing a reviewable artefact, such as a plan document, before it is acted on. Everything mechanical is pre-approved so that the questions which do reach the phone are the ones that genuinely deserve attention.</li>
+</ol>
+
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+
+		  <!-- Pagination links -->
+      
+
+	  </div>
+
+	    <!-- Footer -->
+	    <footer><span>&#169; 2018-2026 Maciej Małecki &#10540; last update: 2026-07-20 20:02</span></footer>
+
+
+      <div id="gdpr" style="display: none;">
+        <p>
+          This web page uses cookies to track anonymous user activities. By continuing using this site
+          or by closing this banner you indicate your consent to use these cookies.
+          You can change settings, i.e. disable user tracking on <a href="privacy.html">privacy</a> page.
+        </p>
+        <button id="gdprClose">Close</button>
+      </div>
+
+	    <!-- Script -->
+      <script src="/js/main.js"></script>	
+
+
+	</div>
+
+</body>
+</html>

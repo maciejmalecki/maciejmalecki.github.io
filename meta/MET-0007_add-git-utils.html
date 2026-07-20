@@ -1,0 +1,19 @@
+<h2 id="summary">Summary</h2>
+
+<p>Added the <code class="language-plaintext highlighter-rouge">git-utils</code> skill that wraps the git CLI to standardise feature-branch creation (<code class="language-plaintext highlighter-rouge">$type/$slug</code>), rebase-only pulls, commit granularity, and push-on-demand, delegating command execution to a spawned Haiku subagent.</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>Capture the author’s intended local git convention once, so branch naming and commit habits are consistent instead of ad hoc (the pre-existing <code class="language-plaintext highlighter-rouge">plan-001-relocate-jekyll-source</code> branch predates the <code class="language-plaintext highlighter-rouge">$type/$slug</code> scheme). The main agent decides the operation and commit grouping; a Haiku subagent runs the mechanical git commands, keeping fast deterministic work off the main agent. Encodes: branch <code class="language-plaintext highlighter-rouge">$type/$slug</code> (types <code class="language-plaintext highlighter-rouge">plan</code>/<code class="language-plaintext highlighter-rouge">post</code>, extensible) off an up-to-date <code class="language-plaintext highlighter-rouge">main</code>; always <code class="language-plaintext highlighter-rouge">git pull --rebase</code>; related changes in one commit and unrelated changes in separate commits; push only on demand with upstream set on first push. Guardrails forbid unprompted force-push/amend, committing unrelated changes together, and auto-push. Executed as Step 5 of plan-002.</p>
+
+<h2 id="affected-files">Affected Files</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/git-utils/SKILL.md</code> (new)</li>
+</ul>
+
+<h2 id="original-prompt">Original Prompt</h2>
+
+<blockquote>
+  <p>execute plan 2</p>
+</blockquote>

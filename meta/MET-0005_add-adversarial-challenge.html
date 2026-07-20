@@ -1,0 +1,19 @@
+<h2 id="summary">Summary</h2>
+
+<p>Added the <code class="language-plaintext highlighter-rouge">adversarial-challenge</code> skill that red-teams a single blog post or page against its own front-matter and stated thesis, producing a calibrated Markdown findings report.</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>Give the author a harder, falsification-first probe of a draft than a re-read provides, for the increasingly argument-driven posts on the blog. Adapted from the AI Fundamentals Playbook’s <code class="language-plaintext highlighter-rouge">chapter-adversary</code> skill but retargeted from a <code class="language-plaintext highlighter-rouge">book.yml</code> contract to a single article’s own contract (front-matter <code class="language-plaintext highlighter-rouge">title</code>/<code class="language-plaintext highlighter-rouge">description</code>/<code class="language-plaintext highlighter-rouge">categories</code> plus the opening thesis), and stripped of all book/cross-chapter machinery. The skill reports only; it does not rewrite the prose, which is <code class="language-plaintext highlighter-rouge">english-correction</code>’s job. Executed as Step 2 of plan-002.</p>
+
+<h2 id="affected-files">Affected Files</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/adversarial-challenge/SKILL.md</code> (new)</li>
+</ul>
+
+<h2 id="original-prompt">Original Prompt</h2>
+
+<blockquote>
+  <p>execute plan 2</p>
+</blockquote>

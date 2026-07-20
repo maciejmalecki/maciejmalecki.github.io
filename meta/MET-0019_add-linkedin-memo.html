@@ -1,0 +1,25 @@
+<h2 id="summary">Summary</h2>
+
+<p>Add the <code class="language-plaintext highlighter-rouge">linkedin-memo</code> skill and extend <code class="language-plaintext highlighter-rouge">task-utils</code> and <code class="language-plaintext highlighter-rouge">CLAUDE.md</code> so published posts can carry an optional, build-excluded LinkedIn summary/advertisement memo cross-linked via the post’s task (executes plan-005).</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>To let selected published blog posts carry an optional, ready-to-paste LinkedIn promotion (summary + advertisement + back-link to the live article) without polluting the published site or the four-gate post-authoring flow — realised as the <code class="language-plaintext highlighter-rouge">linkedin-memo</code> skill writing build-excluded memo files, with <code class="language-plaintext highlighter-rouge">task-utils</code> and <code class="language-plaintext highlighter-rouge">CLAUDE.md</code> extended to record and validate the memo’s cross-link to its post. This executes plan-005.</p>
+
+<h2 id="affected-files">Affected Files</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/linkedin-memo/SKILL.md</code> (new — scaffolds a memo for a published post and cross-links it on the task)</li>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/task-utils/SKILL.md</code> (records + validates the memo cross-link; new §6, renumbered promotion-gating to §7; boundary + guardrail added)</li>
+  <li><code class="language-plaintext highlighter-rouge">CLAUDE.md</code> (authoring-overview note on optional LinkedIn memos)</li>
+  <li><code class="language-plaintext highlighter-rouge">templates/linkedin-memo-template.md</code> (new — out of changelog scope, listed for context)</li>
+  <li><code class="language-plaintext highlighter-rouge">templates/task-template.md</code> (new optional LinkedIn-memo section — out of changelog scope, listed for context)</li>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> (added <code class="language-plaintext highlighter-rouge">exclude:</code> for <code class="language-plaintext highlighter-rouge">linkedin-memos/</code>, restating Jekyll defaults — out of changelog scope, listed for context)</li>
+  <li><code class="language-plaintext highlighter-rouge">linkedin-memos/README.md</code> (new folder marker — out of changelog scope, listed for context)</li>
+</ul>
+
+<h2 id="original-prompt">Original Prompt</h2>
+
+<blockquote>
+  <p>plan new feature called optional LinkedIn summary. for some blog entries I would like to have an option to create a LinkedIn standard summary and advertisement with a link to the blog (blog url is maciejmalecki.github.io). Summary should be an optional add on MD file in dedicated log folder (linkedin-memos) crosslinked with blog article via task</p>
+</blockquote>

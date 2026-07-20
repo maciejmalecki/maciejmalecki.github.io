@@ -1,0 +1,19 @@
+<h2 id="summary">Summary</h2>
+
+<p>Added the <code class="language-plaintext highlighter-rouge">research-access</code> skill: a read-only, Haiku-delegated bridge that surfaces the sibling <code class="language-plaintext highlighter-rouge">../research</code> repo’s subjects, observations, and bibliography as grounding for blog posts.</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>Close the gap between the blog and the author’s separate <code class="language-plaintext highlighter-rouge">../research</code> workspace so posts can be grounded in cited, confidence-labelled research without hand-copying context across repos. The skill reads <code class="language-plaintext highlighter-rouge">../research</code> in place and strictly read-only (research → blog, one direction), keeping the research repo the single source of truth; the main agent decides what to pull and a Haiku subagent does the mechanical read/collate, matching the <code class="language-plaintext highlighter-rouge">-utils</code> precedent. Part of executing plan-004.</p>
+
+<h2 id="affected-files">Affected Files</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/research-access/SKILL.md</code></li>
+</ul>
+
+<h2 id="original-prompt">Original Prompt</h2>
+
+<blockquote>
+  <p>execute plan</p>
+</blockquote>

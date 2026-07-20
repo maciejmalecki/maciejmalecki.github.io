@@ -1,0 +1,19 @@
+<h2 id="summary">Summary</h2>
+
+<p>Extended the <code class="language-plaintext highlighter-rouge">task-utils</code> skill to manage and validate a task’s research grounding — writing the three link lists (via a Haiku subagent) and flagging links that no longer resolve in <code class="language-plaintext highlighter-rouge">../research</code> as part of reconciliation.</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>Turn the task’s new Research grounding section into a maintained, validated link set. <code class="language-plaintext highlighter-rouge">task-utils</code> already owns the task file and does orphan-reconciliation, so extending it to write the grounding links (choosing them optionally via <code class="language-plaintext highlighter-rouge">research-access</code>) and to flag a vanished subject/observation/citation — or a malformed bare observation reference, or an absent <code class="language-plaintext highlighter-rouge">../research</code> — is a small, consistent addition. Grounding stays optional and is explicitly not a quality gate. Part of executing plan-004.</p>
+
+<h2 id="affected-files">Affected Files</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/task-utils/SKILL.md</code></li>
+</ul>
+
+<h2 id="original-prompt">Original Prompt</h2>
+
+<blockquote>
+  <p>execute plan</p>
+</blockquote>

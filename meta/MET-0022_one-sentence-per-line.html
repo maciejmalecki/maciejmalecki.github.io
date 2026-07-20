@@ -1,0 +1,20 @@
+<h2 id="summary">Summary</h2>
+
+<p>Added a “Source-line formatting (one sentence per line)” convention to <code class="language-plaintext highlighter-rouge">EDITORIAL.md</code> §5 — one sentence per source line, paragraphs separated by at least one blank line — and wired its enforcement into the <code class="language-plaintext highlighter-rouge">english-correction</code> skill as a re-lineation step.</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>The author wants post/page body prose authored with one sentence per physical source line and a blank line between every paragraph, for authoring and diff legibility. This is a source-layout convention only: because kramdown renders consecutive single-newline lines as one flowing paragraph and treats a blank line as the paragraph break, the rule changes how the Markdown source reads in an editor and in diffs, not how the published page renders. It is a deliberate change from the older posts (authored one-paragraph-per-line), so it is recorded as a standard for new and revised posts rather than a description of the current corpus, and it is scoped to post/page prose — it explicitly does not apply to plan/task files (which the plan/execute-plan skills require one-paragraph-per-line), code, tables, front-matter, or reference-link blocks. Enforcement lives in the <code class="language-plaintext highlighter-rouge">english-correction</code> skill so a correction pass re-lineates the body without touching wording, order, or any do-not-touch region.</p>
+
+<h2 id="affected-files">Affected Files</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/english-correction/SKILL.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">EDITORIAL.md</code> (mirrored guidance; not a Claude asset, logged here for context)</li>
+</ul>
+
+<h2 id="original-prompt">Original Prompt</h2>
+
+<blockquote>
+  <p>enhancd editorial so it is enforced that each sentence is in separate line and paragraph of text is separated by at least one empty line</p>
+</blockquote>

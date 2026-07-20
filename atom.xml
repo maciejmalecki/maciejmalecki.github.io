@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>()=>{} | Void's blog</title>
+ <link href="https://maciejmalecki.github.io//atom.xml" rel="self"/>
+ <id>https://maciejmalecki.github.io/</id>
+ <updated>2026-07-20T20:02:55+00:00</updated>
+ <author>
+   <name></name>
+   <uri></uri>
+   <email></email>
+ </author>
+
+ 
+
+ <entry>
+   <title>Coding from my phone: a remote agentic setup</title>
+   <link href="https://maciejmalecki.github.io//coding-from-my-phone"/>
+   <id>https://maciejmalecki.github.io//coding-from-my-phone</id>
+   <updated>2026-07-20T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;A year ago, on my laptop, I started to use the newly introduced — and still very imperfect — agent mode of GitHub Copilot to push forward my private project, the &lt;a href=&quot;https://c64lib.github.io/gradle-retro-assembler-plugin/&quot;&gt;Retro Build Tool&lt;/a&gt; (RBT). The project had stagnated for a long time, and it was AI that finally...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Why don't I feel emotional about most of the code I write today?</title>
+   <link href="https://maciejmalecki.github.io//why-dont-i-feel-emotional"/>
+   <id>https://maciejmalecki.github.io//why-dont-i-feel-emotional</id>
+   <updated>2025-10-25T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;A few days ago, my colleague Adam Witkowski published an &lt;a href=&quot;https://www.linkedin.com/pulse/digital-orphans-adam-witkowski-r17ef/?trackingId=4OfhmobARbyeKlfo9Y6qQQ%3D%3D&quot;&gt;interesting article&lt;/a&gt; titled ‘Digital Orphans’. In it, he compares two approaches to authoring code: The ‘classic’ approach, where code is crafted by hand, and the ‘vibe coding’ approach, where a human simply instructs an AI agent to generate code...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>How to organise and share your prompts in Agentic AI</title>
+   <link href="https://maciejmalecki.github.io//prompts-and-agentic-ai"/>
+   <id>https://maciejmalecki.github.io//prompts-and-agentic-ai</id>
+   <updated>2025-09-14T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;the-rise-of-vibe-coding&quot;&gt;Last time&lt;/a&gt;, I demonstrated how to use an AI agent for complex coding tasks. I opted for GitHub Copilot Agent Mode, but I could also have used Windsurf’s Cascade, Claude Code, or any other mature Agentic Coding tool. I tried to follow the approach outlined by Andrej Karpathy, who...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>The Rise of Vibe Coding</title>
+   <link href="https://maciejmalecki.github.io//the-rise-of-vibe-coding"/>
+   <id>https://maciejmalecki.github.io//the-rise-of-vibe-coding</id>
+   <updated>2025-08-23T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;With &lt;em&gt;Vibe Coding&lt;/em&gt; it’s the same as with &lt;em&gt;Agile&lt;/em&gt;: a reasonable idea gets ruined by misunderstanding, and this gets worse as the hype continues. This may happen if an idea is applied blindly, or even forcibly, and the result is far from what was anticipated. Losses instead of profits, and...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Significance of Architecture</title>
+   <link href="https://maciejmalecki.github.io//significance-of-architecture"/>
+   <id>https://maciejmalecki.github.io//significance-of-architecture</id>
+   <updated>2025-08-21T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;When interviewing new candidates for the software architect position, I like to start with a few awkward questions, such as “What is architecture?”, “Who is an architect?” and “What do you do?”, before waiting for the ensuing moment of disbelief and long silence. Maybe some of them will try to...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>When does AI take my job?</title>
+   <link href="https://maciejmalecki.github.io//when-does-ai-take-my-job"/>
+   <id>https://maciejmalecki.github.io//when-does-ai-take-my-job</id>
+   <updated>2025-08-01T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;May was the second anniversary of my personal journey with AI, or generative AI to be precise. A few weeks ago before that moment, we had a quick chat on Zoom with some guys from all over the world, from Switzerland to New Zealand. So, the news was like, “You’ve...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Power supply for bare ESP 8266 units</title>
+   <link href="https://maciejmalecki.github.io//power-supply-for-bare-esp8266"/>
+   <id>https://maciejmalecki.github.io//power-supply-for-bare-esp8266</id>
+   <updated>2020-11-19T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;For &lt;a href=&quot;esp8266-weather-station-1&quot;&gt;battery powered ESP 8266 projects&lt;/a&gt; we would like to have a full control over electrical components that we use on board. This is because everything that draws power will also drain our battery, and this is something we want to avoid. The Wemos D1 Mini module seems to...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Gradle Retro Assembler plugin is released</title>
+   <link href="https://maciejmalecki.github.io//gradle-retro-plugin"/>
+   <id>https://maciejmalecki.github.io//gradle-retro-plugin</id>
+   <updated>2020-11-18T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;The idea of a tool that can automatically download all dependencies and build my 6502 projects arose some time &lt;a href=&quot;assembler-libraries&quot;&gt;ago&lt;/a&gt;. In the meantime I started using &lt;a href=&quot;https://64bites.com/64spec/&quot;&gt;64spec&lt;/a&gt; for testing my assembly code. The library itself is great but requires a lot of manual operations once a great number...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Weather Station with ESP 8266</title>
+   <link href="https://maciejmalecki.github.io//esp8266-weather-station-1"/>
+   <id>https://maciejmalecki.github.io//esp8266-weather-station-1</id>
+   <updated>2020-11-17T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;The ESP 8266 has relatively high power consumption (around 70-80mA) which makes battery powered devices difficult to build, unless we accept a very short battery lifetime. Reasons for this are apparently connected with WiFi communication model, which is not especially economical, big processing power of the ESP chip itself has...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Internet of Things done cheaply with ESP 8266</title>
+   <link href="https://maciejmalecki.github.io//esp8266"/>
+   <id>https://maciejmalecki.github.io//esp8266</id>
+   <updated>2020-09-11T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;For some time I had an idea to do few “home improvements” and, as a side effect, learn a bit about microcontrollers and electronics. So called “smart home” can be expensive - there are a lot of out-of-the-box solutions that cost a small fortune (as I said: “for some time”,...</content>
+ </entry>
+
+ 
+
+</feed>

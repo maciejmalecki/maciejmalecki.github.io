@@ -1,0 +1,23 @@
+<h2 id="summary">Summary</h2>
+
+<p>Added the <code class="language-plaintext highlighter-rouge">inline-review</code> skill, which batch-processes the author’s inline review comments (<code class="language-plaintext highlighter-rouge">&lt;!-- ... --&gt;</code> or <code class="language-plaintext highlighter-rouge">//</code>) left directly in a post/page, applies each comment’s instruction to its scoped target, removes the comments, and edits the file in place.</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>Give the author a lightweight way to review a draft by leaving instructions inline in the Markdown source and have them batch-applied and cleaned up on demand. It complements the existing editorial skills: <code class="language-plaintext highlighter-rouge">english-correction</code> acts on its own judgement toward British-English/voice, and <code class="language-plaintext highlighter-rouge">adversarial-challenge</code> only reports — neither lets the author drive specific, located edits. <code class="language-plaintext highlighter-rouge">inline-review</code> fills that gap, faithfully executing the author’s own located notes and removing the comments afterward, editing in place like <code class="language-plaintext highlighter-rouge">english-correction</code>. A comment scopes to the next sentence by default, to the next paragraph or section via a leading <code class="language-plaintext highlighter-rouge">para:</code>/<code class="language-plaintext highlighter-rouge">section:</code> keyword, or to an irregular structural span wrapped in <code class="language-plaintext highlighter-rouge">// { ... // }</code>. It respects the same do-not-touch regions as the editorial skills unless a comment explicitly overrides them, defers language/tone work to <code class="language-plaintext highlighter-rouge">english-correction</code> and challenge questions to <code class="language-plaintext highlighter-rouge">adversarial-challenge</code>, and runs one file per pass leaving no orphan markers behind.</p>
+
+<h2 id="affected-files">Affected Files</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/inline-review/SKILL.md</code></li>
+</ul>
+
+<h2 id="original-prompt">Original Prompt</h2>
+
+<blockquote>
+  <p>create new skill that supports inline reviews, these my comments placed directly in MD documents in form of comments either html style or //.</p>
+
+  <p>comment applies to next sentence, or next paragraph or next section. structural comments for less regular blocks are supported by opening // { and closing // }</p>
+
+  <p>once asked for processing,  all comments for given md file should be batch processed and edited, and comments removed</p>
+</blockquote>

@@ -1,0 +1,23 @@
+<h2 id="summary">Summary</h2>
+
+<p>Add a root <code class="language-plaintext highlighter-rouge">EDITORIAL.md</code> editorial charter for the blog and wire it into <code class="language-plaintext highlighter-rouge">CLAUDE.md</code>, <code class="language-plaintext highlighter-rouge">english-correction</code>, and <code class="language-plaintext highlighter-rouge">adversarial-challenge</code> (executes plan-006).</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>To give the blog a single human-readable editorial charter — house style, tone, front-matter contract, structure, and voice — separate from <code class="language-plaintext highlighter-rouge">CLAUDE.md</code>’s build/architecture layer, and to make it enforceable by wiring it into the existing skills: <code class="language-plaintext highlighter-rouge">english-correction</code> (voice + British-English, with the recent-post corpus remaining the live tone anchor) and <code class="language-plaintext highlighter-rouge">adversarial-challenge</code> (the post contract, defined as front-matter + opening thesis with no length component). Modelled on <code class="language-plaintext highlighter-rouge">../kaplus/EDITORIAL.md</code> for form but rewritten for this Jekyll/Markdown, single-language, web-published site. This executes plan-006.</p>
+
+<h2 id="affected-files">Affected Files</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">EDITORIAL.md</code> (new — root editorial charter; not a Claude asset, listed for context)</li>
+  <li><code class="language-plaintext highlighter-rouge">CLAUDE.md</code> (Purpose section: pointer establishing <code class="language-plaintext highlighter-rouge">EDITORIAL.md</code> as the editorial layer, enforced by the two skills)</li>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/english-correction/SKILL.md</code> (Target section: references <code class="language-plaintext highlighter-rouge">EDITORIAL.md</code> §10/§11 as the human-readable voice/British-English description, with the recent-post corpus kept as the live anchor)</li>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/adversarial-challenge/SKILL.md</code> (§4.1 and §6: the post contract is defined by reference to <code class="language-plaintext highlighter-rouge">EDITORIAL.md</code> §5, with no length component per §4)</li>
+  <li><code class="language-plaintext highlighter-rouge">plans/plan-006-editorial-guidelines.md</code>, <code class="language-plaintext highlighter-rouge">plans/README.md</code> (plan execution bookkeeping — out of changelog scope, listed for context)</li>
+</ul>
+
+<h2 id="original-prompt">Original Prompt</h2>
+
+<blockquote>
+  <p>create new plan to prepare an editorial guidelines for blog. it should ensure style, tone, and adhere to current expression in this blog. refer ../kaplus for example editorial.md</p>
+</blockquote>

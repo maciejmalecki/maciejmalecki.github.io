@@ -1,0 +1,21 @@
+<h2 id="summary">Summary</h2>
+
+<p>Fixed three defects in the scaffold front-matter contract of the <code class="language-plaintext highlighter-rouge">post-utils</code>/<code class="language-plaintext highlighter-rouge">task-utils</code> skills and the task template, found by challenging the plan-003 implementation.</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>A post-implementation challenge of plan-003 surfaced three real defects in the front-matter contract: (1) <code class="language-plaintext highlighter-rouge">categories</code> was seeded with the bare section name and treated as “derivable”, but the corpus shows it is an authorial, usually multi-token field — so the scaffold seed looked real and defeated the <code class="language-plaintext highlighter-rouge">frontmatter-and-links</code> gate; now seeded with a <code class="language-plaintext highlighter-rouge">TODO</code> marker and treated as authorial across all three files. (2) The slug rule claimed to mirror the <code class="language-plaintext highlighter-rouge">Rakefile</code>’s <code class="language-plaintext highlighter-rouge">parameterize</code> and gave <code class="language-plaintext highlighter-rouge">why-dont-i</code>, but <code class="language-plaintext highlighter-rouge">parameterize</code> turns apostrophes into a separator (<code class="language-plaintext highlighter-rouge">why-don-t-i</code>); removed the false citation and documented the real “drop apostrophes” behaviour matching the author’s hand-slugged filenames. (3) Softened the <code class="language-plaintext highlighter-rouge">layout: post</code> “always” wording to note it is redundant with the <code class="language-plaintext highlighter-rouge">_config.yml</code> default and kept only to mirror the corpus.</p>
+
+<h2 id="affected-files">Affected Files</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/post-utils/SKILL.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/task-utils/SKILL.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">templates/task-template.md</code></li>
+</ul>
+
+<h2 id="original-prompt">Original Prompt</h2>
+
+<blockquote>
+  <p>challenge implementation of plan 3</p>
+</blockquote>

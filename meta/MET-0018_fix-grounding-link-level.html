@@ -1,0 +1,20 @@
+<h2 id="summary">Summary</h2>
+
+<p>Fixed the research-grounding link level in <code class="language-plaintext highlighter-rouge">templates/task-template.md</code> and <code class="language-plaintext highlighter-rouge">task-utils</code> §5(a): links written into a task file must be <code class="language-plaintext highlighter-rouge">../../research/...</code> (two levels up from <code class="language-plaintext highlighter-rouge">tasks/</code>), not <code class="language-plaintext highlighter-rouge">../research/...</code>.</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>A challenge of the plan-004 implementation found that grounding links written into a task file (which lives in <code class="language-plaintext highlighter-rouge">tasks/</code>) used <code class="language-plaintext highlighter-rouge">../research/...</code>, resolving to a non-existent <code class="language-plaintext highlighter-rouge">&lt;repo-root&gt;/research/</code> — every such link was dead. The sibling research repo is two levels up from a task file, so the correct link is <code class="language-plaintext highlighter-rouge">../../research/...</code>. Fixed the three link templates and the <code class="language-plaintext highlighter-rouge">task-utils</code> §5(a) parenthetical, and added a note explaining the two-levels-up prefix. The <code class="language-plaintext highlighter-rouge">research-access</code> skill and <code class="language-plaintext highlighter-rouge">task-utils</code> §5(b) filesystem-check paths keep <code class="language-plaintext highlighter-rouge">../research</code> deliberately — those run from the repo root, where one level up is correct.</p>
+
+<h2 id="affected-files">Affected Files</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">templates/task-template.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">.claude/skills/task-utils/SKILL.md</code></li>
+</ul>
+
+<h2 id="original-prompt">Original Prompt</h2>
+
+<blockquote>
+  <p>fix</p>
+</blockquote>
